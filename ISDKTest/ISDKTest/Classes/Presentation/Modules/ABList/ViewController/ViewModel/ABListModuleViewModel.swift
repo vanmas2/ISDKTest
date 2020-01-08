@@ -21,18 +21,38 @@ final class ABListModuleViewModel {
     
     private var _action: PublishRelay<ABListModuleViewModelAction>
     
+    private var getABListUseCase: GetABListUseCaseProtocol
+    
     private var output: Output
     
     private var disposeBag = DisposeBag()
     
     // MARK: Constructors
     
-    init() {
+    init(getABListUseCase: GetABListUseCaseProtocol) {
+        self.getABListUseCase = getABListUseCase
+        
         output = Output()
-        _state = .init(value: .init(cells: Stub.viewModels))
+        _state = .init(value: .init(cells: []))
         _action = .init()
         
-        _action.bind(to: actionBinder).disposed(by: disposeBag)
+        _action.filter { $0 == .refresh }
+            .flatMap { _ in self.getABListUseCase.execute(request: .init(sort: .bType)) }
+            .map { (items) in
+                return items.items.map { (item) -> CellViewModelProtocol in
+                    switch item {
+                    case .itemA(let item):
+                        return ABListModuleItemACellViewModel(title: item.title, desc: item.desc, value: item.value.description, image: item.image)
+                    case .itemB(let item):
+                        return ABListModuleItemBCellViewModel(title: item.title, desc: item.desc, value: item.value.description, image: item.image, labels: item.labels.reduce("") { "\($0)\($1) " })
+                    }
+                }
+            }
+            .map { ABListModuleViewModelState(cells: $0) }
+            .bind { self._state.accept($0) }
+            .disposed(by: disposeBag)
+        
+//        _action.bind(to: actionBinder).disposed(by: disposeBag)
     }
 }
 
@@ -67,6 +87,10 @@ private extension ABListModuleViewModel {
     }
     
     func refreshHandleAction(state: ABListModuleViewModelState) -> ABListModuleViewModelState {
+        getABListUseCase.execute(request: .init(sort: .title))
+            .bind { (response) in
+                
+            }
         return state
     }
 }

@@ -37,6 +37,7 @@ final class ABListModuleViewController: ViewController<ABListModuleView> {
         super.viewDidLoad()
         configure()
         bindViewModel()
+        viewModel.action.accept(.refresh)
     }
 }
 

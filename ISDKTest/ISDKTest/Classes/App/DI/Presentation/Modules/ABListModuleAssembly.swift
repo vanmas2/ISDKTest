@@ -40,7 +40,10 @@ private extension ABListModuleAssembly {
     func registerViewModel(_ container: Container) {
         container
             .register(ABListModuleViewModelProtocol.self) { (resolver) in
-                return ABListModuleViewModel()
+                guard
+                    let getABListUseCase = resolver.resolve(GetABListUseCaseProtocol.self)
+                    else { fatalError() }
+                return ABListModuleViewModel(getABListUseCase: getABListUseCase)
             }
             .inObjectScope(.transient)
     }
