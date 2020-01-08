@@ -16,6 +16,10 @@
 		2C32C49123C5C8D70028CFFA /* Styler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C32C49023C5C8D70028CFFA /* Styler.swift */; };
 		2C32C49323C5C8F50028CFFA /* LabelStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C32C49223C5C8F50028CFFA /* LabelStyle.swift */; };
 		2C32C49523C5CC950028CFFA /* ViewStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C32C49423C5CC950028CFFA /* ViewStyle.swift */; };
+		2C32C49A23C5D1A00028CFFA /* ABListModuleItemBCellViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C32C49923C5D1A00028CFFA /* ABListModuleItemBCellViewModelProtocol.swift */; };
+		2C32C49C23C5D1AE0028CFFA /* ABListModuleItemBCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C32C49B23C5D1AE0028CFFA /* ABListModuleItemBCellViewModel.swift */; };
+		2C32C49E23C5D1C00028CFFA /* ABListModuleItemBCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C32C49D23C5D1C00028CFFA /* ABListModuleItemBCell.swift */; };
+		2C32C4A023C5D1D10028CFFA /* ABListModuleItemBView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C32C49F23C5D1D10028CFFA /* ABListModuleItemBView.swift */; };
 		2C3DCB3C23C2119E00B52607 /* ABListCoordinatorAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3DCB3B23C2119E00B52607 /* ABListCoordinatorAssembly.swift */; };
 		2C3DCB3E23C2131600B52607 /* ABListCoordinatorsFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3DCB3D23C2131600B52607 /* ABListCoordinatorsFactory.swift */; };
 		2C3DCB4023C217FA00B52607 /* ABListModuleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3DCB3F23C217FA00B52607 /* ABListModuleViewModel.swift */; };
@@ -74,6 +78,10 @@
 		2C32C49023C5C8D70028CFFA /* Styler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Styler.swift; sourceTree = "<group>"; };
 		2C32C49223C5C8F50028CFFA /* LabelStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelStyle.swift; sourceTree = "<group>"; };
 		2C32C49423C5CC950028CFFA /* ViewStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewStyle.swift; sourceTree = "<group>"; };
+		2C32C49923C5D1A00028CFFA /* ABListModuleItemBCellViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ABListModuleItemBCellViewModelProtocol.swift; sourceTree = "<group>"; };
+		2C32C49B23C5D1AE0028CFFA /* ABListModuleItemBCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ABListModuleItemBCellViewModel.swift; sourceTree = "<group>"; };
+		2C32C49D23C5D1C00028CFFA /* ABListModuleItemBCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ABListModuleItemBCell.swift; sourceTree = "<group>"; };
+		2C32C49F23C5D1D10028CFFA /* ABListModuleItemBView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ABListModuleItemBView.swift; sourceTree = "<group>"; };
 		2C3DCB3B23C2119E00B52607 /* ABListCoordinatorAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ABListCoordinatorAssembly.swift; sourceTree = "<group>"; };
 		2C3DCB3D23C2131600B52607 /* ABListCoordinatorsFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ABListCoordinatorsFactory.swift; sourceTree = "<group>"; };
 		2C3DCB3F23C217FA00B52607 /* ABListModuleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ABListModuleViewModel.swift; sourceTree = "<group>"; };
@@ -183,6 +191,33 @@
 			path = Styler;
 			sourceTree = "<group>";
 		};
+		2C32C49623C5D0B00028CFFA /* ItemB */ = {
+			isa = PBXGroup;
+			children = (
+				2C32C49723C5D0C20028CFFA /* UI */,
+				2C32C49823C5D0C60028CFFA /* ViewModel */,
+			);
+			path = ItemB;
+			sourceTree = "<group>";
+		};
+		2C32C49723C5D0C20028CFFA /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				2C32C49D23C5D1C00028CFFA /* ABListModuleItemBCell.swift */,
+				2C32C49F23C5D1D10028CFFA /* ABListModuleItemBView.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		2C32C49823C5D0C60028CFFA /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				2C32C49B23C5D1AE0028CFFA /* ABListModuleItemBCellViewModel.swift */,
+				2C32C49923C5D1A00028CFFA /* ABListModuleItemBCellViewModelProtocol.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		2C3DCB4823C329E400B52607 /* ItemA */ = {
 			isa = PBXGroup;
 			children = (
@@ -214,6 +249,7 @@
 			isa = PBXGroup;
 			children = (
 				2C3DCB4823C329E400B52607 /* ItemA */,
+				2C32C49623C5D0B00028CFFA /* ItemB */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -649,10 +685,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C32C49E23C5D1C00028CFFA /* ABListModuleItemBCell.swift in Sources */,
 				2C32C49523C5CC950028CFFA /* ViewStyle.swift in Sources */,
 				2CC7062523BA66AB00921919 /* AppCoordinatorProtocol.swift in Sources */,
 				2C3DCB4E23C32AF900B52607 /* ABListModuleItemACellViewModel.swift in Sources */,
 				2C3DCB5023C3410800B52607 /* ABListModuleItemACellViewModelProtocol.swift in Sources */,
+				2C32C49C23C5D1AE0028CFFA /* ABListModuleItemBCellViewModel.swift in Sources */,
 				2CC7062E23BA67A800921919 /* ABListCoordinatorsFactoryProtocol.swift in Sources */,
 				2C3DCB3E23C2131600B52607 /* ABListCoordinatorsFactory.swift in Sources */,
 				2CC7064A23BA70C800921919 /* ABListModuleAssembly.swift in Sources */,
@@ -666,9 +704,11 @@
 				2CB1D0FA23BA483B00755886 /* ISDKTest.xcdatamodeld in Sources */,
 				2CC7061123BA4FF800921919 /* Router.swift in Sources */,
 				2C3DCB4C23C32AA800B52607 /* ABListModuleItemACell.swift in Sources */,
+				2C32C49A23C5D1A00028CFFA /* ABListModuleItemBCellViewModelProtocol.swift in Sources */,
 				2CC7064823BA702500921919 /* ABListModuleView.swift in Sources */,
 				2C3DCB3C23C2119E00B52607 /* ABListCoordinatorAssembly.swift in Sources */,
 				2CC7064323BA6FAB00921919 /* ABListModuleViewController.swift in Sources */,
+				2C32C4A023C5D1D10028CFFA /* ABListModuleItemBView.swift in Sources */,
 				2C32C48823C4C7CD0028CFFA /* CellViewModelProtocol.swift in Sources */,
 				2CC7063423BA683B00921919 /* ABListCoordinator.swift in Sources */,
 				2C32C48C23C4D4C50028CFFA /* ViewController.swift in Sources */,

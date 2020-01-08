@@ -45,6 +45,7 @@ private extension ABListModuleView {
     func configureViews() {
         tableView = UITableView()
         tableView.register(ABListModuleItemACell.self, forCellReuseIdentifier: ABListModuleItemACell.reuseIdentifier)
+        tableView.register(ABListModuleItemBCell.self, forCellReuseIdentifier: ABListModuleItemBCell.reuseIdentifier)
         sv(tableView)
     }
     

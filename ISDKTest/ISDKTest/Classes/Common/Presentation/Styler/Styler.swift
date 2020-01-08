@@ -28,6 +28,18 @@ final class Styler {
         if let lineBreakMode = style.lineBreakMode {
             label.lineBreakMode = lineBreakMode
         }
+        
+        if let textColor = style.textColor {
+            label.textColor = textColor
+        }
+        
+        if let adjustsFontSizeToFitWidth = style.adjustsFontSizeToFitWidth {
+            label.adjustsFontSizeToFitWidth = adjustsFontSizeToFitWidth
+        }
+        
+        if let minimumScaleFactor = style.minimumScaleFactor {
+            label.minimumScaleFactor = minimumScaleFactor
+        }
     }
     
     func viewStyle(_ view: UIView, style: ViewStyle) {

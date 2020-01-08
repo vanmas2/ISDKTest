@@ -138,9 +138,13 @@ private extension ABListModuleViewModel {
     
     enum Stub {
         static let viewModels: [CellViewModelProtocol] = [
-            ABListModuleItemACellViewModel(title: "One One One One One One One", desc: "One desc One desc One desc One desc One desc One desc", value: "123456789", image: "Icons/noImage"),
-            ABListModuleItemACellViewModel(title: "Two Two Two Two v Two Two Two Two Two v Two Two Two Two v v Two", desc: "Two desc Two desc Two desc Two desc Two desc Two desc Two desc Two desc v Two desc Two desc", value: "123456789101112131415", image: "Icons/noImage"),
-            ABListModuleItemACellViewModel(title: "Three Three", desc: "Three desc", value: "123", image: "Icons/noImage")
+            ABListModuleItemACellViewModel(title: "A One One One One One One One", desc: "One desc One desc One desc One desc One desc One desc", value: "123456789", image: "Icons/noImage"),
+            ABListModuleItemACellViewModel(title: "A Two Two Two Two v Two Two Two Two Two v Two Two Two Two v v Two", desc: "Two desc Two desc Two desc Two desc Two desc Two desc Two desc Two desc v Two desc Two desc", value: "123456789101112131415", image: "Icons/noImage"),
+            ABListModuleItemACellViewModel(title: "A Three Three", desc: "Three desc", value: "123", image: "Icons/noImage"),
+            ABListModuleItemBCellViewModel(title: "B One One One One One One One", desc: "One desc One desc One desc One desc One desc One desc", value: "123456789", image: "Icons/noImage", labels: "labels labels labels labels labels labels"),
+            ABListModuleItemBCellViewModel(title: "B Two Two Two Two v Two Two Two Two Two v Two Two Two Two v v Two", desc: "Two desc Two desc Two desc Two desc Two desc Two desc Two desc Two desc v Two desc Two desc", value: "123456789101112131415", image: "Icons/noImage", labels: "labels"),
+            ABListModuleItemBCellViewModel(title: "B Three Three", desc: "Three desc", value: "123", image: "Icons/noImage", labels: "labels labels labels labels labels labels labels labels labels"),
+            ABListModuleItemBCellViewModel(title: "B Four Four", desc: "Four desc", value: "123", image: "Icons/noImage", labels: "labels labels labels labels labels")
         ]
     }
 }
