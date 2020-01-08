@@ -18,7 +18,7 @@ final class ABListModule: Module, ABListModuleProtocol {
     
     var output: ABListModuleOutput
     
-    private weak var viewController: UIViewController?
+    private var viewController: UIViewController?
     
     // MARK: Constructors
     

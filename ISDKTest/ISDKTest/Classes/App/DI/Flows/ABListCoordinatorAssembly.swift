@@ -40,7 +40,7 @@ private extension ABListCoordinatorAssembly {
     
     func registerModulesFactory(_ container: Container) {
         container
-            .register(ABListModulesFactoryProtocol.self) { (resolver, router: RouterProtocol) in
+            .register(ABListModulesFactoryProtocol.self) { (resolver) in
                 let abListModule: () -> ABListModuleProtocol = { () -> ABListModuleProtocol in
                     guard
                         let module = resolver.resolve(ABListModuleProtocol.self)
@@ -54,7 +54,7 @@ private extension ABListCoordinatorAssembly {
     
     func registerCoordinatorsFactory(_ container: Container) {
         container
-            .register(ABListCoordinatorsFactoryProtocol.self) { (resolver, router: RouterProtocol) in
+            .register(ABListCoordinatorsFactoryProtocol.self) { (resolver) in
                 return ABListCoordinatorsFactory()
             }
             .inObjectScope(.container)

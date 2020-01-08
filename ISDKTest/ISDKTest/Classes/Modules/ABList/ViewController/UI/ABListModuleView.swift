@@ -15,7 +15,7 @@ final class ABListModuleView: UIView {
     
     // MARK: Views
     
-    //    var logoView: LogoUIView!
+    private(set) var tableView: UITableView!
     
     
     // MARK: Constructors
@@ -43,16 +43,20 @@ private extension ABListModuleView {
     }
     
     func configureViews() {
-        //        logoView = LogoUIView()
-        //        sv(logoView)
+        tableView = UITableView()
+        tableView.register(ABListModuleItemACell.self, forCellReuseIdentifier: ABListModuleItemACell.reuseIdentifier)
+        sv(tableView)
     }
     
     func configureLayout() {
+        tableView.fillContainer()
         //        logoView.centerInContainer().width(LogoView.size).height(LogoView.size)
     }
     
     func configureStyle() {
         backgroundColor = View.backgroundColor
+        
+        tableView.separatorStyle = .none
     }
 }
 
@@ -62,7 +66,7 @@ private extension ABListModuleView {
 private extension ABListModuleView {
     
     enum View {
-        static let backgroundColor = UIColor.red
+        static let backgroundColor = UIColor.blue
     }
     
     //    enum LogoView {

@@ -42,10 +42,10 @@ private extension AppCoordinatorAssembly {
     
     func registerCoordinatorsFactory(_ container: Container) {
         container
-            .register(AppCoordinatorsFactoryProtocol.self) { (resolver, router: RouterProtocol) in
+            .register(AppCoordinatorsFactoryProtocol.self) { (resolver) in
                 let abListCoordinator: (RouterProtocol) -> ABListCoordinatorProtocol = { (router) in
                     guard
-                        let coordinator = resolver.resolve(ABListCoordinatorProtocol.self)
+                        let coordinator = resolver.resolve(ABListCoordinatorProtocol.self, argument: router)
                         else { fatalError() }
                     return coordinator
                 }

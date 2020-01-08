@@ -7,10 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2C32C48223C4C7AD0028CFFA /* CellSelectable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C32C48123C4C7AD0028CFFA /* CellSelectable.swift */; };
+		2C32C48423C4C7B80028CFFA /* CellConfigurable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C32C48323C4C7B80028CFFA /* CellConfigurable.swift */; };
+		2C32C48623C4C7C30028CFFA /* CellReusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C32C48523C4C7C30028CFFA /* CellReusable.swift */; };
+		2C32C48823C4C7CD0028CFFA /* CellViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C32C48723C4C7CD0028CFFA /* CellViewModelProtocol.swift */; };
+		2C32C48C23C4D4C50028CFFA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C32C48B23C4D4C50028CFFA /* ViewController.swift */; };
+		2C32C48E23C4D5920028CFFA /* SpecificViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C32C48D23C4D5920028CFFA /* SpecificViewController.swift */; };
 		2C3DCB3C23C2119E00B52607 /* ABListCoordinatorAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3DCB3B23C2119E00B52607 /* ABListCoordinatorAssembly.swift */; };
 		2C3DCB3E23C2131600B52607 /* ABListCoordinatorsFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3DCB3D23C2131600B52607 /* ABListCoordinatorsFactory.swift */; };
 		2C3DCB4023C217FA00B52607 /* ABListModuleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3DCB3F23C217FA00B52607 /* ABListModuleViewModel.swift */; };
 		2C3DCB4223C2180F00B52607 /* ABListModuleViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3DCB4123C2180F00B52607 /* ABListModuleViewModelProtocol.swift */; };
+		2C3DCB4A23C32A9900B52607 /* ABListModuleItemAView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3DCB4923C32A9900B52607 /* ABListModuleItemAView.swift */; };
+		2C3DCB4C23C32AA800B52607 /* ABListModuleItemACell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3DCB4B23C32AA800B52607 /* ABListModuleItemACell.swift */; };
+		2C3DCB4E23C32AF900B52607 /* ABListModuleItemACellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3DCB4D23C32AF900B52607 /* ABListModuleItemACellViewModel.swift */; };
+		2C3DCB5023C3410800B52607 /* ABListModuleItemACellViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3DCB4F23C3410800B52607 /* ABListModuleItemACellViewModelProtocol.swift */; };
 		2CB1D0F223BA483B00755886 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB1D0F123BA483B00755886 /* AppDelegate.swift */; };
 		2CB1D0FA23BA483B00755886 /* ISDKTest.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2CB1D0F823BA483B00755886 /* ISDKTest.xcdatamodeld */; };
 		2CB1D0FC23BA483D00755886 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2CB1D0FB23BA483D00755886 /* Assets.xcassets */; };
@@ -52,10 +62,20 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2C32C48123C4C7AD0028CFFA /* CellSelectable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellSelectable.swift; sourceTree = "<group>"; };
+		2C32C48323C4C7B80028CFFA /* CellConfigurable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellConfigurable.swift; sourceTree = "<group>"; };
+		2C32C48523C4C7C30028CFFA /* CellReusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellReusable.swift; sourceTree = "<group>"; };
+		2C32C48723C4C7CD0028CFFA /* CellViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellViewModelProtocol.swift; sourceTree = "<group>"; };
+		2C32C48B23C4D4C50028CFFA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		2C32C48D23C4D5920028CFFA /* SpecificViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecificViewController.swift; sourceTree = "<group>"; };
 		2C3DCB3B23C2119E00B52607 /* ABListCoordinatorAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ABListCoordinatorAssembly.swift; sourceTree = "<group>"; };
 		2C3DCB3D23C2131600B52607 /* ABListCoordinatorsFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ABListCoordinatorsFactory.swift; sourceTree = "<group>"; };
 		2C3DCB3F23C217FA00B52607 /* ABListModuleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ABListModuleViewModel.swift; sourceTree = "<group>"; };
 		2C3DCB4123C2180F00B52607 /* ABListModuleViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ABListModuleViewModelProtocol.swift; sourceTree = "<group>"; };
+		2C3DCB4923C32A9900B52607 /* ABListModuleItemAView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ABListModuleItemAView.swift; sourceTree = "<group>"; };
+		2C3DCB4B23C32AA800B52607 /* ABListModuleItemACell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ABListModuleItemACell.swift; sourceTree = "<group>"; };
+		2C3DCB4D23C32AF900B52607 /* ABListModuleItemACellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ABListModuleItemACellViewModel.swift; sourceTree = "<group>"; };
+		2C3DCB4F23C3410800B52607 /* ABListModuleItemACellViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ABListModuleItemACellViewModelProtocol.swift; sourceTree = "<group>"; };
 		2CB1D0EE23BA483B00755886 /* ISDKTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ISDKTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CB1D0F123BA483B00755886 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2CB1D0F923BA483B00755886 /* ISDKTest.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ISDKTest.xcdatamodel; sourceTree = "<group>"; };
@@ -111,6 +131,86 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2C32C47F23C4C7870028CFFA /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				2C32C48023C4C79F0028CFFA /* Cell */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		2C32C48023C4C79F0028CFFA /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				2C32C48323C4C7B80028CFFA /* CellConfigurable.swift */,
+				2C32C48523C4C7C30028CFFA /* CellReusable.swift */,
+				2C32C48123C4C7AD0028CFFA /* CellSelectable.swift */,
+				2C32C48723C4C7CD0028CFFA /* CellViewModelProtocol.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		2C32C48923C4D4AB0028CFFA /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				2C32C48A23C4D4B10028CFFA /* ViewController */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		2C32C48A23C4D4B10028CFFA /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				2C32C48D23C4D5920028CFFA /* SpecificViewController.swift */,
+				2C32C48B23C4D4C50028CFFA /* ViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		2C3DCB4823C329E400B52607 /* ItemA */ = {
+			isa = PBXGroup;
+			children = (
+				2C3DCB5223C344C100B52607 /* UI */,
+				2C3DCB5123C344B400B52607 /* ViewModel */,
+			);
+			path = ItemA;
+			sourceTree = "<group>";
+		};
+		2C3DCB5123C344B400B52607 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				2C3DCB4D23C32AF900B52607 /* ABListModuleItemACellViewModel.swift */,
+				2C3DCB4F23C3410800B52607 /* ABListModuleItemACellViewModelProtocol.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		2C3DCB5223C344C100B52607 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				2C3DCB4B23C32AA800B52607 /* ABListModuleItemACell.swift */,
+				2C3DCB4923C32A9900B52607 /* ABListModuleItemAView.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		2C3DCB5323C3454000B52607 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				2C3DCB4823C329E400B52607 /* ItemA */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		2C3DCB5423C35D3000B52607 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				2CC7064523BA6FCA00921919 /* UI */,
+				2CC7064623BA6FCF00921919 /* ViewModel */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
 		2CB1D0E523BA483B00755886 = {
 			isa = PBXGroup;
 			children = (
@@ -217,8 +317,10 @@
 		2CC7060E23BA4FD100921919 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
-				2CC7061A23BA5BA600921919 /* Module */,
 				2CC7060F23BA4FE900921919 /* Coordinator */,
+				2CC7061A23BA5BA600921919 /* Module */,
+				2C32C47F23C4C7870028CFFA /* Protocols */,
+				2C32C48923C4D4AB0028CFFA /* UI */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -319,9 +421,9 @@
 		2CC7063523BA6AD000921919 /* ABList */ = {
 			isa = PBXGroup;
 			children = (
+				2C3DCB5323C3454000B52607 /* Cells */,
 				2CC7064423BA6FBE00921919 /* Module */,
-				2CC7064523BA6FCA00921919 /* UI */,
-				2CC7064623BA6FCF00921919 /* ViewModel */,
+				2C3DCB5423C35D3000B52607 /* ViewController */,
 			);
 			path = ABList;
 			sourceTree = "<group>";
@@ -531,18 +633,25 @@
 			buildActionMask = 2147483647;
 			files = (
 				2CC7062523BA66AB00921919 /* AppCoordinatorProtocol.swift in Sources */,
+				2C3DCB4E23C32AF900B52607 /* ABListModuleItemACellViewModel.swift in Sources */,
+				2C3DCB5023C3410800B52607 /* ABListModuleItemACellViewModelProtocol.swift in Sources */,
 				2CC7062E23BA67A800921919 /* ABListCoordinatorsFactoryProtocol.swift in Sources */,
 				2C3DCB3E23C2131600B52607 /* ABListCoordinatorsFactory.swift in Sources */,
 				2CC7064A23BA70C800921919 /* ABListModuleAssembly.swift in Sources */,
+				2C32C48E23C4D5920028CFFA /* SpecificViewController.swift in Sources */,
 				2C3DCB4023C217FA00B52607 /* ABListModuleViewModel.swift in Sources */,
 				2CC7062823BA670500921919 /* AppCoordinatorsFactoryProtocol.swift in Sources */,
 				2CC7063923BA6B8000921919 /* ABListModulesFactory.swift in Sources */,
+				2C3DCB4A23C32A9900B52607 /* ABListModuleItemAView.swift in Sources */,
 				2CB1D0FA23BA483B00755886 /* ISDKTest.xcdatamodeld in Sources */,
 				2CC7061123BA4FF800921919 /* Router.swift in Sources */,
+				2C3DCB4C23C32AA800B52607 /* ABListModuleItemACell.swift in Sources */,
 				2CC7064823BA702500921919 /* ABListModuleView.swift in Sources */,
 				2C3DCB3C23C2119E00B52607 /* ABListCoordinatorAssembly.swift in Sources */,
 				2CC7064323BA6FAB00921919 /* ABListModuleViewController.swift in Sources */,
+				2C32C48823C4C7CD0028CFFA /* CellViewModelProtocol.swift in Sources */,
 				2CC7063423BA683B00921919 /* ABListCoordinator.swift in Sources */,
+				2C32C48C23C4D4C50028CFFA /* ViewController.swift in Sources */,
 				2C3DCB4223C2180F00B52607 /* ABListModuleViewModelProtocol.swift in Sources */,
 				2CC7063723BA6ADE00921919 /* ABListModule.swift in Sources */,
 				2CC7061723BA507300921919 /* CoordinatorProtocol.swift in Sources */,
@@ -553,10 +662,13 @@
 				2CC7061C23BA5BB800921919 /* Module.swift in Sources */,
 				2CC7062023BA636700921919 /* AppCoordinator.swift in Sources */,
 				2CB1D0F223BA483B00755886 /* AppDelegate.swift in Sources */,
+				2C32C48623C4C7C30028CFFA /* CellReusable.swift in Sources */,
+				2C32C48223C4C7AD0028CFFA /* CellSelectable.swift in Sources */,
 				2CC7064123BA6E0900921919 /* AppCoordinatorAssembly.swift in Sources */,
 				2CC7061923BA509F00921919 /* Presentable.swift in Sources */,
 				2CC7063D23BA6DC400921919 /* AppAssembly.swift in Sources */,
 				2CC7063223BA682E00921919 /* ABListCoordinatorProtocol.swift in Sources */,
+				2C32C48423C4C7B80028CFFA /* CellConfigurable.swift in Sources */,
 				2CC7063023BA67C500921919 /* ABListModulesFactoryProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

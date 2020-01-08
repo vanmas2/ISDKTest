@@ -14,6 +14,7 @@ final class ABListModuleAssembly: Assembly {
     
     func assemble(container: Container) {
         registerModule(container)
+        registerViewModel(container)
     }
 }
 
@@ -25,8 +26,21 @@ private extension ABListModuleAssembly {
     func registerModule(_ container: Container) {
         container
             .register(ABListModuleProtocol.self) { (resolver) in
-                let viewController = ABListModuleViewController()
-                return ABListModule(input: viewController, output: viewController, viewController: viewController)
+                guard
+                    let viewModel = resolver.resolve(ABListModuleViewModelProtocol.self),
+                    let input = viewModel as? ABListModuleIntput,
+                    let output = viewModel as? ABListModuleOutput
+                    else { fatalError() }
+                let viewController = ABListModuleViewController(viewModel: viewModel)
+                return ABListModule(input: input, output: output, viewController: viewController)
+            }
+            .inObjectScope(.transient)
+    }
+    
+    func registerViewModel(_ container: Container) {
+        container
+            .register(ABListModuleViewModelProtocol.self) { (resolver) in
+                return ABListModuleViewModel()
             }
             .inObjectScope(.transient)
     }
