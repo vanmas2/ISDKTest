@@ -22,13 +22,13 @@ final class ABListModuleItemACellViewModel {
     // MARK: Constructors
     
     init() {
-        _state = .init(value: .init(title: ""))
+        _state = .init(value: .init(title: "", desc: "", value: "", image: ""))
         _action = .init()
     }
     
-    convenience init(title: String) {
+    convenience init(title: String, desc: String, value: String, image: String) {
         self.init()
-        _state.accept(.init(title: title))
+        _state.accept(.init(title: title, desc: desc, value: value, image: image))
     }
 }
 

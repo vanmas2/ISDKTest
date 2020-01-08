@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
 import Stevia
 
 
@@ -15,7 +17,17 @@ final class ABListModuleItemAView: UIView {
     
     // MARK: Properties
     
+    private(set) var avatarImageView: UIImageView!
+    
     private(set) var titleLabel: UILabel!
+    
+    private(set) var descriptionLabel: UILabel!
+    
+    private(set) var valueLabel: UILabel!
+    
+    private var dataWrapperView: UIView!
+    
+    private var textWrapperView: UIView!
     
     // MARK: Constructors
     
@@ -41,33 +53,87 @@ private extension ABListModuleItemAView {
     }
     
     func configureViews() {
+        avatarImageView = UIImageView()
         titleLabel = UILabel()
-        sv(titleLabel)
+        descriptionLabel = UILabel()
+        valueLabel = UILabel()
+        dataWrapperView = UIView()
+        textWrapperView = UIView()
+        
+        sv(
+            avatarImageView,
+            dataWrapperView.sv(
+                textWrapperView.sv(
+                    titleLabel,
+                    descriptionLabel
+                ),
+                valueLabel
+            )
+        )
     }
     
     func configureLayout() {
         layout(
             10,
-            |-10-titleLabel-10-|,
-            10
+            |-10-avatarImageView,
+            (>=10)
         )
+        layout(
+            10,
+            dataWrapperView-10-|,
+            (>=10)
+        )
+        avatarImageView-10-dataWrapperView
+        
+        dataWrapperView.layout(
+            0,
+            |-0-textWrapperView,
+            0
+        )
+        dataWrapperView.layout(
+            0,
+            valueLabel-0-|,
+            (>=0)
+        )
+        textWrapperView-10-valueLabel
+        valueLabel.Width <= textWrapperView.Width
+        
+        textWrapperView.layout(
+            0,
+            |titleLabel|,
+            10,
+            |descriptionLabel|,
+            0
+        )
+        
+        textWrapperView.setContentHuggingPriority(.init(250), for: .horizontal)
+        titleLabel.setContentHuggingPriority(.init(250), for: .horizontal)
+        descriptionLabel.setContentHuggingPriority(.init(250), for: .horizontal)
+        valueLabel.setContentHuggingPriority(.init(750), for: .horizontal)
+        
+        textWrapperView.setContentCompressionResistancePriority(.init(250), for: .horizontal)
+        titleLabel.setContentCompressionResistancePriority(.init(250), for: .horizontal)
+        descriptionLabel.setContentCompressionResistancePriority(.init(250), for: .horizontal)
+        valueLabel.setContentCompressionResistancePriority(.init(750), for: .horizontal)
+        
+        avatarImageView.size(75.0)
     }
     
     func configureStyle() {
-        itemStyle(self)
-        titleLabelStyle(titleLabel)
+        style(viewStyle: .init(backgroundColor: .red))
+        titleLabel.style(labelStyle: .init(font: UIFont.boldSystemFont(ofSize: 18), numberOfLines: 0))
+        descriptionLabel.style(labelStyle: .init(font: UIFont.systemFont(ofSize: 16), numberOfLines: 0))
+        valueLabel.style(labelStyle: .init(font: UIFont.systemFont(ofSize: 16), lineBreakMode: .byTruncatingTail))
     }
 }
 
-// MARK: - Style
-
-private extension ABListModuleItemAView {
+extension Reactive where Base: ABListModuleItemAView {
     
-    func titleLabelStyle(_ label: UILabel) {
-        label.font = UIFont.boldSystemFont(ofSize: 16)
-    }
-    
-    func itemStyle(_ view: UIView) {
-        view.backgroundColor = .red
+    var avatar: Binder<String> {
+        return Binder(self.base.avatarImageView) { avatarImageView, path in
+            avatarImageView.image = UIImage(named: path)
+        }
     }
 }
+
+

@@ -13,6 +13,9 @@
 		2C32C48823C4C7CD0028CFFA /* CellViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C32C48723C4C7CD0028CFFA /* CellViewModelProtocol.swift */; };
 		2C32C48C23C4D4C50028CFFA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C32C48B23C4D4C50028CFFA /* ViewController.swift */; };
 		2C32C48E23C4D5920028CFFA /* SpecificViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C32C48D23C4D5920028CFFA /* SpecificViewController.swift */; };
+		2C32C49123C5C8D70028CFFA /* Styler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C32C49023C5C8D70028CFFA /* Styler.swift */; };
+		2C32C49323C5C8F50028CFFA /* LabelStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C32C49223C5C8F50028CFFA /* LabelStyle.swift */; };
+		2C32C49523C5CC950028CFFA /* ViewStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C32C49423C5CC950028CFFA /* ViewStyle.swift */; };
 		2C3DCB3C23C2119E00B52607 /* ABListCoordinatorAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3DCB3B23C2119E00B52607 /* ABListCoordinatorAssembly.swift */; };
 		2C3DCB3E23C2131600B52607 /* ABListCoordinatorsFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3DCB3D23C2131600B52607 /* ABListCoordinatorsFactory.swift */; };
 		2C3DCB4023C217FA00B52607 /* ABListModuleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3DCB3F23C217FA00B52607 /* ABListModuleViewModel.swift */; };
@@ -68,6 +71,9 @@
 		2C32C48723C4C7CD0028CFFA /* CellViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellViewModelProtocol.swift; sourceTree = "<group>"; };
 		2C32C48B23C4D4C50028CFFA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		2C32C48D23C4D5920028CFFA /* SpecificViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecificViewController.swift; sourceTree = "<group>"; };
+		2C32C49023C5C8D70028CFFA /* Styler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Styler.swift; sourceTree = "<group>"; };
+		2C32C49223C5C8F50028CFFA /* LabelStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelStyle.swift; sourceTree = "<group>"; };
+		2C32C49423C5CC950028CFFA /* ViewStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewStyle.swift; sourceTree = "<group>"; };
 		2C3DCB3B23C2119E00B52607 /* ABListCoordinatorAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ABListCoordinatorAssembly.swift; sourceTree = "<group>"; };
 		2C3DCB3D23C2131600B52607 /* ABListCoordinatorsFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ABListCoordinatorsFactory.swift; sourceTree = "<group>"; };
 		2C3DCB3F23C217FA00B52607 /* ABListModuleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ABListModuleViewModel.swift; sourceTree = "<group>"; };
@@ -165,6 +171,16 @@
 				2C32C48B23C4D4C50028CFFA /* ViewController.swift */,
 			);
 			path = ViewController;
+			sourceTree = "<group>";
+		};
+		2C32C48F23C5C8C70028CFFA /* Styler */ = {
+			isa = PBXGroup;
+			children = (
+				2C32C49023C5C8D70028CFFA /* Styler.swift */,
+				2C32C49223C5C8F50028CFFA /* LabelStyle.swift */,
+				2C32C49423C5CC950028CFFA /* ViewStyle.swift */,
+			);
+			path = Styler;
 			sourceTree = "<group>";
 		};
 		2C3DCB4823C329E400B52607 /* ItemA */ = {
@@ -320,6 +336,7 @@
 				2CC7060F23BA4FE900921919 /* Coordinator */,
 				2CC7061A23BA5BA600921919 /* Module */,
 				2C32C47F23C4C7870028CFFA /* Protocols */,
+				2C32C48F23C5C8C70028CFFA /* Styler */,
 				2C32C48923C4D4AB0028CFFA /* UI */,
 			);
 			path = Presentation;
@@ -632,17 +649,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C32C49523C5CC950028CFFA /* ViewStyle.swift in Sources */,
 				2CC7062523BA66AB00921919 /* AppCoordinatorProtocol.swift in Sources */,
 				2C3DCB4E23C32AF900B52607 /* ABListModuleItemACellViewModel.swift in Sources */,
 				2C3DCB5023C3410800B52607 /* ABListModuleItemACellViewModelProtocol.swift in Sources */,
 				2CC7062E23BA67A800921919 /* ABListCoordinatorsFactoryProtocol.swift in Sources */,
 				2C3DCB3E23C2131600B52607 /* ABListCoordinatorsFactory.swift in Sources */,
 				2CC7064A23BA70C800921919 /* ABListModuleAssembly.swift in Sources */,
+				2C32C49123C5C8D70028CFFA /* Styler.swift in Sources */,
 				2C32C48E23C4D5920028CFFA /* SpecificViewController.swift in Sources */,
 				2C3DCB4023C217FA00B52607 /* ABListModuleViewModel.swift in Sources */,
 				2CC7062823BA670500921919 /* AppCoordinatorsFactoryProtocol.swift in Sources */,
 				2CC7063923BA6B8000921919 /* ABListModulesFactory.swift in Sources */,
 				2C3DCB4A23C32A9900B52607 /* ABListModuleItemAView.swift in Sources */,
+				2C32C49323C5C8F50028CFFA /* LabelStyle.swift in Sources */,
 				2CB1D0FA23BA483B00755886 /* ISDKTest.xcdatamodeld in Sources */,
 				2CC7061123BA4FF800921919 /* Router.swift in Sources */,
 				2C3DCB4C23C32AA800B52607 /* ABListModuleItemACell.swift in Sources */,

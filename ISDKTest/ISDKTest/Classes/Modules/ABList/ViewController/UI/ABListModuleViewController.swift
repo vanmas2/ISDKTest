@@ -65,6 +65,7 @@ private extension ABListModuleViewController {
             .itemSelected
             .bind(to: tableViewItemSelectedBinder)
             .disposed(by: disposeBag)
+        
     }
     
     var tableViewItemSelectedBinder: Binder<IndexPath> {

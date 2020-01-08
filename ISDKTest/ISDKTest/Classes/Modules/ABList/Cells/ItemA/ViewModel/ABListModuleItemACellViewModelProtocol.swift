@@ -16,6 +16,9 @@ protocol ABListModuleItemACellViewModelProtocol {
 
 struct ABListModuleItemACellViewModelState {
     var title: String
+    var desc: String
+    var value: String
+    var image: String
 }
 
 enum ABListModuleItemACellViewModeAction {

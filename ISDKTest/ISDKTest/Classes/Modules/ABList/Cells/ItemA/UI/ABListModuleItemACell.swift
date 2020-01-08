@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Stevia
 import RxSwift
 import RxCocoa
 
@@ -17,6 +18,8 @@ final class ABListModuleItemACell: UITableViewCell {
     // MARK: Properties
     
     private(set) var view: ABListModuleItemAView!
+    
+    private var bottomBorder: UIView!
     
     private var viewModel: ABListModuleItemACellViewModelProtocol?
     
@@ -47,15 +50,26 @@ private extension ABListModuleItemACell {
     
     func configureViews() {
         view = ABListModuleItemAView()
-        sv(view)
+        bottomBorder = UIView()
+        sv(view, bottomBorder)
     }
     
     func configureLayout() {
+        contentView.fillContainer()
         view.fillContainer()
+
+        contentView.layout(
+            |bottomBorder|,
+            0
+        )
+        
+        bottomBorder.height(1)
     }
     
     func configureStyle() {
         selectionStyle = .none
+        
+        bottomBorder.style(viewStyle: .init(backgroundColor: .blue))
     }
 }
 
@@ -88,6 +102,21 @@ extension ABListModuleItemACell: CellConfigurable {
         viewModel.state
             .map { $0.title }
             .bind(to: view.titleLabel.rx.text)
+            .disposed(by: disposeBag)
+        
+        viewModel.state
+            .map { $0.desc }
+            .bind(to: view.descriptionLabel.rx.text)
+            .disposed(by: disposeBag)
+        
+        viewModel.state
+            .map { $0.value }
+            .bind(to: view.valueLabel.rx.text)
+            .disposed(by: disposeBag)
+        
+        viewModel.state
+            .map { $0.image }
+            .bind(to: view.rx.avatar)
             .disposed(by: disposeBag)
     }
 }
