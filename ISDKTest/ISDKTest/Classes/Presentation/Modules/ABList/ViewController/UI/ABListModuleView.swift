@@ -15,6 +15,8 @@ final class ABListModuleView: UIView {
     
     // MARK: Views
     
+    private(set) var sortPickerView: UIPickerView!
+    
     private(set) var tableView: UITableView!
     
     
@@ -43,15 +45,21 @@ private extension ABListModuleView {
     }
     
     func configureViews() {
+        sortPickerView = UIPickerView()
         tableView = UITableView()
         tableView.register(ABListModuleItemACell.self, forCellReuseIdentifier: ABListModuleItemACell.reuseIdentifier)
         tableView.register(ABListModuleItemBCell.self, forCellReuseIdentifier: ABListModuleItemBCell.reuseIdentifier)
-        sv(tableView)
+        sv(sortPickerView, tableView)
     }
     
     func configureLayout() {
-        tableView.fillContainer()
-        //        logoView.centerInContainer().width(LogoView.size).height(LogoView.size)
+        layout(
+            0,
+            |sortPickerView|,
+            0,
+            |tableView|,
+            0
+        )
     }
     
     func configureStyle() {

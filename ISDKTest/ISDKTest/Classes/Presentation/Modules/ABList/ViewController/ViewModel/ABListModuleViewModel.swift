@@ -46,7 +46,10 @@ extension ABListModuleViewModel: Reactor {
     // MARK: Properties
 
     var initialState: ABListModuleViewModelState {
-        return ABListModuleViewModelState(cells: [])
+        return ABListModuleViewModelState(
+            cells: [],
+            sortTypeItems: SortTypeItem.allCases,
+            sortTypeItemSelected: .value)
     }
 
     // MARK: Functions
@@ -58,6 +61,7 @@ extension ABListModuleViewModel: Reactor {
         case .createB: return Observable.empty()
         case .selectB: return Observable.empty()
         case .refresh: return refreshHandleAction()
+        case .selectSort(let index): return selectSortHandleAction(index: index)
         }
     }
 
@@ -67,6 +71,8 @@ extension ABListModuleViewModel: Reactor {
         switch mutation {
         case .setItems(let items):
             newState.cells = items
+        case .setSortType(let sortTypeItem):
+            newState.sortTypeItemSelected = sortTypeItem
         }
 
         return newState
@@ -78,7 +84,7 @@ extension ABListModuleViewModel: Reactor {
 private extension ABListModuleViewModel {
 
     func refreshHandleAction() -> Observable<Mutation> {
-        return getABListUseCase.execute(request: .init(sort: .bType))
+        return getABListUseCase.execute(request: .init(sort: sortTypeItemRequest()))
             .map { (items) in
                 return items.items.map { (item) -> CellViewModelProtocol in
                     switch item {
@@ -90,6 +96,21 @@ private extension ABListModuleViewModel {
                 }
             }
             .map { .setItems($0) }
+    }
+    
+    func selectSortHandleAction(index: Int) -> Observable<Mutation> {
+        return Observable.from(currentState.sortTypeItems)
+            .filter { $0.rawValue == index }
+            .map { .setSortType($0) }
+    }
+    
+    func sortTypeItemRequest() -> GetABListUseCaseModels.Request.Sort {
+        switch currentState.sortTypeItemSelected {
+        case .title: return .title
+        case .value: return .value
+        case .aItems: return .aType
+        case .bItems: return .bType
+        }
     }
 }
 

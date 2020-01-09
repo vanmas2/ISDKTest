@@ -46,9 +46,11 @@ private extension ABListModuleViewController {
     func bindViewModel() {
 
         // Actions
-
-        Observable.just(())
-            .map { ABListModuleViewModelAction.refresh }
+        
+        view().sortPickerView.rx
+            .itemSelected
+            .map { $0.row }
+            .map { ABListModuleViewModelAction.selectSort($0) }
             .bind(to: viewModel.vmAction)
             .disposed(by: disposeBag)
 
@@ -61,6 +63,38 @@ private extension ABListModuleViewController {
                 (cell as? CellConfigurable)?.configure(withCellViewModel: cellViewModel)
                 return cell
             }
+            .disposed(by: disposeBag)
+        
+        viewModel.vmState
+            .map { $0.sortTypeItems }
+            .distinctUntilChanged()
+            .bind(to: view().sortPickerView.rx.itemTitles) { (_, item) in
+                return item.title
+            }
+            .disposed(by: disposeBag)
+        
+        viewModel.vmState
+            .map { $0.sortTypeItemSelected }
+            .distinctUntilChanged()
+            .bind(onNext: { (item) in
+                print("set input", item)
+            })
+            .disposed(by: disposeBag)
+        
+        viewModel.vmState
+            .map { $0.sortTypeItemSelected.rawValue }
+            .distinctUntilChanged()
+            .bind(onNext: { [weak self] (itemIndex) in
+                self?.view().sortPickerView.selectRow(itemIndex, inComponent: 0, animated: false)
+            })
+            .disposed(by: disposeBag)
+        
+        viewModel.vmState
+            .map { $0.sortTypeItemSelected }
+            .distinctUntilChanged()
+            .map { _ in ABListModuleViewModelAction.refresh }
+            .observeOn(MainScheduler.asyncInstance)
+            .bind(to: viewModel.vmAction)
             .disposed(by: disposeBag)
     }
 }
