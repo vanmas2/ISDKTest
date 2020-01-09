@@ -6,12 +6,13 @@
 //
 
 import Foundation
-import RxRelay
+import RxSwift
+import ReactorKit
 
 
 protocol ABListModuleViewModelProtocol {
-    var state: BehaviorRelay<ABListModuleViewModelState> { get set }
-    var action: PublishRelay<ABListModuleViewModelAction> { get set }
+    var vmState: Observable<ABListModuleViewModelState> { get }
+    var vmAction: ActionSubject<ABListModuleViewModelAction> { get }
 }
 
 enum ABListModuleViewModelAction {
@@ -20,6 +21,10 @@ enum ABListModuleViewModelAction {
     case createB
     case selectB
     case refresh
+}
+
+enum ABListModuleViewModelMutation {
+    case setItems([CellViewModelProtocol])
 }
 
 struct ABListModuleViewModelState {

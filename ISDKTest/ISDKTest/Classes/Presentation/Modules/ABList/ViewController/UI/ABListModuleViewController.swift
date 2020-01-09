@@ -8,6 +8,7 @@
 import UIKit
 import RxSwift
 import RxCocoa
+import ReactorKit
 
 
 // MARK: - ABListModuleViewController
@@ -17,14 +18,13 @@ final class ABListModuleViewController: ViewController<ABListModuleView> {
     // MARK: Private properties
     
     private var viewModel: ABListModuleViewModelProtocol
-    
-    private let disposeBag = DisposeBag()
-    
+
     // MARK: Constructors
     
     init(viewModel: ABListModuleViewModelProtocol) {
         self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
+        bindViewModel()
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -36,8 +36,6 @@ final class ABListModuleViewController: ViewController<ABListModuleView> {
     override func viewDidLoad() {
         super.viewDidLoad()
         configure()
-        bindViewModel()
-        viewModel.action.accept(.refresh)
     }
 }
 
@@ -46,7 +44,17 @@ final class ABListModuleViewController: ViewController<ABListModuleView> {
 private extension ABListModuleViewController {
     
     func bindViewModel() {
-        viewModel.state
+
+        // Actions
+
+        Observable.just(())
+            .map { ABListModuleViewModelAction.refresh }
+            .bind(to: viewModel.vmAction)
+            .disposed(by: disposeBag)
+
+        // States
+
+        viewModel.vmState
             .map { $0.cells }
             .bind(to: view().tableView.rx.items) { (tableView, index, cellViewModel) in
                 let cell = tableView.dequeueReusableCell(withIdentifier: cellViewModel.reuseIdentifier)!
