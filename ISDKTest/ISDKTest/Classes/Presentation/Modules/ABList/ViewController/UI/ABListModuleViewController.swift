@@ -76,8 +76,8 @@ private extension ABListModuleViewController {
         viewModel.vmState
             .map { $0.sortTypeItemSelected }
             .distinctUntilChanged()
-            .bind(onNext: { (item) in
-                print("set input", item)
+            .bind(onNext: { [weak self] (item) in
+                self?.view().sortTextField.text = item.title
             })
             .disposed(by: disposeBag)
         
