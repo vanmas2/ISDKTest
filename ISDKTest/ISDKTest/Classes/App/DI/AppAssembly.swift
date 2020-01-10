@@ -34,14 +34,22 @@ extension AppAssembly {
     
     static let flows: [Assembly] = [
         AppCoordinatorAssembly(),
-        ABListCoordinatorAssembly()
+        ABListCoordinatorAssembly(),
+        ItemACoordinatorAssembly(),
+        ItemBCoordinatorAssembly(),
+        CreateItemACoordinatorAssembly(),
+        CreateItemBCoordinatorAssembly()
     ]
 }
 
 extension AppAssembly {
     
     static let modules: [Assembly] = [
-        ABListModuleAssembly()
+        ABListModuleAssembly(),
+        ItemAModuleAssembly(),
+        ItemBModuleAssembly(),
+        CreateItemAModuleAssembly(),
+        CreateItemBModuleAssembly()
     ]
 }
 

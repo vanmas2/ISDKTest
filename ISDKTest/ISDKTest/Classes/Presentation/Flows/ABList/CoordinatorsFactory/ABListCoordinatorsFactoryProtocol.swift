@@ -10,4 +10,9 @@ import Foundation
 
 // MARK: - ABListCoordinatorsFactoryProtocol
 
-protocol ABListCoordinatorsFactoryProtocol: class {}
+protocol ABListCoordinatorsFactoryProtocol: class {
+    func createItemACoordinator(router: RouterProtocol) -> ItemACoordinatorProtocol
+    func createItemBCoordinator(router: RouterProtocol) -> ItemBCoordinatorProtocol
+    func createCreateItemACoordinator(router: RouterProtocol) -> CreateItemACoordinatorProtocol
+    func createCreateItemBCoordinator(router: RouterProtocol) -> CreateItemBCoordinatorProtocol
+}

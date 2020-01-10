@@ -55,7 +55,31 @@ private extension ABListCoordinatorAssembly {
     func registerCoordinatorsFactory(_ container: Container) {
         container
             .register(ABListCoordinatorsFactoryProtocol.self) { (resolver) in
-                return ABListCoordinatorsFactory()
+                let itemACoordinator: (RouterProtocol) -> ItemACoordinatorProtocol = { (router) -> ItemACoordinatorProtocol in
+                    guard
+                        let coordinator = resolver.resolve(ItemACoordinatorProtocol.self, argument: router)
+                        else { fatalError() }
+                    return coordinator
+                }
+                let itemBCoordinator: (RouterProtocol) -> ItemBCoordinatorProtocol = { (router) -> ItemBCoordinatorProtocol in
+                    guard
+                        let coordinator = resolver.resolve(ItemBCoordinatorProtocol.self, argument: router)
+                        else { fatalError() }
+                    return coordinator
+                }
+                let createItemACoordinator: (RouterProtocol) -> CreateItemACoordinatorProtocol = { (router) -> CreateItemACoordinatorProtocol in
+                    guard
+                        let coordinator = resolver.resolve(CreateItemACoordinatorProtocol.self, argument: router)
+                        else { fatalError() }
+                    return coordinator
+                }
+                let createItemBCoordinator: (RouterProtocol) -> CreateItemBCoordinatorProtocol = { (router) -> CreateItemBCoordinatorProtocol in
+                    guard
+                        let coordinator = resolver.resolve(CreateItemBCoordinatorProtocol.self, argument: router)
+                        else { fatalError() }
+                    return coordinator
+                }
+                return ABListCoordinatorsFactory(itemACoordinator: itemACoordinator, itemBCoordinator: itemBCoordinator, createItemACoordinator: createItemACoordinator, createItemBCoordinator: createItemBCoordinator)
             }
             .inObjectScope(.container)
     }

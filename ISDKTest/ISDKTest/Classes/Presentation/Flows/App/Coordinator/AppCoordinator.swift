@@ -35,7 +35,6 @@ final class AppCoordinator: Coordinator, AppCoordinatorProtocol {
     }
 }
 
-
 // MARK: - Coordinators
 
 private extension AppCoordinator {
