@@ -131,6 +131,13 @@ extension ABListModuleItemBCell: CellConfigurable {
 extension ABListModuleItemBCell: CellSelectable {
     
     func select() {
-        viewModel.map { $0.action.accept(.select) }
+        guard
+            let viewModel = viewModel
+            else { return }
+        
+        Observable.just(())
+            .map { ABListModuleItemBCellViewModeAction.select }
+            .bind(to: viewModel.action)
+            .disposed(by: disposeBag)
     }
 }

@@ -17,6 +17,8 @@ protocol ABListModuleIntput {}
 
 protocol ABListModuleOutput {
     var didFinish: (() -> Void)? { get set }
-    var showAddA: (() -> Void)? { get set }
-    var showAddB: (() -> Void)? { get set }
+    var showAddItemA: (() -> Void)? { get set }
+    var showAddItemB: (() -> Void)? { get set }
+    var showItemA: ((Int) -> Void)? { get set }
+    var showItemB: ((Int) -> Void)? { get set }
 }

@@ -17,9 +17,9 @@ protocol ABListModuleViewModelProtocol {
 
 enum ABListModuleViewModelAction {
     case createA
-    case selectA
+    case selectA(Int)
     case createB
-    case selectB
+    case selectB(Int)
     case refresh
     case selectSort(Int)
 }

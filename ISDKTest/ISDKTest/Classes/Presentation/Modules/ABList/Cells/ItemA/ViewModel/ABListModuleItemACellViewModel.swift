@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import RxSwift
 import RxRelay
 
 
@@ -15,20 +16,38 @@ final class ABListModuleItemACellViewModel {
     
     // MARK: Properties
     
+    private var viewModel: ABListModuleViewModelProtocol
+    
+    private var id: Int
+    
     private var _state: BehaviorRelay<ABListModuleItemACellViewModelState>
     
     private var _action: PublishRelay<ABListModuleItemACellViewModeAction>
     
+    private var disposeBag: DisposeBag
+    
     // MARK: Constructors
     
-    init() {
+    init(viewModel: ABListModuleViewModelProtocol) {
         _state = .init(value: .init(title: "", desc: "", value: "", image: ""))
         _action = .init()
+        self.viewModel = viewModel
+        id = 0
+        disposeBag = DisposeBag()
+        bindViewModel()
     }
     
-    convenience init(title: String, desc: String, value: String, image: String) {
-        self.init()
+    convenience init(id: Int, title: String, desc: String, value: String, image: String, viewModel: ABListModuleViewModelProtocol) {
+        self.init(viewModel: viewModel)
+        self.id = id
         _state.accept(.init(title: title, desc: desc, value: value, image: image))
+    }
+    
+    private func bindViewModel() {
+        _action.filter { $0 == ABListModuleItemACellViewModeAction.select }
+            .map { _ in ABListModuleViewModelAction.selectA(self.id) }
+            .bind(to: viewModel.vmAction)
+            .disposed(by: disposeBag)
     }
 }
 

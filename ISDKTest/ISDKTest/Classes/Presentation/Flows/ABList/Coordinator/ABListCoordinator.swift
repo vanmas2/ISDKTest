@@ -41,12 +41,20 @@ private extension ABListCoordinator {
     func showABModule() {
         var module = modulesFactory.createABListModule()
         
-        module.output.showAddA = { [weak self] in
-            // run A
+        module.output.showAddItemA = { [weak self] in
+            
         }
         
-        module.output.showAddB = { [weak self] in
-            // run B
+        module.output.showAddItemB = { [weak self] in
+            
+        }
+        
+        module.output.showItemA = { [weak self] (id) in
+            
+        }
+        
+        module.output.showItemB = { [weak self] (id) in
+            
         }
         
         router.setRootModule(module)

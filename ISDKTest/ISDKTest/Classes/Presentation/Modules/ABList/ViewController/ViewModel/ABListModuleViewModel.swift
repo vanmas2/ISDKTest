@@ -56,12 +56,22 @@ extension ABListModuleViewModel: Reactor {
 
     func mutate(action: Action) -> Observable<Mutation> {
         switch action {
-        case .createA: return Observable.empty()
-        case .selectA: return Observable.empty()
-        case .createB: return Observable.empty()
-        case .selectB: return Observable.empty()
-        case .refresh: return refreshHandleAction()
-        case .selectSort(let index): return selectSortHandleAction(index: index)
+        case .createA:
+            output.showAddItemA?()
+            return Observable.empty()
+        case .selectA(let id):
+            output.showItemA?(id)
+            return Observable.empty()
+        case .createB:
+            output.showAddItemB?()
+            return Observable.empty()
+        case .selectB(let id):
+            output.showItemB?(id)
+            return Observable.empty()
+        case .refresh:
+            return refreshHandleAction()
+        case .selectSort(let index):
+            return selectSortHandleAction(index: index)
         }
     }
 
@@ -89,9 +99,10 @@ private extension ABListModuleViewModel {
                 return items.items.map { (item) -> CellViewModelProtocol in
                     switch item {
                     case .itemA(let item):
-                        return ABListModuleItemACellViewModel(title: item.title, desc: item.desc, value: item.value.description, image: item.image)
+                        let viewModel = ABListModuleItemACellViewModel(id: item.id, title: item.title, desc: item.desc, value: item.value.description, image: item.image, viewModel: self)
+                        return viewModel
                     case .itemB(let item):
-                        return ABListModuleItemBCellViewModel(title: item.title, desc: item.desc, value: item.value.description, image: item.image, labels: item.labels.reduce("") { "\($0)\($1) " })
+                        return ABListModuleItemBCellViewModel(id: item.id, title: item.title, desc: item.desc, value: item.value.description, image: item.image, labels: item.labels.reduce("") { "\($0)\($1) " }, viewModel: self)
                     }
                 }
             }
@@ -140,14 +151,24 @@ extension ABListModuleViewModel: ABListModuleOutput {
         set { output.didFinish = newValue }
     }
     
-    var showAddA: (() -> Void)? {
-        get { return output.showAddA }
-        set { output.showAddA = newValue }
+    var showAddItemA: (() -> Void)? {
+        get { return output.showAddItemA }
+        set { output.showAddItemA = newValue }
     }
     
-    var showAddB: (() -> Void)? {
-        get { return output.showAddB }
-        set { output.showAddB = newValue }
+    var showAddItemB: (() -> Void)? {
+        get { return output.showAddItemB }
+        set { output.showAddItemB = newValue }
+    }
+    
+    var showItemA: ((Int) -> Void)? {
+        get { return output.showItemA }
+        set { output.showItemA = newValue }
+    }
+    
+    var showItemB: ((Int) -> Void)? {
+        get { return output.showItemB }
+        set { output.showItemB = newValue }
     }
 }
 
@@ -157,7 +178,9 @@ private extension ABListModuleViewModel {
     
     struct Output {
         var didFinish: (() -> Void)?
-        var showAddA: (() -> Void)?
-        var showAddB: (() -> Void)?
+        var showAddItemA: (() -> Void)?
+        var showAddItemB: (() -> Void)?
+        var showItemA: ((Int) -> Void)?
+        var showItemB: ((Int) -> Void)?
     }
 }
