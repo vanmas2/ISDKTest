@@ -11,5 +11,6 @@ target 'ISDKTest' do
   pod 'RxCocoa', '~> 5.0.0'
   # pod 'RxRealm', '~> 0.7.6'
   pod 'SteviaLayout', '~> 4.7.2'
+  pod 'ReactorKit', '~> 2.0.1'
   
 end

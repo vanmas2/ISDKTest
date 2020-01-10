@@ -19,6 +19,8 @@ final class AppAssembly {
         let assemblies: [Assembly] = []
             + flows
             + modules
+            + useCases
+            + repositories
         
         Container.loggingFunction = nil
         
@@ -32,13 +34,36 @@ extension AppAssembly {
     
     static let flows: [Assembly] = [
         AppCoordinatorAssembly(),
-        ABListCoordinatorAssembly()
+        ABListCoordinatorAssembly(),
+        ItemACoordinatorAssembly(),
+        ItemBCoordinatorAssembly(),
+        CreateItemACoordinatorAssembly(),
+        CreateItemBCoordinatorAssembly()
     ]
 }
 
 extension AppAssembly {
     
     static let modules: [Assembly] = [
-        ABListModuleAssembly()
+        ABListModuleAssembly(),
+        ItemAModuleAssembly(),
+        ItemBModuleAssembly(),
+        CreateItemAModuleAssembly(),
+        CreateItemBModuleAssembly()
+    ]
+}
+
+extension AppAssembly {
+    
+    static let useCases: [Assembly] = [
+        GetABListUseCaseAssembly()
+    ]
+}
+
+extension AppAssembly {
+    
+    static let repositories: [Assembly] = [
+        ItemARepositoryAssembly(),
+        ItemBRepositoryAssembly()
     ]
 }

@@ -6,11 +6,16 @@
 //
 
 import UIKit
+import RxSwift
 
 
 // MARK: - ViewController
 
 class ViewController<View: UIView>: UIViewController {
+
+    // MARK: Properties
+
+    var disposeBag = DisposeBag()
     
     // MARK: Override functions
     

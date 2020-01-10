@@ -20,6 +20,73 @@
 		2C32C49C23C5D1AE0028CFFA /* ABListModuleItemBCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C32C49B23C5D1AE0028CFFA /* ABListModuleItemBCellViewModel.swift */; };
 		2C32C49E23C5D1C00028CFFA /* ABListModuleItemBCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C32C49D23C5D1C00028CFFA /* ABListModuleItemBCell.swift */; };
 		2C32C4A023C5D1D10028CFFA /* ABListModuleItemBView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C32C49F23C5D1D10028CFFA /* ABListModuleItemBView.swift */; };
+		2C32C4AA23C612A70028CFFA /* ItemAEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C32C4A923C612A70028CFFA /* ItemAEntity.swift */; };
+		2C32C4AC23C612FE0028CFFA /* ItemBEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C32C4AB23C612FE0028CFFA /* ItemBEntity.swift */; };
+		2C32C4AF23C613D00028CFFA /* GetABListUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C32C4AE23C613D00028CFFA /* GetABListUseCase.swift */; };
+		2C32C4B123C614020028CFFA /* GetABListUseCaseBoundaries.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C32C4B023C614020028CFFA /* GetABListUseCaseBoundaries.swift */; };
+		2C32C4B423C61A4C0028CFFA /* ItemARepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C32C4B323C61A4C0028CFFA /* ItemARepositoryProtocol.swift */; };
+		2C32C4B623C61BBE0028CFFA /* ItemBRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C32C4B523C61BBE0028CFFA /* ItemBRepositoryProtocol.swift */; };
+		2C32C4BC23C62CC40028CFFA /* ItemARepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C32C4BB23C62CC40028CFFA /* ItemARepository.swift */; };
+		2C32C4BE23C62CEE0028CFFA /* ItemBRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C32C4BD23C62CEE0028CFFA /* ItemBRepository.swift */; };
+		2C32C4C223C62F930028CFFA /* ItemARepositoryAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C32C4C123C62F930028CFFA /* ItemARepositoryAssembly.swift */; };
+		2C32C4C423C62FA30028CFFA /* ItemBRepositoryAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C32C4C323C62FA30028CFFA /* ItemBRepositoryAssembly.swift */; };
+		2C32C4C923C630570028CFFA /* GetABListUseCaseAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C32C4C823C630570028CFFA /* GetABListUseCaseAssembly.swift */; };
+		2C32C4F223C9088F0028CFFA /* ItemAModuleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C32C4E923C9088F0028CFFA /* ItemAModuleView.swift */; };
+		2C32C4F323C9088F0028CFFA /* ItemAModuleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C32C4EA23C9088F0028CFFA /* ItemAModuleViewController.swift */; };
+		2C32C4F423C9088F0028CFFA /* ItemAModuleBoundaries.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C32C4EC23C9088F0028CFFA /* ItemAModuleBoundaries.swift */; };
+		2C32C4F523C9088F0028CFFA /* ItemAModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C32C4ED23C9088F0028CFFA /* ItemAModule.swift */; };
+		2C32C4F623C9088F0028CFFA /* ItemAModuleAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C32C4EE23C9088F0028CFFA /* ItemAModuleAssembly.swift */; };
+		2C32C4F723C9088F0028CFFA /* ItemAModuleViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C32C4F023C9088F0028CFFA /* ItemAModuleViewModelProtocol.swift */; };
+		2C32C4F823C9088F0028CFFA /* ItemAModuleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C32C4F123C9088F0028CFFA /* ItemAModuleViewModel.swift */; };
+		2C32C50C23C908CE0028CFFA /* ItemACoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C32C50323C908CD0028CFFA /* ItemACoordinatorProtocol.swift */; };
+		2C32C50D23C908CE0028CFFA /* ItemACoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C32C50423C908CD0028CFFA /* ItemACoordinator.swift */; };
+		2C32C50E23C908CE0028CFFA /* ItemACoordinatorsFactoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C32C50623C908CE0028CFFA /* ItemACoordinatorsFactoryProtocol.swift */; };
+		2C32C50F23C908CE0028CFFA /* ItemACoordinatorsFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C32C50723C908CE0028CFFA /* ItemACoordinatorsFactory.swift */; };
+		2C32C51023C908CE0028CFFA /* ItemAModulesFactoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C32C50923C908CE0028CFFA /* ItemAModulesFactoryProtocol.swift */; };
+		2C32C51123C908CE0028CFFA /* ItemAModulesFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C32C50A23C908CE0028CFFA /* ItemAModulesFactory.swift */; };
+		2C32C51223C908CE0028CFFA /* ItemACoordinatorAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C32C50B23C908CE0028CFFA /* ItemACoordinatorAssembly.swift */; };
+		2C32C52623C90B290028CFFA /* ItemBModuleBoundaries.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C32C51D23C90B290028CFFA /* ItemBModuleBoundaries.swift */; };
+		2C32C52723C90B290028CFFA /* ItemBModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C32C51E23C90B290028CFFA /* ItemBModule.swift */; };
+		2C32C52823C90B290028CFFA /* ItemBModuleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C32C52023C90B290028CFFA /* ItemBModuleViewController.swift */; };
+		2C32C52923C90B290028CFFA /* ItemBModuleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C32C52123C90B290028CFFA /* ItemBModuleView.swift */; };
+		2C32C52A23C90B290028CFFA /* ItemBModuleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C32C52323C90B290028CFFA /* ItemBModuleViewModel.swift */; };
+		2C32C52B23C90B290028CFFA /* ItemBModuleViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C32C52423C90B290028CFFA /* ItemBModuleViewModelProtocol.swift */; };
+		2C32C52C23C90B290028CFFA /* ItemBModuleAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C32C52523C90B290028CFFA /* ItemBModuleAssembly.swift */; };
+		2C32C54023C90B860028CFFA /* CreateItemAModuleBoundaries.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C32C53723C90B850028CFFA /* CreateItemAModuleBoundaries.swift */; };
+		2C32C54123C90B860028CFFA /* CreateItemAModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C32C53823C90B850028CFFA /* CreateItemAModule.swift */; };
+		2C32C54223C90B860028CFFA /* CreateItemAModuleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C32C53A23C90B850028CFFA /* CreateItemAModuleView.swift */; };
+		2C32C54323C90B860028CFFA /* CreateItemAModuleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C32C53B23C90B850028CFFA /* CreateItemAModuleViewController.swift */; };
+		2C32C54423C90B860028CFFA /* CreateItemAModuleViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C32C53D23C90B850028CFFA /* CreateItemAModuleViewModelProtocol.swift */; };
+		2C32C54523C90B860028CFFA /* CreateItemAModuleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C32C53E23C90B850028CFFA /* CreateItemAModuleViewModel.swift */; };
+		2C32C54623C90B860028CFFA /* CreateItemAModuleAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C32C53F23C90B850028CFFA /* CreateItemAModuleAssembly.swift */; };
+		2C32C55A23C90BDD0028CFFA /* CreateItemBModuleAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C32C55023C90BDD0028CFFA /* CreateItemBModuleAssembly.swift */; };
+		2C32C55B23C90BDE0028CFFA /* CreateItemBModuleBoundaries.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C32C55223C90BDD0028CFFA /* CreateItemBModuleBoundaries.swift */; };
+		2C32C55C23C90BDE0028CFFA /* CreateItemBModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C32C55323C90BDD0028CFFA /* CreateItemBModule.swift */; };
+		2C32C55D23C90BDE0028CFFA /* CreateItemBModuleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C32C55523C90BDD0028CFFA /* CreateItemBModuleViewController.swift */; };
+		2C32C55E23C90BDE0028CFFA /* CreateItemBModuleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C32C55623C90BDD0028CFFA /* CreateItemBModuleView.swift */; };
+		2C32C55F23C90BDE0028CFFA /* CreateItemBModuleViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C32C55823C90BDD0028CFFA /* CreateItemBModuleViewModelProtocol.swift */; };
+		2C32C56023C90BDE0028CFFA /* CreateItemBModuleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C32C55923C90BDD0028CFFA /* CreateItemBModuleViewModel.swift */; };
+		2C32C57623C90C490028CFFA /* ItemBModulesFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C32C56D23C90C490028CFFA /* ItemBModulesFactory.swift */; };
+		2C32C57723C90C490028CFFA /* ItemBModulesFactoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C32C56E23C90C490028CFFA /* ItemBModulesFactoryProtocol.swift */; };
+		2C32C57823C90C490028CFFA /* ItemBCoordinatorAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C32C56F23C90C490028CFFA /* ItemBCoordinatorAssembly.swift */; };
+		2C32C57923C90C490028CFFA /* ItemBCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C32C57123C90C490028CFFA /* ItemBCoordinator.swift */; };
+		2C32C57A23C90C490028CFFA /* ItemBCoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C32C57223C90C490028CFFA /* ItemBCoordinatorProtocol.swift */; };
+		2C32C57B23C90C490028CFFA /* ItemBCoordinatorsFactoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C32C57423C90C490028CFFA /* ItemBCoordinatorsFactoryProtocol.swift */; };
+		2C32C57C23C90C490028CFFA /* ItemBCoordinatorsFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C32C57523C90C490028CFFA /* ItemBCoordinatorsFactory.swift */; };
+		2C32C58F23C90C740028CFFA /* CreateItemAModulesFactoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C32C58623C90C740028CFFA /* CreateItemAModulesFactoryProtocol.swift */; };
+		2C32C59023C90C740028CFFA /* CreateItemAModulesFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C32C58723C90C740028CFFA /* CreateItemAModulesFactory.swift */; };
+		2C32C59123C90C740028CFFA /* CreateItemACoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C32C58923C90C740028CFFA /* CreateItemACoordinatorProtocol.swift */; };
+		2C32C59223C90C740028CFFA /* CreateItemACoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C32C58A23C90C740028CFFA /* CreateItemACoordinator.swift */; };
+		2C32C59323C90C740028CFFA /* CreateItemACoordinatorsFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C32C58C23C90C740028CFFA /* CreateItemACoordinatorsFactory.swift */; };
+		2C32C59423C90C740028CFFA /* CreateItemACoordinatorsFactoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C32C58D23C90C740028CFFA /* CreateItemACoordinatorsFactoryProtocol.swift */; };
+		2C32C59523C90C740028CFFA /* CreateItemACoordinatorAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C32C58E23C90C740028CFFA /* CreateItemACoordinatorAssembly.swift */; };
+		2C32C5A823C90C960028CFFA /* CreateItemBCoordinatorsFactoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C32C59F23C90C950028CFFA /* CreateItemBCoordinatorsFactoryProtocol.swift */; };
+		2C32C5A923C90C960028CFFA /* CreateItemBCoordinatorsFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C32C5A023C90C950028CFFA /* CreateItemBCoordinatorsFactory.swift */; };
+		2C32C5AA23C90C960028CFFA /* CreateItemBCoordinatorAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C32C5A123C90C950028CFFA /* CreateItemBCoordinatorAssembly.swift */; };
+		2C32C5AB23C90C960028CFFA /* CreateItemBCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C32C5A323C90C950028CFFA /* CreateItemBCoordinator.swift */; };
+		2C32C5AC23C90C960028CFFA /* CreateItemBCoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C32C5A423C90C950028CFFA /* CreateItemBCoordinatorProtocol.swift */; };
+		2C32C5AD23C90C960028CFFA /* CreateItemBModulesFactoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C32C5A623C90C950028CFFA /* CreateItemBModulesFactoryProtocol.swift */; };
+		2C32C5AE23C90C960028CFFA /* CreateItemBModulesFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C32C5A723C90C950028CFFA /* CreateItemBModulesFactory.swift */; };
 		2C3DCB3C23C2119E00B52607 /* ABListCoordinatorAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3DCB3B23C2119E00B52607 /* ABListCoordinatorAssembly.swift */; };
 		2C3DCB3E23C2131600B52607 /* ABListCoordinatorsFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3DCB3D23C2131600B52607 /* ABListCoordinatorsFactory.swift */; };
 		2C3DCB4023C217FA00B52607 /* ABListModuleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3DCB3F23C217FA00B52607 /* ABListModuleViewModel.swift */; };
@@ -82,6 +149,73 @@
 		2C32C49B23C5D1AE0028CFFA /* ABListModuleItemBCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ABListModuleItemBCellViewModel.swift; sourceTree = "<group>"; };
 		2C32C49D23C5D1C00028CFFA /* ABListModuleItemBCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ABListModuleItemBCell.swift; sourceTree = "<group>"; };
 		2C32C49F23C5D1D10028CFFA /* ABListModuleItemBView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ABListModuleItemBView.swift; sourceTree = "<group>"; };
+		2C32C4A923C612A70028CFFA /* ItemAEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemAEntity.swift; sourceTree = "<group>"; };
+		2C32C4AB23C612FE0028CFFA /* ItemBEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemBEntity.swift; sourceTree = "<group>"; };
+		2C32C4AE23C613D00028CFFA /* GetABListUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetABListUseCase.swift; sourceTree = "<group>"; };
+		2C32C4B023C614020028CFFA /* GetABListUseCaseBoundaries.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetABListUseCaseBoundaries.swift; sourceTree = "<group>"; };
+		2C32C4B323C61A4C0028CFFA /* ItemARepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemARepositoryProtocol.swift; sourceTree = "<group>"; };
+		2C32C4B523C61BBE0028CFFA /* ItemBRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemBRepositoryProtocol.swift; sourceTree = "<group>"; };
+		2C32C4BB23C62CC40028CFFA /* ItemARepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemARepository.swift; sourceTree = "<group>"; };
+		2C32C4BD23C62CEE0028CFFA /* ItemBRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemBRepository.swift; sourceTree = "<group>"; };
+		2C32C4C123C62F930028CFFA /* ItemARepositoryAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemARepositoryAssembly.swift; sourceTree = "<group>"; };
+		2C32C4C323C62FA30028CFFA /* ItemBRepositoryAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemBRepositoryAssembly.swift; sourceTree = "<group>"; };
+		2C32C4C823C630570028CFFA /* GetABListUseCaseAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetABListUseCaseAssembly.swift; sourceTree = "<group>"; };
+		2C32C4E923C9088F0028CFFA /* ItemAModuleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemAModuleView.swift; sourceTree = "<group>"; };
+		2C32C4EA23C9088F0028CFFA /* ItemAModuleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemAModuleViewController.swift; sourceTree = "<group>"; };
+		2C32C4EC23C9088F0028CFFA /* ItemAModuleBoundaries.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemAModuleBoundaries.swift; sourceTree = "<group>"; };
+		2C32C4ED23C9088F0028CFFA /* ItemAModule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemAModule.swift; sourceTree = "<group>"; };
+		2C32C4EE23C9088F0028CFFA /* ItemAModuleAssembly.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemAModuleAssembly.swift; sourceTree = "<group>"; };
+		2C32C4F023C9088F0028CFFA /* ItemAModuleViewModelProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemAModuleViewModelProtocol.swift; sourceTree = "<group>"; };
+		2C32C4F123C9088F0028CFFA /* ItemAModuleViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemAModuleViewModel.swift; sourceTree = "<group>"; };
+		2C32C50323C908CD0028CFFA /* ItemACoordinatorProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemACoordinatorProtocol.swift; sourceTree = "<group>"; };
+		2C32C50423C908CD0028CFFA /* ItemACoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemACoordinator.swift; sourceTree = "<group>"; };
+		2C32C50623C908CE0028CFFA /* ItemACoordinatorsFactoryProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemACoordinatorsFactoryProtocol.swift; sourceTree = "<group>"; };
+		2C32C50723C908CE0028CFFA /* ItemACoordinatorsFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemACoordinatorsFactory.swift; sourceTree = "<group>"; };
+		2C32C50923C908CE0028CFFA /* ItemAModulesFactoryProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemAModulesFactoryProtocol.swift; sourceTree = "<group>"; };
+		2C32C50A23C908CE0028CFFA /* ItemAModulesFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemAModulesFactory.swift; sourceTree = "<group>"; };
+		2C32C50B23C908CE0028CFFA /* ItemACoordinatorAssembly.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemACoordinatorAssembly.swift; sourceTree = "<group>"; };
+		2C32C51D23C90B290028CFFA /* ItemBModuleBoundaries.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemBModuleBoundaries.swift; sourceTree = "<group>"; };
+		2C32C51E23C90B290028CFFA /* ItemBModule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemBModule.swift; sourceTree = "<group>"; };
+		2C32C52023C90B290028CFFA /* ItemBModuleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemBModuleViewController.swift; sourceTree = "<group>"; };
+		2C32C52123C90B290028CFFA /* ItemBModuleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemBModuleView.swift; sourceTree = "<group>"; };
+		2C32C52323C90B290028CFFA /* ItemBModuleViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemBModuleViewModel.swift; sourceTree = "<group>"; };
+		2C32C52423C90B290028CFFA /* ItemBModuleViewModelProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemBModuleViewModelProtocol.swift; sourceTree = "<group>"; };
+		2C32C52523C90B290028CFFA /* ItemBModuleAssembly.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemBModuleAssembly.swift; sourceTree = "<group>"; };
+		2C32C53723C90B850028CFFA /* CreateItemAModuleBoundaries.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateItemAModuleBoundaries.swift; sourceTree = "<group>"; };
+		2C32C53823C90B850028CFFA /* CreateItemAModule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateItemAModule.swift; sourceTree = "<group>"; };
+		2C32C53A23C90B850028CFFA /* CreateItemAModuleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateItemAModuleView.swift; sourceTree = "<group>"; };
+		2C32C53B23C90B850028CFFA /* CreateItemAModuleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateItemAModuleViewController.swift; sourceTree = "<group>"; };
+		2C32C53D23C90B850028CFFA /* CreateItemAModuleViewModelProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateItemAModuleViewModelProtocol.swift; sourceTree = "<group>"; };
+		2C32C53E23C90B850028CFFA /* CreateItemAModuleViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateItemAModuleViewModel.swift; sourceTree = "<group>"; };
+		2C32C53F23C90B850028CFFA /* CreateItemAModuleAssembly.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateItemAModuleAssembly.swift; sourceTree = "<group>"; };
+		2C32C55023C90BDD0028CFFA /* CreateItemBModuleAssembly.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateItemBModuleAssembly.swift; sourceTree = "<group>"; };
+		2C32C55223C90BDD0028CFFA /* CreateItemBModuleBoundaries.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateItemBModuleBoundaries.swift; sourceTree = "<group>"; };
+		2C32C55323C90BDD0028CFFA /* CreateItemBModule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateItemBModule.swift; sourceTree = "<group>"; };
+		2C32C55523C90BDD0028CFFA /* CreateItemBModuleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateItemBModuleViewController.swift; sourceTree = "<group>"; };
+		2C32C55623C90BDD0028CFFA /* CreateItemBModuleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateItemBModuleView.swift; sourceTree = "<group>"; };
+		2C32C55823C90BDD0028CFFA /* CreateItemBModuleViewModelProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateItemBModuleViewModelProtocol.swift; sourceTree = "<group>"; };
+		2C32C55923C90BDD0028CFFA /* CreateItemBModuleViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateItemBModuleViewModel.swift; sourceTree = "<group>"; };
+		2C32C56D23C90C490028CFFA /* ItemBModulesFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemBModulesFactory.swift; sourceTree = "<group>"; };
+		2C32C56E23C90C490028CFFA /* ItemBModulesFactoryProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemBModulesFactoryProtocol.swift; sourceTree = "<group>"; };
+		2C32C56F23C90C490028CFFA /* ItemBCoordinatorAssembly.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemBCoordinatorAssembly.swift; sourceTree = "<group>"; };
+		2C32C57123C90C490028CFFA /* ItemBCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemBCoordinator.swift; sourceTree = "<group>"; };
+		2C32C57223C90C490028CFFA /* ItemBCoordinatorProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemBCoordinatorProtocol.swift; sourceTree = "<group>"; };
+		2C32C57423C90C490028CFFA /* ItemBCoordinatorsFactoryProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemBCoordinatorsFactoryProtocol.swift; sourceTree = "<group>"; };
+		2C32C57523C90C490028CFFA /* ItemBCoordinatorsFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemBCoordinatorsFactory.swift; sourceTree = "<group>"; };
+		2C32C58623C90C740028CFFA /* CreateItemAModulesFactoryProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateItemAModulesFactoryProtocol.swift; sourceTree = "<group>"; };
+		2C32C58723C90C740028CFFA /* CreateItemAModulesFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateItemAModulesFactory.swift; sourceTree = "<group>"; };
+		2C32C58923C90C740028CFFA /* CreateItemACoordinatorProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateItemACoordinatorProtocol.swift; sourceTree = "<group>"; };
+		2C32C58A23C90C740028CFFA /* CreateItemACoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateItemACoordinator.swift; sourceTree = "<group>"; };
+		2C32C58C23C90C740028CFFA /* CreateItemACoordinatorsFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateItemACoordinatorsFactory.swift; sourceTree = "<group>"; };
+		2C32C58D23C90C740028CFFA /* CreateItemACoordinatorsFactoryProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateItemACoordinatorsFactoryProtocol.swift; sourceTree = "<group>"; };
+		2C32C58E23C90C740028CFFA /* CreateItemACoordinatorAssembly.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateItemACoordinatorAssembly.swift; sourceTree = "<group>"; };
+		2C32C59F23C90C950028CFFA /* CreateItemBCoordinatorsFactoryProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateItemBCoordinatorsFactoryProtocol.swift; sourceTree = "<group>"; };
+		2C32C5A023C90C950028CFFA /* CreateItemBCoordinatorsFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateItemBCoordinatorsFactory.swift; sourceTree = "<group>"; };
+		2C32C5A123C90C950028CFFA /* CreateItemBCoordinatorAssembly.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateItemBCoordinatorAssembly.swift; sourceTree = "<group>"; };
+		2C32C5A323C90C950028CFFA /* CreateItemBCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateItemBCoordinator.swift; sourceTree = "<group>"; };
+		2C32C5A423C90C950028CFFA /* CreateItemBCoordinatorProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateItemBCoordinatorProtocol.swift; sourceTree = "<group>"; };
+		2C32C5A623C90C950028CFFA /* CreateItemBModulesFactoryProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateItemBModulesFactoryProtocol.swift; sourceTree = "<group>"; };
+		2C32C5A723C90C950028CFFA /* CreateItemBModulesFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateItemBModulesFactory.swift; sourceTree = "<group>"; };
 		2C3DCB3B23C2119E00B52607 /* ABListCoordinatorAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ABListCoordinatorAssembly.swift; sourceTree = "<group>"; };
 		2C3DCB3D23C2131600B52607 /* ABListCoordinatorsFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ABListCoordinatorsFactory.swift; sourceTree = "<group>"; };
 		2C3DCB3F23C217FA00B52607 /* ABListModuleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ABListModuleViewModel.swift; sourceTree = "<group>"; };
@@ -218,6 +352,431 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		2C32C4A523C612450028CFFA /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				2C32C4A723C612810028CFFA /* Entities */,
+				2C32C4B223C61A2D0028CFFA /* Repositories */,
+				2C32C4A823C612890028CFFA /* UseCases */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		2C32C4A623C612510028CFFA /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				2CC7061D23BA62FB00921919 /* Flows */,
+				2CC7060D23BA4DCB00921919 /* Modules */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		2C32C4A723C612810028CFFA /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				2C32C4A923C612A70028CFFA /* ItemAEntity.swift */,
+				2C32C4AB23C612FE0028CFFA /* ItemBEntity.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		2C32C4A823C612890028CFFA /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+				2C32C4AD23C6131A0028CFFA /* GetABList */,
+			);
+			path = UseCases;
+			sourceTree = "<group>";
+		};
+		2C32C4AD23C6131A0028CFFA /* GetABList */ = {
+			isa = PBXGroup;
+			children = (
+				2C32C4AE23C613D00028CFFA /* GetABListUseCase.swift */,
+				2C32C4B023C614020028CFFA /* GetABListUseCaseBoundaries.swift */,
+			);
+			path = GetABList;
+			sourceTree = "<group>";
+		};
+		2C32C4B223C61A2D0028CFFA /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				2C32C4B323C61A4C0028CFFA /* ItemARepositoryProtocol.swift */,
+				2C32C4B523C61BBE0028CFFA /* ItemBRepositoryProtocol.swift */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		2C32C4B723C62C940028CFFA /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				2C32C4B823C62CA00028CFFA /* Repositories */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		2C32C4B823C62CA00028CFFA /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				2C32C4B923C62CAB0028CFFA /* ItemA */,
+				2C32C4BA23C62CB20028CFFA /* ItemB */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		2C32C4B923C62CAB0028CFFA /* ItemA */ = {
+			isa = PBXGroup;
+			children = (
+				2C32C4BB23C62CC40028CFFA /* ItemARepository.swift */,
+			);
+			path = ItemA;
+			sourceTree = "<group>";
+		};
+		2C32C4BA23C62CB20028CFFA /* ItemB */ = {
+			isa = PBXGroup;
+			children = (
+				2C32C4BD23C62CEE0028CFFA /* ItemBRepository.swift */,
+			);
+			path = ItemB;
+			sourceTree = "<group>";
+		};
+		2C32C4BF23C62F630028CFFA /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+				2C32C4C823C630570028CFFA /* GetABListUseCaseAssembly.swift */,
+			);
+			path = UseCases;
+			sourceTree = "<group>";
+		};
+		2C32C4C023C62F760028CFFA /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				2C32C4C123C62F930028CFFA /* ItemARepositoryAssembly.swift */,
+				2C32C4C323C62FA30028CFFA /* ItemBRepositoryAssembly.swift */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		2C32C4C523C62FAA0028CFFA /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				2CC7063E23BA6DE900921919 /* Flows */,
+				2CC7063F23BA6DF000921919 /* Modules */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		2C32C4C623C62FB20028CFFA /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				2C32C4BF23C62F630028CFFA /* UseCases */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		2C32C4C723C62FBA0028CFFA /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				2C32C4C023C62F760028CFFA /* Repositories */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		2C32C4CA23C904990028CFFA /* ItemA */ = {
+			isa = PBXGroup;
+			children = (
+				2C32C4EB23C9088F0028CFFA /* Module */,
+				2C32C4E823C9088F0028CFFA /* ViewController */,
+				2C32C4EF23C9088F0028CFFA /* ViewModel */,
+			);
+			path = ItemA;
+			sourceTree = "<group>";
+		};
+		2C32C4E823C9088F0028CFFA /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				2C32C4E923C9088F0028CFFA /* ItemAModuleView.swift */,
+				2C32C4EA23C9088F0028CFFA /* ItemAModuleViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		2C32C4EB23C9088F0028CFFA /* Module */ = {
+			isa = PBXGroup;
+			children = (
+				2C32C4EC23C9088F0028CFFA /* ItemAModuleBoundaries.swift */,
+				2C32C4ED23C9088F0028CFFA /* ItemAModule.swift */,
+			);
+			path = Module;
+			sourceTree = "<group>";
+		};
+		2C32C4EF23C9088F0028CFFA /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				2C32C4F023C9088F0028CFFA /* ItemAModuleViewModelProtocol.swift */,
+				2C32C4F123C9088F0028CFFA /* ItemAModuleViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		2C32C4F923C908B10028CFFA /* ItemA */ = {
+			isa = PBXGroup;
+			children = (
+				2C32C50223C908CD0028CFFA /* Coordinator */,
+				2C32C50523C908CE0028CFFA /* CoordinatorsFactory */,
+				2C32C50823C908CE0028CFFA /* ModulesFactory */,
+			);
+			path = ItemA;
+			sourceTree = "<group>";
+		};
+		2C32C50223C908CD0028CFFA /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				2C32C50323C908CD0028CFFA /* ItemACoordinatorProtocol.swift */,
+				2C32C50423C908CD0028CFFA /* ItemACoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		2C32C50523C908CE0028CFFA /* CoordinatorsFactory */ = {
+			isa = PBXGroup;
+			children = (
+				2C32C50623C908CE0028CFFA /* ItemACoordinatorsFactoryProtocol.swift */,
+				2C32C50723C908CE0028CFFA /* ItemACoordinatorsFactory.swift */,
+			);
+			path = CoordinatorsFactory;
+			sourceTree = "<group>";
+		};
+		2C32C50823C908CE0028CFFA /* ModulesFactory */ = {
+			isa = PBXGroup;
+			children = (
+				2C32C50923C908CE0028CFFA /* ItemAModulesFactoryProtocol.swift */,
+				2C32C50A23C908CE0028CFFA /* ItemAModulesFactory.swift */,
+			);
+			path = ModulesFactory;
+			sourceTree = "<group>";
+		};
+		2C32C51323C90AF60028CFFA /* ItemB */ = {
+			isa = PBXGroup;
+			children = (
+				2C32C51C23C90B290028CFFA /* Module */,
+				2C32C51F23C90B290028CFFA /* ViewController */,
+				2C32C52223C90B290028CFFA /* ViewModel */,
+			);
+			path = ItemB;
+			sourceTree = "<group>";
+		};
+		2C32C51C23C90B290028CFFA /* Module */ = {
+			isa = PBXGroup;
+			children = (
+				2C32C51D23C90B290028CFFA /* ItemBModuleBoundaries.swift */,
+				2C32C51E23C90B290028CFFA /* ItemBModule.swift */,
+			);
+			path = Module;
+			sourceTree = "<group>";
+		};
+		2C32C51F23C90B290028CFFA /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				2C32C52123C90B290028CFFA /* ItemBModuleView.swift */,
+				2C32C52023C90B290028CFFA /* ItemBModuleViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		2C32C52223C90B290028CFFA /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				2C32C52323C90B290028CFFA /* ItemBModuleViewModel.swift */,
+				2C32C52423C90B290028CFFA /* ItemBModuleViewModelProtocol.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		2C32C52D23C90B440028CFFA /* CreateItemA */ = {
+			isa = PBXGroup;
+			children = (
+				2C32C53623C90B850028CFFA /* Module */,
+				2C32C53923C90B850028CFFA /* ViewController */,
+				2C32C53C23C90B850028CFFA /* ViewModel */,
+			);
+			path = CreateItemA;
+			sourceTree = "<group>";
+		};
+		2C32C53623C90B850028CFFA /* Module */ = {
+			isa = PBXGroup;
+			children = (
+				2C32C53723C90B850028CFFA /* CreateItemAModuleBoundaries.swift */,
+				2C32C53823C90B850028CFFA /* CreateItemAModule.swift */,
+			);
+			path = Module;
+			sourceTree = "<group>";
+		};
+		2C32C53923C90B850028CFFA /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				2C32C53A23C90B850028CFFA /* CreateItemAModuleView.swift */,
+				2C32C53B23C90B850028CFFA /* CreateItemAModuleViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		2C32C53C23C90B850028CFFA /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				2C32C53D23C90B850028CFFA /* CreateItemAModuleViewModelProtocol.swift */,
+				2C32C53E23C90B850028CFFA /* CreateItemAModuleViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		2C32C54723C90BBD0028CFFA /* CreateItemB */ = {
+			isa = PBXGroup;
+			children = (
+				2C32C55123C90BDD0028CFFA /* Module */,
+				2C32C55423C90BDD0028CFFA /* ViewController */,
+				2C32C55723C90BDD0028CFFA /* ViewModel */,
+			);
+			path = CreateItemB;
+			sourceTree = "<group>";
+		};
+		2C32C55123C90BDD0028CFFA /* Module */ = {
+			isa = PBXGroup;
+			children = (
+				2C32C55223C90BDD0028CFFA /* CreateItemBModuleBoundaries.swift */,
+				2C32C55323C90BDD0028CFFA /* CreateItemBModule.swift */,
+			);
+			path = Module;
+			sourceTree = "<group>";
+		};
+		2C32C55423C90BDD0028CFFA /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				2C32C55623C90BDD0028CFFA /* CreateItemBModuleView.swift */,
+				2C32C55523C90BDD0028CFFA /* CreateItemBModuleViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		2C32C55723C90BDD0028CFFA /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				2C32C55823C90BDD0028CFFA /* CreateItemBModuleViewModelProtocol.swift */,
+				2C32C55923C90BDD0028CFFA /* CreateItemBModuleViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		2C32C56123C90C1F0028CFFA /* ItemB */ = {
+			isa = PBXGroup;
+			children = (
+				2C32C57023C90C490028CFFA /* Coordinator */,
+				2C32C57323C90C490028CFFA /* CoordinatorsFactory */,
+				2C32C56C23C90C490028CFFA /* ModulesFactory */,
+			);
+			path = ItemB;
+			sourceTree = "<group>";
+		};
+		2C32C56223C90C240028CFFA /* CreateItemA */ = {
+			isa = PBXGroup;
+			children = (
+				2C32C58823C90C740028CFFA /* Coordinator */,
+				2C32C58B23C90C740028CFFA /* CoordinatorsFactory */,
+				2C32C58523C90C740028CFFA /* ModulesFactory */,
+			);
+			path = CreateItemA;
+			sourceTree = "<group>";
+		};
+		2C32C56323C90C2A0028CFFA /* CreateItemB */ = {
+			isa = PBXGroup;
+			children = (
+				2C32C5A223C90C950028CFFA /* Coordinator */,
+				2C32C59E23C90C950028CFFA /* CoordinatorsFactory */,
+				2C32C5A523C90C950028CFFA /* ModulesFactory */,
+			);
+			path = CreateItemB;
+			sourceTree = "<group>";
+		};
+		2C32C56C23C90C490028CFFA /* ModulesFactory */ = {
+			isa = PBXGroup;
+			children = (
+				2C32C56D23C90C490028CFFA /* ItemBModulesFactory.swift */,
+				2C32C56E23C90C490028CFFA /* ItemBModulesFactoryProtocol.swift */,
+			);
+			path = ModulesFactory;
+			sourceTree = "<group>";
+		};
+		2C32C57023C90C490028CFFA /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				2C32C57123C90C490028CFFA /* ItemBCoordinator.swift */,
+				2C32C57223C90C490028CFFA /* ItemBCoordinatorProtocol.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		2C32C57323C90C490028CFFA /* CoordinatorsFactory */ = {
+			isa = PBXGroup;
+			children = (
+				2C32C57423C90C490028CFFA /* ItemBCoordinatorsFactoryProtocol.swift */,
+				2C32C57523C90C490028CFFA /* ItemBCoordinatorsFactory.swift */,
+			);
+			path = CoordinatorsFactory;
+			sourceTree = "<group>";
+		};
+		2C32C58523C90C740028CFFA /* ModulesFactory */ = {
+			isa = PBXGroup;
+			children = (
+				2C32C58623C90C740028CFFA /* CreateItemAModulesFactoryProtocol.swift */,
+				2C32C58723C90C740028CFFA /* CreateItemAModulesFactory.swift */,
+			);
+			path = ModulesFactory;
+			sourceTree = "<group>";
+		};
+		2C32C58823C90C740028CFFA /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				2C32C58923C90C740028CFFA /* CreateItemACoordinatorProtocol.swift */,
+				2C32C58A23C90C740028CFFA /* CreateItemACoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		2C32C58B23C90C740028CFFA /* CoordinatorsFactory */ = {
+			isa = PBXGroup;
+			children = (
+				2C32C58C23C90C740028CFFA /* CreateItemACoordinatorsFactory.swift */,
+				2C32C58D23C90C740028CFFA /* CreateItemACoordinatorsFactoryProtocol.swift */,
+			);
+			path = CoordinatorsFactory;
+			sourceTree = "<group>";
+		};
+		2C32C59E23C90C950028CFFA /* CoordinatorsFactory */ = {
+			isa = PBXGroup;
+			children = (
+				2C32C59F23C90C950028CFFA /* CreateItemBCoordinatorsFactoryProtocol.swift */,
+				2C32C5A023C90C950028CFFA /* CreateItemBCoordinatorsFactory.swift */,
+			);
+			path = CoordinatorsFactory;
+			sourceTree = "<group>";
+		};
+		2C32C5A223C90C950028CFFA /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				2C32C5A323C90C950028CFFA /* CreateItemBCoordinator.swift */,
+				2C32C5A423C90C950028CFFA /* CreateItemBCoordinatorProtocol.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		2C32C5A523C90C950028CFFA /* ModulesFactory */ = {
+			isa = PBXGroup;
+			children = (
+				2C32C5A623C90C950028CFFA /* CreateItemBModulesFactoryProtocol.swift */,
+				2C32C5A723C90C950028CFFA /* CreateItemBModulesFactory.swift */,
+			);
+			path = ModulesFactory;
+			sourceTree = "<group>";
+		};
 		2C3DCB4823C329E400B52607 /* ItemA */ = {
 			isa = PBXGroup;
 			children = (
@@ -325,8 +884,9 @@
 			children = (
 				2CC7060A23BA49F000921919 /* App */,
 				2CC7060C23BA4DC100921919 /* Common */,
-				2CC7061D23BA62FB00921919 /* Flows */,
-				2CC7060D23BA4DCB00921919 /* Modules */,
+				2C32C4B723C62C940028CFFA /* Data */,
+				2C32C4A523C612450028CFFA /* Domain */,
+				2C32C4A623C612510028CFFA /* Presentation */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -344,8 +904,9 @@
 			isa = PBXGroup;
 			children = (
 				2CC7063C23BA6DC400921919 /* AppAssembly.swift */,
-				2CC7063E23BA6DE900921919 /* Flows */,
-				2CC7063F23BA6DF000921919 /* Modules */,
+				2C32C4C723C62FBA0028CFFA /* Data */,
+				2C32C4C623C62FB20028CFFA /* Domain */,
+				2C32C4C523C62FAA0028CFFA /* Presentation */,
 			);
 			path = DI;
 			sourceTree = "<group>";
@@ -362,6 +923,10 @@
 			isa = PBXGroup;
 			children = (
 				2CC7063523BA6AD000921919 /* ABList */,
+				2C32C52D23C90B440028CFFA /* CreateItemA */,
+				2C32C54723C90BBD0028CFFA /* CreateItemB */,
+				2C32C4CA23C904990028CFFA /* ItemA */,
+				2C32C51323C90AF60028CFFA /* ItemB */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -403,6 +968,10 @@
 			children = (
 				2CC7062923BA676900921919 /* ABList */,
 				2CC7061E23BA634200921919 /* App */,
+				2C32C56223C90C240028CFFA /* CreateItemA */,
+				2C32C56323C90C2A0028CFFA /* CreateItemB */,
+				2C32C4F923C908B10028CFFA /* ItemA */,
+				2C32C56123C90C1F0028CFFA /* ItemB */,
 			);
 			path = Flows;
 			sourceTree = "<group>";
@@ -486,6 +1055,10 @@
 			children = (
 				2C3DCB3B23C2119E00B52607 /* ABListCoordinatorAssembly.swift */,
 				2CC7064023BA6E0900921919 /* AppCoordinatorAssembly.swift */,
+				2C32C50B23C908CE0028CFFA /* ItemACoordinatorAssembly.swift */,
+				2C32C56F23C90C490028CFFA /* ItemBCoordinatorAssembly.swift */,
+				2C32C58E23C90C740028CFFA /* CreateItemACoordinatorAssembly.swift */,
+				2C32C5A123C90C950028CFFA /* CreateItemBCoordinatorAssembly.swift */,
 			);
 			path = Flows;
 			sourceTree = "<group>";
@@ -494,6 +1067,10 @@
 			isa = PBXGroup;
 			children = (
 				2CC7064923BA70C800921919 /* ABListModuleAssembly.swift */,
+				2C32C53F23C90B850028CFFA /* CreateItemAModuleAssembly.swift */,
+				2C32C55023C90BDD0028CFFA /* CreateItemBModuleAssembly.swift */,
+				2C32C4EE23C9088F0028CFFA /* ItemAModuleAssembly.swift */,
+				2C32C52523C90B290028CFFA /* ItemBModuleAssembly.swift */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -685,50 +1262,117 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C32C5AB23C90C960028CFFA /* CreateItemBCoordinator.swift in Sources */,
 				2C32C49E23C5D1C00028CFFA /* ABListModuleItemBCell.swift in Sources */,
+				2C32C4C923C630570028CFFA /* GetABListUseCaseAssembly.swift in Sources */,
 				2C32C49523C5CC950028CFFA /* ViewStyle.swift in Sources */,
+				2C32C4C423C62FA30028CFFA /* ItemBRepositoryAssembly.swift in Sources */,
+				2C32C54623C90B860028CFFA /* CreateItemAModuleAssembly.swift in Sources */,
+				2C32C52C23C90B290028CFFA /* ItemBModuleAssembly.swift in Sources */,
+				2C32C4B423C61A4C0028CFFA /* ItemARepositoryProtocol.swift in Sources */,
 				2CC7062523BA66AB00921919 /* AppCoordinatorProtocol.swift in Sources */,
+				2C32C58F23C90C740028CFFA /* CreateItemAModulesFactoryProtocol.swift in Sources */,
 				2C3DCB4E23C32AF900B52607 /* ABListModuleItemACellViewModel.swift in Sources */,
 				2C3DCB5023C3410800B52607 /* ABListModuleItemACellViewModelProtocol.swift in Sources */,
+				2C32C57723C90C490028CFFA /* ItemBModulesFactoryProtocol.swift in Sources */,
 				2C32C49C23C5D1AE0028CFFA /* ABListModuleItemBCellViewModel.swift in Sources */,
+				2C32C54123C90B860028CFFA /* CreateItemAModule.swift in Sources */,
+				2C32C59523C90C740028CFFA /* CreateItemACoordinatorAssembly.swift in Sources */,
+				2C32C54223C90B860028CFFA /* CreateItemAModuleView.swift in Sources */,
+				2C32C59323C90C740028CFFA /* CreateItemACoordinatorsFactory.swift in Sources */,
+				2C32C52623C90B290028CFFA /* ItemBModuleBoundaries.swift in Sources */,
 				2CC7062E23BA67A800921919 /* ABListCoordinatorsFactoryProtocol.swift in Sources */,
+				2C32C50E23C908CE0028CFFA /* ItemACoordinatorsFactoryProtocol.swift in Sources */,
 				2C3DCB3E23C2131600B52607 /* ABListCoordinatorsFactory.swift in Sources */,
 				2CC7064A23BA70C800921919 /* ABListModuleAssembly.swift in Sources */,
 				2C32C49123C5C8D70028CFFA /* Styler.swift in Sources */,
+				2C32C54023C90B860028CFFA /* CreateItemAModuleBoundaries.swift in Sources */,
+				2C32C4AC23C612FE0028CFFA /* ItemBEntity.swift in Sources */,
+				2C32C4F523C9088F0028CFFA /* ItemAModule.swift in Sources */,
+				2C32C57623C90C490028CFFA /* ItemBModulesFactory.swift in Sources */,
 				2C32C48E23C4D5920028CFFA /* SpecificViewController.swift in Sources */,
+				2C32C4BE23C62CEE0028CFFA /* ItemBRepository.swift in Sources */,
+				2C32C59023C90C740028CFFA /* CreateItemAModulesFactory.swift in Sources */,
 				2C3DCB4023C217FA00B52607 /* ABListModuleViewModel.swift in Sources */,
 				2CC7062823BA670500921919 /* AppCoordinatorsFactoryProtocol.swift in Sources */,
+				2C32C55D23C90BDE0028CFFA /* CreateItemBModuleViewController.swift in Sources */,
 				2CC7063923BA6B8000921919 /* ABListModulesFactory.swift in Sources */,
+				2C32C4BC23C62CC40028CFFA /* ItemARepository.swift in Sources */,
+				2C32C5A823C90C960028CFFA /* CreateItemBCoordinatorsFactoryProtocol.swift in Sources */,
 				2C3DCB4A23C32A9900B52607 /* ABListModuleItemAView.swift in Sources */,
 				2C32C49323C5C8F50028CFFA /* LabelStyle.swift in Sources */,
+				2C32C56023C90BDE0028CFFA /* CreateItemBModuleViewModel.swift in Sources */,
 				2CB1D0FA23BA483B00755886 /* ISDKTest.xcdatamodeld in Sources */,
+				2C32C52923C90B290028CFFA /* ItemBModuleView.swift in Sources */,
+				2C32C4F323C9088F0028CFFA /* ItemAModuleViewController.swift in Sources */,
+				2C32C57923C90C490028CFFA /* ItemBCoordinator.swift in Sources */,
+				2C32C55B23C90BDE0028CFFA /* CreateItemBModuleBoundaries.swift in Sources */,
 				2CC7061123BA4FF800921919 /* Router.swift in Sources */,
+				2C32C55C23C90BDE0028CFFA /* CreateItemBModule.swift in Sources */,
+				2C32C55E23C90BDE0028CFFA /* CreateItemBModuleView.swift in Sources */,
 				2C3DCB4C23C32AA800B52607 /* ABListModuleItemACell.swift in Sources */,
 				2C32C49A23C5D1A00028CFFA /* ABListModuleItemBCellViewModelProtocol.swift in Sources */,
+				2C32C55F23C90BDE0028CFFA /* CreateItemBModuleViewModelProtocol.swift in Sources */,
+				2C32C4C223C62F930028CFFA /* ItemARepositoryAssembly.swift in Sources */,
+				2C32C5AD23C90C960028CFFA /* CreateItemBModulesFactoryProtocol.swift in Sources */,
 				2CC7064823BA702500921919 /* ABListModuleView.swift in Sources */,
+				2C32C4F823C9088F0028CFFA /* ItemAModuleViewModel.swift in Sources */,
+				2C32C50C23C908CE0028CFFA /* ItemACoordinatorProtocol.swift in Sources */,
+				2C32C51023C908CE0028CFFA /* ItemAModulesFactoryProtocol.swift in Sources */,
+				2C32C52723C90B290028CFFA /* ItemBModule.swift in Sources */,
 				2C3DCB3C23C2119E00B52607 /* ABListCoordinatorAssembly.swift in Sources */,
 				2CC7064323BA6FAB00921919 /* ABListModuleViewController.swift in Sources */,
 				2C32C4A023C5D1D10028CFFA /* ABListModuleItemBView.swift in Sources */,
+				2C32C59123C90C740028CFFA /* CreateItemACoordinatorProtocol.swift in Sources */,
+				2C32C4AF23C613D00028CFFA /* GetABListUseCase.swift in Sources */,
+				2C32C54523C90B860028CFFA /* CreateItemAModuleViewModel.swift in Sources */,
+				2C32C5AE23C90C960028CFFA /* CreateItemBModulesFactory.swift in Sources */,
+				2C32C59423C90C740028CFFA /* CreateItemACoordinatorsFactoryProtocol.swift in Sources */,
 				2C32C48823C4C7CD0028CFFA /* CellViewModelProtocol.swift in Sources */,
 				2CC7063423BA683B00921919 /* ABListCoordinator.swift in Sources */,
 				2C32C48C23C4D4C50028CFFA /* ViewController.swift in Sources */,
+				2C32C55A23C90BDD0028CFFA /* CreateItemBModuleAssembly.swift in Sources */,
 				2C3DCB4223C2180F00B52607 /* ABListModuleViewModelProtocol.swift in Sources */,
 				2CC7063723BA6ADE00921919 /* ABListModule.swift in Sources */,
 				2CC7061723BA507300921919 /* CoordinatorProtocol.swift in Sources */,
+				2C32C50D23C908CE0028CFFA /* ItemACoordinator.swift in Sources */,
+				2C32C59223C90C740028CFFA /* CreateItemACoordinator.swift in Sources */,
+				2C32C57A23C90C490028CFFA /* ItemBCoordinatorProtocol.swift in Sources */,
+				2C32C51123C908CE0028CFFA /* ItemAModulesFactory.swift in Sources */,
 				2CC7063B23BA6CC500921919 /* ABListModuleBoundaries.swift in Sources */,
 				2CC7061523BA504A00921919 /* Coordinator.swift in Sources */,
+				2C32C57B23C90C490028CFFA /* ItemBCoordinatorsFactoryProtocol.swift in Sources */,
+				2C32C4AA23C612A70028CFFA /* ItemAEntity.swift in Sources */,
 				2CC7061323BA501A00921919 /* RouterProtocol.swift in Sources */,
+				2C32C4F423C9088F0028CFFA /* ItemAModuleBoundaries.swift in Sources */,
+				2C32C4F723C9088F0028CFFA /* ItemAModuleViewModelProtocol.swift in Sources */,
 				2CC7062223BA644C00921919 /* AppCoordinatorsFactory.swift in Sources */,
 				2CC7061C23BA5BB800921919 /* Module.swift in Sources */,
 				2CC7062023BA636700921919 /* AppCoordinator.swift in Sources */,
 				2CB1D0F223BA483B00755886 /* AppDelegate.swift in Sources */,
+				2C32C52A23C90B290028CFFA /* ItemBModuleViewModel.swift in Sources */,
+				2C32C50F23C908CE0028CFFA /* ItemACoordinatorsFactory.swift in Sources */,
+				2C32C54423C90B860028CFFA /* CreateItemAModuleViewModelProtocol.swift in Sources */,
+				2C32C4B123C614020028CFFA /* GetABListUseCaseBoundaries.swift in Sources */,
 				2C32C48623C4C7C30028CFFA /* CellReusable.swift in Sources */,
 				2C32C48223C4C7AD0028CFFA /* CellSelectable.swift in Sources */,
+				2C32C5A923C90C960028CFFA /* CreateItemBCoordinatorsFactory.swift in Sources */,
+				2C32C5AA23C90C960028CFFA /* CreateItemBCoordinatorAssembly.swift in Sources */,
+				2C32C4B623C61BBE0028CFFA /* ItemBRepositoryProtocol.swift in Sources */,
+				2C32C4F623C9088F0028CFFA /* ItemAModuleAssembly.swift in Sources */,
+				2C32C57C23C90C490028CFFA /* ItemBCoordinatorsFactory.swift in Sources */,
 				2CC7064123BA6E0900921919 /* AppCoordinatorAssembly.swift in Sources */,
+				2C32C5AC23C90C960028CFFA /* CreateItemBCoordinatorProtocol.swift in Sources */,
+				2C32C51223C908CE0028CFFA /* ItemACoordinatorAssembly.swift in Sources */,
 				2CC7061923BA509F00921919 /* Presentable.swift in Sources */,
+				2C32C4F223C9088F0028CFFA /* ItemAModuleView.swift in Sources */,
 				2CC7063D23BA6DC400921919 /* AppAssembly.swift in Sources */,
 				2CC7063223BA682E00921919 /* ABListCoordinatorProtocol.swift in Sources */,
 				2C32C48423C4C7B80028CFFA /* CellConfigurable.swift in Sources */,
+				2C32C54323C90B860028CFFA /* CreateItemAModuleViewController.swift in Sources */,
+				2C32C57823C90C490028CFFA /* ItemBCoordinatorAssembly.swift in Sources */,
+				2C32C52823C90B290028CFFA /* ItemBModuleViewController.swift in Sources */,
+				2C32C52B23C90B290028CFFA /* ItemBModuleViewModelProtocol.swift in Sources */,
 				2CC7063023BA67C500921919 /* ABListModulesFactoryProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
