@@ -25,6 +25,10 @@ final class ABListModuleView: UIView {
     
     private(set) var tableView: UITableView!
     
+    private(set) var addItemAButton: UIButton!
+    
+    private(set) var addItemBButton: UIButton!
+    
     
     // MARK: Constructors
     
@@ -56,7 +60,14 @@ private extension ABListModuleView {
         sortTextField = UITextField()
         sortPickerView = UIPickerView()
         tableView = UITableView()
-        sv(sortView.sv(sortLabel, sortTextField), tableView)
+        addItemAButton = UIButton()
+        addItemBButton = UIButton()
+        sv(
+            sortView.sv(sortLabel, sortTextField),
+            tableView,
+            addItemAButton,
+            addItemBButton
+        )
         
         tableView.register(ABListModuleItemACell.self, forCellReuseIdentifier: ABListModuleItemACell.reuseIdentifier)
         tableView.register(ABListModuleItemBCell.self, forCellReuseIdentifier: ABListModuleItemBCell.reuseIdentifier)
@@ -84,18 +95,42 @@ private extension ABListModuleView {
             10
         )
         
+        if #available(iOS 11.0, *) {
+            addItemAButton.Left == safeAreaLayoutGuide.Left + 10
+            addItemAButton.Bottom == safeAreaLayoutGuide.Bottom + 10
+        } else {
+            addItemAButton.Left == layoutMarginsGuide.Left + 10
+            addItemAButton.Bottom == layoutMarginsGuide.Bottom + 10
+        }
+        
+        if #available(iOS 11.0, *) {
+            addItemBButton.Right == safeAreaLayoutGuide.Right - 10
+            addItemBButton.Bottom == safeAreaLayoutGuide.Bottom + 10
+        } else {
+            addItemBButton.Right == layoutMarginsGuide.Right - 10
+            addItemBButton.Bottom == layoutMarginsGuide.Bottom + 10
+        }
+        
         sortTextField.width(100)
     }
     
     func configureStyle() {
         backgroundColor = View.backgroundColor
         
+        tableView.backgroundColor = View.backgroundColor
         tableView.separatorStyle = .none
+        tableView.contentInset = .init(top: 0, left: 0, bottom: 34, right: 0)
         
         sortLabel.text = "Sort by:"
         
         sortTextField.borderStyle = .roundedRect
         sortTextField.backgroundColor = .green
+        
+        addItemAButton.setTitle("Add Item A", for: .normal)
+        addItemAButton.backgroundColor = .gray
+        
+        addItemBButton.setTitle("Add Item B", for: .normal)
+        addItemBButton.backgroundColor = .lightGray
     }
     
     func configurePickerView() {

@@ -68,7 +68,7 @@ private extension ABListModuleItemBCell {
     
     func configureStyle() {
         selectionStyle = .none
-        
+        style(viewStyle: .init(backgroundColor: .red))
         bottomBorder.style(viewStyle: .init(backgroundColor: .blue))
     }
 }
