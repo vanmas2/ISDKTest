@@ -53,6 +53,18 @@ private extension ABListModuleViewController {
             .map { ABListModuleViewModelAction.selectSort($0) }
             .bind(to: viewModel.vmAction)
             .disposed(by: disposeBag)
+        
+        view().addItemAButton.rx
+            .tap
+            .map { ABListModuleViewModelAction.createA }
+            .bind(to: viewModel.vmAction)
+            .disposed(by: disposeBag)
+        
+        view().addItemBButton.rx
+            .tap
+            .map { ABListModuleViewModelAction.createB }
+            .bind(to: viewModel.vmAction)
+            .disposed(by: disposeBag)
 
         // States
 
