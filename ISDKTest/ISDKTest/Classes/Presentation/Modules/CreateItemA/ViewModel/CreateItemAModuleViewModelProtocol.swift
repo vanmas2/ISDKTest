@@ -16,13 +16,16 @@ protocol CreateItemAModuleViewModelProtocol {
 }
 
 enum CreateItemAModuleViewModelAction {
- 
-}
-
-enum CreateItemAModuleViewModelMutation {
-
+    case setTitle(String)
+    case setDesc(String)
+    case setValue(String)
+    case setImageData(Data)
+    case create
 }
 
 struct CreateItemAModuleViewModelState {
-
+    var title: String
+    var desc: String
+    var value: String
+    var imageData: Data
 }

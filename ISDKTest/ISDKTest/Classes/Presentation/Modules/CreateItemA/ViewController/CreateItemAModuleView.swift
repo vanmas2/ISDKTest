@@ -38,6 +38,8 @@ final class CreateItemAModuleView: UIView {
     
     private(set) var photoButton: UIButton!
     
+    private(set) var createButton: UIButton!
+    
     // MARK: Constructors
     
     override init(frame: CGRect) {
@@ -74,6 +76,7 @@ private extension CreateItemAModuleView {
         valueTextField = UITextField()
         photoLabel = UILabel()
         photoButton = UIButton()
+        createButton = UIButton()
         sv(
             titleLabel,
             titleTextField,
@@ -85,7 +88,9 @@ private extension CreateItemAModuleView {
             valueTextField,
             valueErrorLabel,
             photoLabel,
-            photoButton)
+            photoButton,
+            createButton
+        )
         
     }
     
@@ -118,6 +123,8 @@ private extension CreateItemAModuleView {
             |-20-photoLabel-20-|,
             2,
             |-20-photoButton,
+            20,
+            |-20-createButton-20-|,
             (>=20)
         )
         
@@ -152,7 +159,7 @@ private extension CreateItemAModuleView {
         
         photoLabel.text = "Photo"
         
-        photoButton.setImage(UIImage(named: "Icons/noImage"), for: .normal)
+        createButton.style(buttonStyle: .init(title: "Create item A", backgroundColor: .lightGray))
     }
 }
 

@@ -53,6 +53,16 @@ final class Styler {
             textField.borderStyle = borderStyle
         }
     }
+    
+    func buttonStyle(_ button: UIButton, style: ButtonStyle) {
+        if let title = style.title {
+            button.setTitle(title, for: .normal)
+        }
+        
+        if let backgroundColor = style.backgroundColor {
+            button.backgroundColor = backgroundColor
+        }
+    }
 }
 
 extension UILabel {
@@ -66,6 +76,13 @@ extension UITextField {
     
     func style(textFieldStyle: TextFieldStyle) {
         Styler.shared.textFieldStyle(self, style: textFieldStyle)
+    }
+}
+
+extension UIButton {
+    
+    func style(buttonStyle: ButtonStyle) {
+        Styler.shared.buttonStyle(self, style: buttonStyle)
     }
 }
 

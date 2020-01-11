@@ -26,6 +26,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         appCoordinator = resolver.resolve(AppCoordinatorProtocol.self, argument: window)
         appCoordinator?.start()
         
+        RxImagePickerDelegateProxy.register { RxImagePickerDelegateProxy(imagePicker: $0) }
+        
         return true
     }
 
