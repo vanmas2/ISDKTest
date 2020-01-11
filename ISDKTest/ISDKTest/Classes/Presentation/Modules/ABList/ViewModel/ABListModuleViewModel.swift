@@ -140,7 +140,15 @@ extension ABListModuleViewModel: ABListModuleViewModelProtocol {
 
 // MARK: - ABListModuleIntput
 
-extension ABListModuleViewModel: ABListModuleIntput {}
+extension ABListModuleViewModel: ABListModuleIntput {
+    
+    func refresh() {
+        Observable.just(())
+            .map { ABListModuleViewModelAction.refresh }
+            .bind(to: self.vmAction)
+            .disposed(by: disposeBag)
+    }
+}
 
 // MARK: - ABListModuleOutput
 
@@ -161,12 +169,12 @@ extension ABListModuleViewModel: ABListModuleOutput {
         set { output.showAddItemB = newValue }
     }
     
-    var showItemA: ((Int) -> Void)? {
+    var showItemA: ((String) -> Void)? {
         get { return output.showItemA }
         set { output.showItemA = newValue }
     }
     
-    var showItemB: ((Int) -> Void)? {
+    var showItemB: ((String) -> Void)? {
         get { return output.showItemB }
         set { output.showItemB = newValue }
     }
@@ -180,7 +188,7 @@ private extension ABListModuleViewModel {
         var didFinish: (() -> Void)?
         var showAddItemA: (() -> Void)?
         var showAddItemB: (() -> Void)?
-        var showItemA: ((Int) -> Void)?
-        var showItemB: ((Int) -> Void)?
+        var showItemA: ((String) -> Void)?
+        var showItemB: ((String) -> Void)?
     }
 }

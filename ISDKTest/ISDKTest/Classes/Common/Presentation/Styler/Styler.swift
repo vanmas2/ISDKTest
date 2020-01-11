@@ -47,12 +47,46 @@ final class Styler {
             view.backgroundColor = backgroundColor
         }
     }
+    
+    func textFieldStyle(_ textField: UITextField, style: TextFieldStyle) {
+        if let borderStyle = style.borderStyle {
+            textField.borderStyle = borderStyle
+        }
+    }
+    
+    func buttonStyle(_ button: UIButton, style: ButtonStyle) {
+        if let title = style.title {
+            button.setTitle(title, for: .normal)
+        }
+        
+        if let backgroundColor = style.backgroundColor {
+            button.backgroundColor = backgroundColor
+        }
+        
+        if let cornerRadius = style.cornerRadius {
+            button.layer.cornerRadius = cornerRadius
+        }
+    }
 }
 
 extension UILabel {
     
     func style(labelStyle: LabelStyle) {
         Styler.shared.labelStyle(self, style: labelStyle)
+    }
+}
+
+extension UITextField {
+    
+    func style(textFieldStyle: TextFieldStyle) {
+        Styler.shared.textFieldStyle(self, style: textFieldStyle)
+    }
+}
+
+extension UIButton {
+    
+    func style(buttonStyle: ButtonStyle) {
+        Styler.shared.buttonStyle(self, style: buttonStyle)
     }
 }
 

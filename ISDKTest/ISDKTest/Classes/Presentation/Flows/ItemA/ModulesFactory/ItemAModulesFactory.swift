@@ -14,11 +14,11 @@ class ItemAModulesFactory {
     
     // MARK: - Properties
     
-    private var module: () -> ItemAModuleProtocol
+    private var module: (String) -> ItemAModuleProtocol
     
     // MARK: - Construction
     
-    init(module: @escaping () -> ItemAModuleProtocol) {
+    init(module: @escaping (String) -> ItemAModuleProtocol) {
         self.module = module
     }
 }
@@ -28,7 +28,7 @@ class ItemAModulesFactory {
 
 extension ItemAModulesFactory: ItemAModulesFactoryProtocol {
     
-    func createItemAModule() -> ItemAModuleProtocol {
-        return module()
+    func createItemAModule(id: String) -> ItemAModuleProtocol {
+        return module(id)
     }
 }

@@ -28,8 +28,8 @@ final class ItemACoordinator: Coordinator, ItemACoordinatorProtocol {
     
     // MARK: Override functions
     
-    override func start() {
-        showItemAModule()
+    func start(id: String) {
+        showItemAModule(id: id)
     }
 }
 
@@ -37,14 +37,17 @@ final class ItemACoordinator: Coordinator, ItemACoordinatorProtocol {
 
 private extension ItemACoordinator {
     
-    func showItemAModule() {
-        var module = modulesFactory.createItemAModule()
+    func showItemAModule(id: String) {
+        var module = modulesFactory.createItemAModule(id: id)
         
         module.output.didFinish = { [weak self] in
-            
+            self?.router.popModule()
+            self?.finishFlow?()
         }
         
-        router.push(module)
+        router.push(module, animated: true) { [weak self] in
+            self?.finishFlow?()
+        }
     }
 }
 

@@ -75,12 +75,12 @@ private extension ABListModuleItemAView {
     func configureLayout() {
         layout(
             10,
-            |-10-avatarImageView,
+            |-20-avatarImageView,
             (>=10)
         )
         layout(
             10,
-            dataWrapperView-10-|,
+            dataWrapperView-20-|,
             (>=10)
         )
         avatarImageView-10-dataWrapperView
@@ -120,10 +120,13 @@ private extension ABListModuleItemAView {
     }
     
     func configureStyle() {
-        style(viewStyle: .init(backgroundColor: .red))
+        style(viewStyle: .init(backgroundColor: .white))
         titleLabel.style(labelStyle: .init(font: UIFont.boldSystemFont(ofSize: 18), numberOfLines: 0))
         descriptionLabel.style(labelStyle: .init(font: UIFont.systemFont(ofSize: 16), numberOfLines: 0))
         valueLabel.style(labelStyle: .init(font: UIFont.systemFont(ofSize: 16), lineBreakMode: .byTruncatingTail))
+        
+        avatarImageView.layer.cornerRadius = 5
+        avatarImageView.clipsToBounds = true
     }
 }
 

@@ -14,7 +14,7 @@ struct ItemAEntity {
     
     // MARK: Properties
     
-    let id: Int
+    let id: String
     
     let title: String
     
@@ -22,5 +22,5 @@ struct ItemAEntity {
     
     let value: Int
     
-    let image: String
+    let image: Data
 }

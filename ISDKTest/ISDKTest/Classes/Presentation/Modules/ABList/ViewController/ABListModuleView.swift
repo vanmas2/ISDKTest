@@ -77,14 +77,15 @@ private extension ABListModuleView {
     
     func configureLayout() {
         if #available(iOS 11.0, *) {
-            sortView.Top == safeAreaLayoutGuide.Top
+            sortView.Top == safeAreaLayoutGuide.Top + 10
         } else {
-            sortView.Top == layoutMarginsGuide.Top
+            sortView.Top == layoutMarginsGuide.Top + 10
         }
         
         layout(
-            |sortView|,
-            0,
+            10,
+            |-20-sortView-20-|,
+            10,
             |tableView|,
             0
         )
@@ -97,18 +98,18 @@ private extension ABListModuleView {
         
         if #available(iOS 11.0, *) {
             addItemAButton.Left == safeAreaLayoutGuide.Left + 10
-            addItemAButton.Bottom == safeAreaLayoutGuide.Bottom + 10
+            addItemAButton.Bottom == safeAreaLayoutGuide.Bottom - 10
         } else {
             addItemAButton.Left == layoutMarginsGuide.Left + 10
-            addItemAButton.Bottom == layoutMarginsGuide.Bottom + 10
+            addItemAButton.Bottom == layoutMarginsGuide.Bottom - 10
         }
         
         if #available(iOS 11.0, *) {
             addItemBButton.Right == safeAreaLayoutGuide.Right - 10
-            addItemBButton.Bottom == safeAreaLayoutGuide.Bottom + 10
+            addItemBButton.Bottom == safeAreaLayoutGuide.Bottom - 10
         } else {
             addItemBButton.Right == layoutMarginsGuide.Right - 10
-            addItemBButton.Bottom == layoutMarginsGuide.Bottom + 10
+            addItemBButton.Bottom == layoutMarginsGuide.Bottom - 10
         }
         
         sortTextField.width(100)
@@ -119,18 +120,30 @@ private extension ABListModuleView {
         
         tableView.backgroundColor = View.backgroundColor
         tableView.separatorStyle = .none
-        tableView.contentInset = .init(top: 0, left: 0, bottom: 34, right: 0)
+        
+        if #available(iOS 11.0, *) {
+            tableView.contentInset = .init(top: 0, left: 0, bottom: safeAreaInsets.bottom + 54, right: 0)
+        } else {
+            tableView.contentInset = .init(top: 0, left: 0, bottom: layoutMargins.bottom + 54, right: 0)
+        }
+        
+        sortView.backgroundColor = .lightGray
+        sortView.layer.cornerRadius = 5
         
         sortLabel.text = "Sort by:"
         
         sortTextField.borderStyle = .roundedRect
-        sortTextField.backgroundColor = .green
+        sortTextField.backgroundColor = .lightGray
         
         addItemAButton.setTitle("Add Item A", for: .normal)
-        addItemAButton.backgroundColor = .gray
+        addItemAButton.backgroundColor = .lightGray
+        addItemAButton.layer.cornerRadius = 5
+        addItemAButton.contentEdgeInsets = .init(top: 6, left: 10, bottom: 6, right: 10)
         
         addItemBButton.setTitle("Add Item B", for: .normal)
         addItemBButton.backgroundColor = .lightGray
+        addItemBButton.layer.cornerRadius = 5
+        addItemBButton.contentEdgeInsets = .init(top: 6, left: 10, bottom: 6, right: 10)
     }
     
     func configurePickerView() {
@@ -158,12 +171,6 @@ private extension ABListModuleView {
 private extension ABListModuleView {
     
     enum View {
-        static let backgroundColor = UIColor.blue
+        static let backgroundColor = UIColor.white
     }
-    
-    //    enum LogoView {
-    //        static let size: CGFloat = 100
-    //    }
 }
-
-//extension ABListModuleView: UITextFieldDelegate {}

@@ -18,7 +18,7 @@ struct ABListModuleItemACellViewModelState {
     var title: String
     var desc: String
     var value: String
-    var image: String
+    var image: Data
 }
 
 enum ABListModuleItemACellViewModeAction {

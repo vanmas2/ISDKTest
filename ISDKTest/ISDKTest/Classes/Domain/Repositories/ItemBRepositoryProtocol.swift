@@ -11,5 +11,5 @@ import RxSwift
 
 protocol ItemBRepositoryProtocol {
     func getAllItems() -> Observable<[ItemBEntity]>
-    func getItem(id: Int) -> Observable<ItemBEntity?>
+    func getItem(id: String) -> Observable<ItemBEntity?>
 }

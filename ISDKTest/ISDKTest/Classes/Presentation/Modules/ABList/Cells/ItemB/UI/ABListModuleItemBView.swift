@@ -84,7 +84,7 @@ private extension ABListModuleItemBView {
     func configureLayout() {
         layout(
             10,
-            |-10-avatarImageView,
+            |-20-avatarImageView,
             (>=10)
         )
         
@@ -98,7 +98,7 @@ private extension ABListModuleItemBView {
         
         layout(
             10,
-            dataWrapperView-10-|,
+            dataWrapperView-20-|,
             (>=10)
         )
         
@@ -139,11 +139,14 @@ private extension ABListModuleItemBView {
     }
     
     func configureStyle() {
-        style(viewStyle: .init(backgroundColor: .red))
+        style(viewStyle: .init(backgroundColor: .white))
         titleLabel.style(labelStyle: .init(font: UIFont.boldSystemFont(ofSize: 18), numberOfLines: 0))
         descriptionLabel.style(labelStyle: .init(font: UIFont.systemFont(ofSize: 16), numberOfLines: 0))
         valueLabel.style(labelStyle: .init(font: UIFont.systemFont(ofSize: 16), lineBreakMode: .byTruncatingTail))
         labelsLabel.style(labelStyle: .init(font: UIFont.systemFont(ofSize: 14), numberOfLines: 0, textColor: UIColor(red: 0, green: 0, blue: 0, alpha: 0.5), adjustsFontSizeToFitWidth: true, minimumScaleFactor: 0.5))
+        
+        avatarImageView.layer.cornerRadius = 5
+        avatarImageView.clipsToBounds = true
     }
 }
 

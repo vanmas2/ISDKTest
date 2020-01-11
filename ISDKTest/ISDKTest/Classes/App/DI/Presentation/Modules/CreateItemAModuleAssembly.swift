@@ -39,7 +39,10 @@ private extension CreateItemAModuleAssembly {
     func registerViewModel(_ container: Container) {
         container
             .register(CreateItemAModuleViewModelProtocol.self) { (resolver) in
-                return CreateItemAModuleViewModel()
+                guard
+                    let createItemAUseCase = resolver.resolve(CreateItemAUseCaseProtocol.self)
+                    else { fatalError() }
+                return CreateItemAModuleViewModel(createItemAUseCase: createItemAUseCase)
             }
             .inObjectScope(.transient)
     }
