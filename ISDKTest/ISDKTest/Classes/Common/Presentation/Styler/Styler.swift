@@ -47,12 +47,25 @@ final class Styler {
             view.backgroundColor = backgroundColor
         }
     }
+    
+    func textFieldStyle(_ textField: UITextField, style: TextFieldStyle) {
+        if let borderStyle = style.borderStyle {
+            textField.borderStyle = borderStyle
+        }
+    }
 }
 
 extension UILabel {
     
     func style(labelStyle: LabelStyle) {
         Styler.shared.labelStyle(self, style: labelStyle)
+    }
+}
+
+extension UITextField {
+    
+    func style(textFieldStyle: TextFieldStyle) {
+        Styler.shared.textFieldStyle(self, style: textFieldStyle)
     }
 }
 

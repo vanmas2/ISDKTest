@@ -87,6 +87,7 @@
 		2C32C5AC23C90C960028CFFA /* CreateItemBCoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C32C5A423C90C950028CFFA /* CreateItemBCoordinatorProtocol.swift */; };
 		2C32C5AD23C90C960028CFFA /* CreateItemBModulesFactoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C32C5A623C90C950028CFFA /* CreateItemBModulesFactoryProtocol.swift */; };
 		2C32C5AE23C90C960028CFFA /* CreateItemBModulesFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C32C5A723C90C950028CFFA /* CreateItemBModulesFactory.swift */; };
+		2C32C5B023C992950028CFFA /* TextFieldStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C32C5AF23C992950028CFFA /* TextFieldStyle.swift */; };
 		2C3DCB3C23C2119E00B52607 /* ABListCoordinatorAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3DCB3B23C2119E00B52607 /* ABListCoordinatorAssembly.swift */; };
 		2C3DCB3E23C2131600B52607 /* ABListCoordinatorsFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3DCB3D23C2131600B52607 /* ABListCoordinatorsFactory.swift */; };
 		2C3DCB4023C217FA00B52607 /* ABListModuleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3DCB3F23C217FA00B52607 /* ABListModuleViewModel.swift */; };
@@ -216,6 +217,7 @@
 		2C32C5A423C90C950028CFFA /* CreateItemBCoordinatorProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateItemBCoordinatorProtocol.swift; sourceTree = "<group>"; };
 		2C32C5A623C90C950028CFFA /* CreateItemBModulesFactoryProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateItemBModulesFactoryProtocol.swift; sourceTree = "<group>"; };
 		2C32C5A723C90C950028CFFA /* CreateItemBModulesFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateItemBModulesFactory.swift; sourceTree = "<group>"; };
+		2C32C5AF23C992950028CFFA /* TextFieldStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldStyle.swift; sourceTree = "<group>"; };
 		2C3DCB3B23C2119E00B52607 /* ABListCoordinatorAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ABListCoordinatorAssembly.swift; sourceTree = "<group>"; };
 		2C3DCB3D23C2131600B52607 /* ABListCoordinatorsFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ABListCoordinatorsFactory.swift; sourceTree = "<group>"; };
 		2C3DCB3F23C217FA00B52607 /* ABListModuleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ABListModuleViewModel.swift; sourceTree = "<group>"; };
@@ -321,6 +323,7 @@
 				2C32C49023C5C8D70028CFFA /* Styler.swift */,
 				2C32C49223C5C8F50028CFFA /* LabelStyle.swift */,
 				2C32C49423C5CC950028CFFA /* ViewStyle.swift */,
+				2C32C5AF23C992950028CFFA /* TextFieldStyle.swift */,
 			);
 			path = Styler;
 			sourceTree = "<group>";
@@ -1267,6 +1270,7 @@
 				2C32C4C923C630570028CFFA /* GetABListUseCaseAssembly.swift in Sources */,
 				2C32C49523C5CC950028CFFA /* ViewStyle.swift in Sources */,
 				2C32C4C423C62FA30028CFFA /* ItemBRepositoryAssembly.swift in Sources */,
+				2C32C5B023C992950028CFFA /* TextFieldStyle.swift in Sources */,
 				2C32C54623C90B860028CFFA /* CreateItemAModuleAssembly.swift in Sources */,
 				2C32C52C23C90B290028CFFA /* ItemBModuleAssembly.swift in Sources */,
 				2C32C4B423C61A4C0028CFFA /* ItemARepositoryProtocol.swift in Sources */,
