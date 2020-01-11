@@ -60,5 +60,25 @@ private extension CreateItemAModuleViewController {
     
     func configure() {
         navigationItem.title = "Create Item A"
+
+        RxImagePickerDelegateProxy.register { RxImagePickerDelegateProxy(imagePicker: $0) }
+        
+        view().photoButton.rx.tap
+            .flatMap { [weak self] _ in
+                return UIImagePickerController.rx.createWithParent(self) { picker in
+                        picker.sourceType = .photoLibrary
+                        picker.allowsEditing = false
+                    }
+                    .flatMap {
+                        $0.rx.didFinishPickingMediaWithInfo
+                    }
+                    .take(1)
+                    .debug()
+            }
+            .map { info in
+                return info[.originalImage] as? UIImage
+            }
+            .bind(to: view().photoButton.rx.image())
+            .disposed(by: disposeBag)
     }
 }

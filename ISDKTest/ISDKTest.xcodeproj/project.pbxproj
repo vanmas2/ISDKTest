@@ -88,6 +88,9 @@
 		2C32C5AD23C90C960028CFFA /* CreateItemBModulesFactoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C32C5A623C90C950028CFFA /* CreateItemBModulesFactoryProtocol.swift */; };
 		2C32C5AE23C90C960028CFFA /* CreateItemBModulesFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C32C5A723C90C950028CFFA /* CreateItemBModulesFactory.swift */; };
 		2C32C5B023C992950028CFFA /* TextFieldStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C32C5AF23C992950028CFFA /* TextFieldStyle.swift */; };
+		2C32C5B423C99F7D0028CFFA /* RxImagePickerDelegateProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C32C5B323C99F7D0028CFFA /* RxImagePickerDelegateProxy.swift */; };
+		2C32C5B623C99FA50028CFFA /* UIImagePickerController+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C32C5B523C99FA50028CFFA /* UIImagePickerController+Rx.swift */; };
+		2C32C5B823C9A0040028CFFA /* UIImagePickerController+RxCreate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C32C5B723C9A0040028CFFA /* UIImagePickerController+RxCreate.swift */; };
 		2C3DCB3C23C2119E00B52607 /* ABListCoordinatorAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3DCB3B23C2119E00B52607 /* ABListCoordinatorAssembly.swift */; };
 		2C3DCB3E23C2131600B52607 /* ABListCoordinatorsFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3DCB3D23C2131600B52607 /* ABListCoordinatorsFactory.swift */; };
 		2C3DCB4023C217FA00B52607 /* ABListModuleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3DCB3F23C217FA00B52607 /* ABListModuleViewModel.swift */; };
@@ -218,6 +221,9 @@
 		2C32C5A623C90C950028CFFA /* CreateItemBModulesFactoryProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateItemBModulesFactoryProtocol.swift; sourceTree = "<group>"; };
 		2C32C5A723C90C950028CFFA /* CreateItemBModulesFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateItemBModulesFactory.swift; sourceTree = "<group>"; };
 		2C32C5AF23C992950028CFFA /* TextFieldStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldStyle.swift; sourceTree = "<group>"; };
+		2C32C5B323C99F7D0028CFFA /* RxImagePickerDelegateProxy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxImagePickerDelegateProxy.swift; sourceTree = "<group>"; };
+		2C32C5B523C99FA50028CFFA /* UIImagePickerController+Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImagePickerController+Rx.swift"; sourceTree = "<group>"; };
+		2C32C5B723C9A0040028CFFA /* UIImagePickerController+RxCreate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImagePickerController+RxCreate.swift"; sourceTree = "<group>"; };
 		2C3DCB3B23C2119E00B52607 /* ABListCoordinatorAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ABListCoordinatorAssembly.swift; sourceTree = "<group>"; };
 		2C3DCB3D23C2131600B52607 /* ABListCoordinatorsFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ABListCoordinatorsFactory.swift; sourceTree = "<group>"; };
 		2C3DCB3F23C217FA00B52607 /* ABListModuleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ABListModuleViewModel.swift; sourceTree = "<group>"; };
@@ -780,6 +786,24 @@
 			path = ModulesFactory;
 			sourceTree = "<group>";
 		};
+		2C32C5B123C99B9D0028CFFA /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				2C32C5B223C99F650028CFFA /* Rx */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		2C32C5B223C99F650028CFFA /* Rx */ = {
+			isa = PBXGroup;
+			children = (
+				2C32C5B323C99F7D0028CFFA /* RxImagePickerDelegateProxy.swift */,
+				2C32C5B523C99FA50028CFFA /* UIImagePickerController+Rx.swift */,
+				2C32C5B723C9A0040028CFFA /* UIImagePickerController+RxCreate.swift */,
+			);
+			path = Rx;
+			sourceTree = "<group>";
+		};
 		2C3DCB4823C329E400B52607 /* ItemA */ = {
 			isa = PBXGroup;
 			children = (
@@ -917,6 +941,7 @@
 		2CC7060C23BA4DC100921919 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				2C32C5B123C99B9D0028CFFA /* Extensions */,
 				2CC7060E23BA4FD100921919 /* Presentation */,
 			);
 			path = Common;
@@ -1298,9 +1323,11 @@
 				2C32C4BE23C62CEE0028CFFA /* ItemBRepository.swift in Sources */,
 				2C32C59023C90C740028CFFA /* CreateItemAModulesFactory.swift in Sources */,
 				2C3DCB4023C217FA00B52607 /* ABListModuleViewModel.swift in Sources */,
+				2C32C5B823C9A0040028CFFA /* UIImagePickerController+RxCreate.swift in Sources */,
 				2CC7062823BA670500921919 /* AppCoordinatorsFactoryProtocol.swift in Sources */,
 				2C32C55D23C90BDE0028CFFA /* CreateItemBModuleViewController.swift in Sources */,
 				2CC7063923BA6B8000921919 /* ABListModulesFactory.swift in Sources */,
+				2C32C5B423C99F7D0028CFFA /* RxImagePickerDelegateProxy.swift in Sources */,
 				2C32C4BC23C62CC40028CFFA /* ItemARepository.swift in Sources */,
 				2C32C5A823C90C960028CFFA /* CreateItemBCoordinatorsFactoryProtocol.swift in Sources */,
 				2C3DCB4A23C32A9900B52607 /* ABListModuleItemAView.swift in Sources */,
@@ -1322,6 +1349,7 @@
 				2CC7064823BA702500921919 /* ABListModuleView.swift in Sources */,
 				2C32C4F823C9088F0028CFFA /* ItemAModuleViewModel.swift in Sources */,
 				2C32C50C23C908CE0028CFFA /* ItemACoordinatorProtocol.swift in Sources */,
+				2C32C5B623C99FA50028CFFA /* UIImagePickerController+Rx.swift in Sources */,
 				2C32C51023C908CE0028CFFA /* ItemAModulesFactoryProtocol.swift in Sources */,
 				2C32C52723C90B290028CFFA /* ItemBModule.swift in Sources */,
 				2C3DCB3C23C2119E00B52607 /* ABListCoordinatorAssembly.swift in Sources */,
