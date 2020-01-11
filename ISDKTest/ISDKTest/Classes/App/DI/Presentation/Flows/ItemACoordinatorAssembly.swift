@@ -41,9 +41,9 @@ private extension ItemACoordinatorAssembly {
     func registerModulesFactory(_ container: Container) {
         container
             .register(ItemAModulesFactoryProtocol.self) { (resolver) in
-                let module: () -> ItemAModuleProtocol = { () -> ItemAModuleProtocol in
+                let module: (String) -> ItemAModuleProtocol = { (id) -> ItemAModuleProtocol in
                     guard
-                        let module = resolver.resolve(ItemAModuleProtocol.self)
+                        let module = resolver.resolve(ItemAModuleProtocol.self, argument: id)
                         else { fatalError() }
                     return module
                 }

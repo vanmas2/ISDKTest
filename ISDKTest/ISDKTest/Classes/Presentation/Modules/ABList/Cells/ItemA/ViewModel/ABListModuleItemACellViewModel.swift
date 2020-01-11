@@ -18,7 +18,7 @@ final class ABListModuleItemACellViewModel {
     
     private var viewModel: ABListModuleViewModelProtocol
     
-    private var id: Int
+    private var id: String
     
     private var _state: BehaviorRelay<ABListModuleItemACellViewModelState>
     
@@ -28,19 +28,13 @@ final class ABListModuleItemACellViewModel {
     
     // MARK: Constructors
     
-    init(viewModel: ABListModuleViewModelProtocol) {
-        _state = .init(value: .init(title: "", desc: "", value: "", image: ""))
+    init(id: String, title: String, desc: String, value: String, image: Data, viewModel: ABListModuleViewModelProtocol) {
+        _state = .init(value: .init(title: title, desc: desc, value: value, image: image))
         _action = .init()
+        self.id = id
         self.viewModel = viewModel
-        id = 0
         disposeBag = DisposeBag()
         bindViewModel()
-    }
-    
-    convenience init(id: Int, title: String, desc: String, value: String, image: String, viewModel: ABListModuleViewModelProtocol) {
-        self.init(viewModel: viewModel)
-        self.id = id
-        _state.accept(.init(title: title, desc: desc, value: value, image: image))
     }
     
     private func bindViewModel() {

@@ -18,6 +18,8 @@ final class ABListCoordinator: Coordinator, ABListCoordinatorProtocol {
     
     private let modulesFactory: ABListModulesFactoryProtocol
     
+    private var rootModule: ABListModuleProtocol?
+    
     // MARK: Constructors
     
     init(coordinatorsFactory: ABListCoordinatorsFactoryProtocol, modulesFactory: ABListModulesFactoryProtocol, router: RouterProtocol) {
@@ -40,6 +42,7 @@ private extension ABListCoordinator {
     
     func showABModule() {
         var module = modulesFactory.createABListModule()
+        self.rootModule = module
         
         module.output.showAddItemA = { [weak self] in
             self?.runCreateItemACoordinator()
@@ -65,19 +68,20 @@ private extension ABListCoordinator {
 
 private extension ABListCoordinator {
     
-    func runItemACoordinator(id: Int) {
+    func runItemACoordinator(id: String) {
         let coordinator = coordinatorsFactory.createItemACoordinator(router: router)
         
         coordinator.finishFlow = { [weak self, weak coordinator] in
             self?.removeDependency(coordinator)
+            self?.rootModule?.input.refresh()
         }
         
         addDependency(coordinator)
         
-        coordinator.start()
+        coordinator.start(id: id)
     }
     
-    func runItemBCoordinator(id: Int) {
+    func runItemBCoordinator(id: String) {
         let coordinator = coordinatorsFactory.createItemBCoordinator(router: router)
         
         coordinator.finishFlow = { [weak self, weak coordinator] in
@@ -94,6 +98,7 @@ private extension ABListCoordinator {
         
         coordinator.finishFlow = { [weak self, weak coordinator] in
             self?.removeDependency(coordinator)
+            self?.rootModule?.input.refresh()
         }
         
         addDependency(coordinator)

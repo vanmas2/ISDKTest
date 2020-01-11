@@ -62,6 +62,10 @@ final class Styler {
         if let backgroundColor = style.backgroundColor {
             button.backgroundColor = backgroundColor
         }
+        
+        if let cornerRadius = style.cornerRadius {
+            button.layer.cornerRadius = cornerRadius
+        }
     }
 }
 

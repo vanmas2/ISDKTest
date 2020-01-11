@@ -11,5 +11,7 @@ import RxSwift
 
 protocol ItemARepositoryProtocol {
     func getAllItems() -> Observable<[ItemAEntity]>
-    func getItem(id: Int) -> Observable<ItemAEntity?>
+    func getItem(id: String) -> Observable<ItemAEntity?>
+    func createItem(title: String, desc: String, value: Int, image: Data) -> Observable<ItemAEntity?>
+    func updateItem(_ item: ItemAEntity) -> Observable<Void>
 }

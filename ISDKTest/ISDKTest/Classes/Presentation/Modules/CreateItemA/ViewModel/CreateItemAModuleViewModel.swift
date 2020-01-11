@@ -18,13 +18,16 @@ final class CreateItemAModuleViewModel {
     
     // MARK: Private properties
     
+    private let createItemAUseCase: CreateItemAUseCaseProtocol
+    
     private var output: Output
     
     private var disposeBag = DisposeBag()
     
     // MARK: Constructors
     
-    init() {
+    init(createItemAUseCase: CreateItemAUseCaseProtocol) {
+        self.createItemAUseCase = createItemAUseCase
         output = Output()
     }
 }
@@ -44,7 +47,7 @@ extension CreateItemAModuleViewModel: Reactor {
     // MARK: Properties
     
     var initialState: CreateItemAModuleViewModelState {
-        return CreateItemAModuleViewModelState(title: "", desc: "", value: "", imageData: Data(imageName: "Icons/noImage"))
+        return CreateItemAModuleViewModelState(title: String.random(length: 50), desc: String.random(length: 100), value: Int.random(in: 0...500), imageData: Data(imageName: "Icons/noImage"))
     }
     
     // MARK: Functions
@@ -60,8 +63,14 @@ extension CreateItemAModuleViewModel: Reactor {
         case .setImageData(let imageData):
             return Observable.just(.setImageData(imageData))
         case .create:
-            // usecase
-            return Observable.just(.create)
+            guard
+                currentState.title.count > 0,
+                currentState.desc.count > 0,
+                currentState.title.count <= 50,
+                currentState.desc.count <= 300
+                else { return Observable.empty() }
+            return createItemAUseCase.execute(request: .init(title: currentState.title, desc: currentState.desc, value: currentState.value, image: currentState.imageData))
+                .map { _ in .create }
         }
     }
     

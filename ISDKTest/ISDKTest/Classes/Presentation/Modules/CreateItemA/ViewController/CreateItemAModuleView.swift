@@ -16,21 +16,17 @@ final class CreateItemAModuleView: UIView {
     
     // MARK: Views
     
-    private(set) var titleLabel: UILabel!
+    private var scrollContentView: ScrollContentView!
     
-    private(set) var titleErrorLabel: UILabel!
+    private(set) var titleLabel: UILabel!
     
     private(set) var titleTextField: UITextField!
     
     private(set) var descLabel: UILabel!
     
-    private(set) var descErrorLabel: UILabel!
-    
-    private(set) var descTextField: UITextField!
+    private(set) var descTextView: UITextView!
     
     private(set) var valueLabel: UILabel!
-    
-    private(set) var valueErrorLabel: UILabel!
     
     private(set) var valueTextField: UITextField!
     
@@ -65,60 +61,46 @@ private extension CreateItemAModuleView {
     }
     
     func configureViews() {
+        scrollContentView = ScrollContentView()
         titleLabel = UILabel()
-        titleErrorLabel = UILabel()
         titleTextField = UITextField()
         descLabel = UILabel()
-        descErrorLabel = UILabel()
-        descTextField = UITextField()
+        descTextView = UITextView()
         valueLabel = UILabel()
-        valueErrorLabel = UILabel()
         valueTextField = UITextField()
         photoLabel = UILabel()
         photoButton = UIButton()
         createButton = UIButton()
-        sv(
+        sv(scrollContentView)
+        scrollContentView.contentView.sv(
             titleLabel,
             titleTextField,
-            titleErrorLabel,
             descLabel,
-            descTextField,
-            descErrorLabel,
+            descTextView,
             valueLabel,
             valueTextField,
-            valueErrorLabel,
             photoLabel,
             photoButton,
             createButton
         )
-        
     }
     
     func configureLayout() {
-        if #available(iOS 11.0, *) {
-            titleLabel.Top == safeAreaLayoutGuide.Top + 20
-        } else {
-            titleLabel.Top == layoutMarginsGuide.Top + 20
-        }
+        scrollContentView.fillContainer()
         
-        layout(
+        scrollContentView.contentView.layout(
+            20,
             |-20-titleLabel-20-|,
             2,
             |-20-titleTextField-20-|,
-            5,
-            |-20-titleErrorLabel-20-|,
             20,
             |-20-descLabel-20-|,
             2,
-            |-20-descTextField-20-|,
-            5,
-            |-20-descErrorLabel-20-|,
+            |-20-descTextView-20-|,
             20,
             |-20-valueLabel-20-|,
             2,
             |-20-valueTextField-20-|,
-            5,
-            |-20-valueErrorLabel-20-|,
             20,
             |-20-photoLabel-20-|,
             2,
@@ -128,38 +110,51 @@ private extension CreateItemAModuleView {
             (>=20)
         )
         
+        descTextView.height(60)
         photoButton.size(75)
+        
+        addKeyboardConstraint(for: scrollContentView)
+        addKeyboardCancelAction()
     }
     
     func configureStyle() {
-        let ErrorLabelStyle = LabelStyle(font: UIFont.systemFont(ofSize: 14), numberOfLines: 0, textColor: .red)
+        let viewStyle = ViewStyle(backgroundColor: View.backgroundColor)
+        let labelStyle = LabelStyle(font: UIFont.systemFont(ofSize: 18), numberOfLines: 1)
+        let buttonStyle = ButtonStyle(backgroundColor: .lightGray, cornerRadius: 5)
+        let photoButtonStyle = ButtonStyle(cornerRadius: 5)
         
-        backgroundColor = View.backgroundColor
+        style(viewStyle: viewStyle)
         
         titleLabel.text = "Title"
+        titleLabel.style(labelStyle: labelStyle)
         
         titleTextField.style(textFieldStyle: .init(borderStyle: .roundedRect))
-        
-        titleErrorLabel.text = "Error"
-        titleErrorLabel.style(labelStyle: ErrorLabelStyle)
+        titleTextField.font = UIFont.systemFont(ofSize: 16)
         
         descLabel.text = "Description"
+        descLabel.style(labelStyle: labelStyle)
         
-        descTextField.style(textFieldStyle: .init(borderStyle: .roundedRect))
-        
-        descErrorLabel.text = "Error"
-        descErrorLabel.style(labelStyle: ErrorLabelStyle)
+        descTextView.isScrollEnabled = true
+        descTextView.layer.borderWidth = 0.5
+        descTextView.layer.borderColor = UIColor.lightGray.cgColor
+        descTextView.layer.cornerRadius = 5
+        descTextView.font = UIFont.systemFont(ofSize: 16)
         
         valueLabel.text = "Value"
+        valueLabel.style(labelStyle: labelStyle)
         
         valueTextField.style(textFieldStyle: .init(borderStyle: .roundedRect))
-        
-        valueErrorLabel.text = "Error"
-        valueErrorLabel.style(labelStyle: ErrorLabelStyle)
+        valueTextField.keyboardType = .numberPad
+        valueTextField.font = UIFont.systemFont(ofSize: 16)
         
         photoLabel.text = "Photo"
+        photoLabel.style(labelStyle: labelStyle)
         
-        createButton.style(buttonStyle: .init(title: "Create item A", backgroundColor: .lightGray))
+        photoButton.style(buttonStyle: photoButtonStyle)
+        photoButton.clipsToBounds = true
+        
+        createButton.setTitle("Create item A", for: .normal)
+        createButton.style(buttonStyle: buttonStyle)
     }
 }
 

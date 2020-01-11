@@ -9,5 +9,5 @@ import Foundation
 
 
 protocol ItemAModulesFactoryProtocol: class {
-    func createItemAModule() -> ItemAModuleProtocol
+    func createItemAModule(id: String) -> ItemAModuleProtocol
 }

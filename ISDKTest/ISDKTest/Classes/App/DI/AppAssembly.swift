@@ -21,6 +21,7 @@ final class AppAssembly {
             + modules
             + useCases
             + repositories
+            + persistentStorages
         
         Container.loggingFunction = nil
         
@@ -56,7 +57,10 @@ extension AppAssembly {
 extension AppAssembly {
     
     static let useCases: [Assembly] = [
-        GetABListUseCaseAssembly()
+        GetABListUseCaseAssembly(),
+        CreateItemAUseCaseAssembly(),
+        GetItemAUseCaseAssembly(),
+        UpdateItemAUseCaseAssembly()
     ]
 }
 
@@ -65,5 +69,12 @@ extension AppAssembly {
     static let repositories: [Assembly] = [
         ItemARepositoryAssembly(),
         ItemBRepositoryAssembly()
+    ]
+}
+
+extension AppAssembly {
+    
+    static let persistentStorages: [Assembly] = [
+        CoreDataProviderAssembly()
     ]
 }

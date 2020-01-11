@@ -18,10 +18,13 @@ struct ButtonStyle {
     
     let backgroundColor: UIColor?
     
+    let cornerRadius: CGFloat?
+    
     // MARK: Constructors
     
-    init(title: String? = nil, backgroundColor: UIColor? = nil) {
+    init(title: String? = nil, backgroundColor: UIColor? = nil, cornerRadius: CGFloat? = nil) {
         self.title = title
         self.backgroundColor = backgroundColor
+        self.cornerRadius = cornerRadius
     }
 }

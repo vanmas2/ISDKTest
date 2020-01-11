@@ -18,7 +18,7 @@ struct ABListModuleItemBCellViewModelState {
     var title: String
     var desc: String
     var value: String
-    var image: String
+    var image: Data
     var labels: String
 }
 

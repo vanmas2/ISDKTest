@@ -18,7 +18,7 @@ protocol CreateItemAModuleViewModelProtocol {
 enum CreateItemAModuleViewModelAction {
     case setTitle(String)
     case setDesc(String)
-    case setValue(String)
+    case setValue(Int)
     case setImageData(Data)
     case create
 }
@@ -26,6 +26,6 @@ enum CreateItemAModuleViewModelAction {
 struct CreateItemAModuleViewModelState {
     var title: String
     var desc: String
-    var value: String
+    var value: Int
     var imageData: Data
 }
