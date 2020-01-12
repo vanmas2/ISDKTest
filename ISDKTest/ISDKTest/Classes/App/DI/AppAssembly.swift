@@ -37,9 +37,7 @@ extension AppAssembly {
         AppCoordinatorAssembly(),
         ABListCoordinatorAssembly(),
         ItemACoordinatorAssembly(),
-        ItemBCoordinatorAssembly(),
-        CreateItemACoordinatorAssembly(),
-        CreateItemBCoordinatorAssembly()
+        ItemBCoordinatorAssembly()
     ]
 }
 
@@ -48,9 +46,7 @@ extension AppAssembly {
     static let modules: [Assembly] = [
         ABListModuleAssembly(),
         ItemAModuleAssembly(),
-        ItemBModuleAssembly(),
-        CreateItemAModuleAssembly(),
-        CreateItemBModuleAssembly()
+        ItemBModuleAssembly()
     ]
 }
 

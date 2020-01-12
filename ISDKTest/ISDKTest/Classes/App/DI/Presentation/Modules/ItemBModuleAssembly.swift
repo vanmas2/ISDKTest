@@ -24,7 +24,7 @@ private extension ItemBModuleAssembly {
     
     func registerModule(_ container: Container) {
         container
-            .register(ItemBModuleProtocol.self) { (resolver, id: String) in
+            .register(ItemBModuleProtocol.self) { (resolver, id: String?) in
                 guard
                     let viewModel = resolver.resolve(ItemBModuleViewModelProtocol.self, argument: id),
                     let input = viewModel as? ItemBModuleIntput,
@@ -38,12 +38,13 @@ private extension ItemBModuleAssembly {
     
     func registerViewModel(_ container: Container) {
         container
-            .register(ItemBModuleViewModelProtocol.self) { (resolver, id: String) in
+            .register(ItemBModuleViewModelProtocol.self) { (resolver, id: String?) in
                 guard
                     let getItemBUseCase = resolver.resolve(GetItemBUseCaseProtocol.self),
-                    let updateItemBUseCase = resolver.resolve(UpdateItemBUseCaseProtocol.self)
+                    let updateItemBUseCase = resolver.resolve(UpdateItemBUseCaseProtocol.self),
+                    let createItemBUseCase = resolver.resolve(CreateItemBUseCaseProtocol.self)
                     else { fatalError() }
-                return ItemBModuleViewModel(id: id, getItemBUseCase: getItemBUseCase, updateItemBUseCase: updateItemBUseCase)
+                return ItemBModuleViewModel(id: id, getItemBUseCase: getItemBUseCase, updateItemBUseCase: updateItemBUseCase, createItemBUseCase: createItemBUseCase)
             }
             .inObjectScope(.transient)
     }

@@ -9,5 +9,5 @@ import Foundation
 
 
 protocol ItemBModulesFactoryProtocol: class {
-    func createItemBModule(id: String) -> ItemBModuleProtocol
+    func createItemBModule(id: String?) -> ItemBModuleProtocol
 }

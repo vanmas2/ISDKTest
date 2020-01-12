@@ -5,7 +5,6 @@
 //  Created by Иван Масальских on 11/01/2020.
 //
 
-
 import UIKit
 import RxSwift
 import RxCocoa
@@ -55,22 +54,23 @@ private extension ItemAModuleViewController {
         
         view().titleTextField.rx
             .text
+            .skip(1)
             .filterNil()
-            .filter { $0.count > 0 }
             .map { ItemAModuleViewModelAction.setTitle($0) }
             .bind(to: viewModel.vmAction)
             .disposed(by: disposeBag)
         
         view().descTextView.rx
             .text
+            .skip(1)
             .filterNil()
-            .filter { $0.count > 0 }
             .map { ItemAModuleViewModelAction.setDesc($0) }
             .bind(to: viewModel.vmAction)
             .disposed(by: disposeBag)
         
         view().valueTextField.rx
             .text
+            .skip(1)
             .filterNil()
             .map { Int($0) }
             .filterNil()

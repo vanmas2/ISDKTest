@@ -28,7 +28,7 @@ final class ItemBCoordinator: Coordinator, ItemBCoordinatorProtocol {
     
     // MARK: Functions
     
-    func start(id: String) {
+    func start(id: String?) {
         showItemBModule(id: id)
     }
 }
@@ -37,7 +37,7 @@ final class ItemBCoordinator: Coordinator, ItemBCoordinatorProtocol {
 
 private extension ItemBCoordinator {
     
-    func showItemBModule(id: String) {
+    func showItemBModule(id: String?) {
         var module = modulesFactory.createItemBModule(id: id)
         
         module.output.didFinish = { [weak self] in

@@ -18,11 +18,13 @@ final class ItemAModuleViewModel {
     
     // MARK: Private properties
     
-    private let id: String
+    private let id: String?
     
     private let updateItemAUseCase: UpdateItemAUseCaseProtocol
     
     private let getItemAUseCase: GetItemAUseCaseProtocol
+    
+    private let createItemAUseCase: CreateItemAUseCaseProtocol
     
     private var output: Output
     
@@ -30,9 +32,10 @@ final class ItemAModuleViewModel {
     
     // MARK: Constructors
     
-    init(id: String, getItemAUseCase: GetItemAUseCaseProtocol, updateItemAUseCase: UpdateItemAUseCaseProtocol) {
+    init(id: String?, getItemAUseCase: GetItemAUseCaseProtocol, updateItemAUseCase: UpdateItemAUseCaseProtocol, createItemAUseCase: CreateItemAUseCaseProtocol) {
         self.getItemAUseCase = getItemAUseCase
         self.updateItemAUseCase = updateItemAUseCase
+        self.createItemAUseCase = createItemAUseCase
         self.id = id
         output = Output()
     }
@@ -75,12 +78,21 @@ extension ItemAModuleViewModel: Reactor {
                 currentState.title.count <= 50,
                 currentState.desc.count <= 300
                 else { return Observable.empty() }
-            return updateItemAUseCase.execute(request: .init(id: id, title: currentState.title, desc: currentState.desc, value: currentState.value, image: currentState.imageData))
-                .map { .update }
+            if let id = id {
+                return updateItemAUseCase.execute(request: .init(id: id, title: currentState.title, desc: currentState.desc, value: currentState.value, image: currentState.imageData))
+                    .map { .update }
+            } else {
+                return createItemAUseCase.execute(request: .init(title: currentState.title, desc: currentState.desc, value: currentState.value, image: currentState.imageData))
+                    .map { _ in .update }
+            }
         case .get:
-            return getItemAUseCase.execute(request: .init(id: id))
-                .filterNil()
-                .map { .set(.init(title: $0.title, desc: $0.desc, value: $0.value, imageData: $0.image)) }
+            if let id = id {
+                return getItemAUseCase.execute(request: .init(id: id))
+                    .filterNil()
+                    .map { .set(.init(title: $0.title, desc: $0.desc, value: $0.value, imageData: $0.image)) }
+            } else {
+                return Observable.just(.set(.init(title: String.random(length: 30), desc: String.random(length: 100), value: Int.random(in: 0...500), imageData: Data(imageName: "Icons/noImage"))))
+            }
         }
     }
     
@@ -111,9 +123,7 @@ extension ItemAModuleViewModel: Reactor {
 
 // MARK: - Helper functions
 
-private extension  ItemAModuleViewModel {
-    
-}
+private extension  ItemAModuleViewModel {}
 
 // MARK: -  ItemAModuleViewModelProtocol
 

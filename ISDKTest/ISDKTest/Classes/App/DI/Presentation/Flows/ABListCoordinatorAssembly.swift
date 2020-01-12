@@ -67,19 +67,7 @@ private extension ABListCoordinatorAssembly {
                         else { fatalError() }
                     return coordinator
                 }
-                let createItemACoordinator: (RouterProtocol) -> CreateItemACoordinatorProtocol = { (router) -> CreateItemACoordinatorProtocol in
-                    guard
-                        let coordinator = resolver.resolve(CreateItemACoordinatorProtocol.self, argument: router)
-                        else { fatalError() }
-                    return coordinator
-                }
-                let createItemBCoordinator: (RouterProtocol) -> CreateItemBCoordinatorProtocol = { (router) -> CreateItemBCoordinatorProtocol in
-                    guard
-                        let coordinator = resolver.resolve(CreateItemBCoordinatorProtocol.self, argument: router)
-                        else { fatalError() }
-                    return coordinator
-                }
-                return ABListCoordinatorsFactory(itemACoordinator: itemACoordinator, itemBCoordinator: itemBCoordinator, createItemACoordinator: createItemACoordinator, createItemBCoordinator: createItemBCoordinator)
+                return ABListCoordinatorsFactory(itemACoordinator: itemACoordinator, itemBCoordinator: itemBCoordinator)
             }
             .inObjectScope(.container)
     }

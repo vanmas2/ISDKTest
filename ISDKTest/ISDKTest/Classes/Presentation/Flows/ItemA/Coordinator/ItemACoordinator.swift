@@ -28,7 +28,7 @@ final class ItemACoordinator: Coordinator, ItemACoordinatorProtocol {
     
     // MARK: Override functions
     
-    func start(id: String) {
+    func start(id: String?) {
         showItemAModule(id: id)
     }
 }
@@ -37,7 +37,7 @@ final class ItemACoordinator: Coordinator, ItemACoordinatorProtocol {
 
 private extension ItemACoordinator {
     
-    func showItemAModule(id: String) {
+    func showItemAModule(id: String?) {
         var module = modulesFactory.createItemAModule(id: id)
         
         module.output.didFinish = { [weak self] in

@@ -11,5 +11,5 @@ import Foundation
 // MARK: - ItemACoordinatorProtocol
 
 protocol ItemACoordinatorProtocol: CoordinatorProtocol {
-    func start(id: String)
+    func start(id: String?)
 }
