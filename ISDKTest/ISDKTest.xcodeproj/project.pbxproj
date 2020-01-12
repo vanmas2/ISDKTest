@@ -95,7 +95,7 @@
 		2C32C5BD23C9BDD20028CFFA /* RxFilterNil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C32C5BC23C9BDD20028CFFA /* RxFilterNil.swift */; };
 		2C32C5BF23C9C2DF0028CFFA /* ButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C32C5BE23C9C2DF0028CFFA /* ButtonStyle.swift */; };
 		2C32C5C223C9C9B10028CFFA /* CreateItemAUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C32C5C123C9C9B10028CFFA /* CreateItemAUseCase.swift */; };
-		2C32C5C423C9C9BC0028CFFA /* CreateItemABoundaries.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C32C5C323C9C9BC0028CFFA /* CreateItemABoundaries.swift */; };
+		2C32C5C423C9C9BC0028CFFA /* CreateItemAUseCaseBoundaries.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C32C5C323C9C9BC0028CFFA /* CreateItemAUseCaseBoundaries.swift */; };
 		2C32C5C823C9CF130028CFFA /* CoreDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C32C5C723C9CF130028CFFA /* CoreDataProvider.swift */; };
 		2C32C5CA23C9CF260028CFFA /* CoreDataProviderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C32C5C923C9CF260028CFFA /* CoreDataProviderProtocol.swift */; };
 		2C32C5D523C9D18F0028CFFA /* CoreDataProviderAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C32C5D423C9D18F0028CFFA /* CoreDataProviderAssembly.swift */; };
@@ -131,6 +131,15 @@
 		2C4C905423CB197A00955074 /* ItemACoreData+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4C905223CB197A00955074 /* ItemACoreData+CoreDataProperties.swift */; };
 		2C4C905623CB1A2600955074 /* ItemBLocalStorageProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4C905523CB1A2600955074 /* ItemBLocalStorageProtocol.swift */; };
 		2C4C905823CB1A2E00955074 /* ItemBLocalStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4C905723CB1A2E00955074 /* ItemBLocalStorage.swift */; };
+		2C4C905D23CB270000955074 /* CreateItemBUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4C905C23CB270000955074 /* CreateItemBUseCase.swift */; };
+		2C4C905F23CB271500955074 /* CreateItemBUseCaseBoundaries.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4C905E23CB271500955074 /* CreateItemBUseCaseBoundaries.swift */; };
+		2C4C906123CB284D00955074 /* GetItemBUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4C906023CB284D00955074 /* GetItemBUseCase.swift */; };
+		2C4C906323CB285C00955074 /* GetItemBUseCaseBoundaries.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4C906223CB285C00955074 /* GetItemBUseCaseBoundaries.swift */; };
+		2C4C906523CB289B00955074 /* UpdateItemBUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4C906423CB289B00955074 /* UpdateItemBUseCase.swift */; };
+		2C4C906723CB28AA00955074 /* UpdateItemBUseCaseBoundaries.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4C906623CB28AA00955074 /* UpdateItemBUseCaseBoundaries.swift */; };
+		2C4C906923CB28F900955074 /* CreateItemBUseCaseAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4C906823CB28F900955074 /* CreateItemBUseCaseAssembly.swift */; };
+		2C4C906B23CB290700955074 /* GetItemBUseCaseAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4C906A23CB290700955074 /* GetItemBUseCaseAssembly.swift */; };
+		2C4C906D23CB291500955074 /* UpdateItemBUseCaseAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4C906C23CB291500955074 /* UpdateItemBUseCaseAssembly.swift */; };
 		2CB1D0F223BA483B00755886 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB1D0F123BA483B00755886 /* AppDelegate.swift */; };
 		2CB1D0FA23BA483B00755886 /* ISDKTest.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2CB1D0F823BA483B00755886 /* ISDKTest.xcdatamodeld */; };
 		2CB1D0FC23BA483D00755886 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2CB1D0FB23BA483D00755886 /* Assets.xcassets */; };
@@ -260,7 +269,7 @@
 		2C32C5BC23C9BDD20028CFFA /* RxFilterNil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxFilterNil.swift; sourceTree = "<group>"; };
 		2C32C5BE23C9C2DF0028CFFA /* ButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonStyle.swift; sourceTree = "<group>"; };
 		2C32C5C123C9C9B10028CFFA /* CreateItemAUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateItemAUseCase.swift; sourceTree = "<group>"; };
-		2C32C5C323C9C9BC0028CFFA /* CreateItemABoundaries.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateItemABoundaries.swift; sourceTree = "<group>"; };
+		2C32C5C323C9C9BC0028CFFA /* CreateItemAUseCaseBoundaries.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateItemAUseCaseBoundaries.swift; sourceTree = "<group>"; };
 		2C32C5C723C9CF130028CFFA /* CoreDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataProvider.swift; sourceTree = "<group>"; };
 		2C32C5C923C9CF260028CFFA /* CoreDataProviderProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataProviderProtocol.swift; sourceTree = "<group>"; };
 		2C32C5D423C9D18F0028CFFA /* CoreDataProviderAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataProviderAssembly.swift; sourceTree = "<group>"; };
@@ -297,6 +306,15 @@
 		2C4C905223CB197A00955074 /* ItemACoreData+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ItemACoreData+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		2C4C905523CB1A2600955074 /* ItemBLocalStorageProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ItemBLocalStorageProtocol.swift; path = ../../LocalStorages/ItemB/ItemBLocalStorageProtocol.swift; sourceTree = "<group>"; };
 		2C4C905723CB1A2E00955074 /* ItemBLocalStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemBLocalStorage.swift; sourceTree = "<group>"; };
+		2C4C905C23CB270000955074 /* CreateItemBUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateItemBUseCase.swift; sourceTree = "<group>"; };
+		2C4C905E23CB271500955074 /* CreateItemBUseCaseBoundaries.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateItemBUseCaseBoundaries.swift; sourceTree = "<group>"; };
+		2C4C906023CB284D00955074 /* GetItemBUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetItemBUseCase.swift; sourceTree = "<group>"; };
+		2C4C906223CB285C00955074 /* GetItemBUseCaseBoundaries.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetItemBUseCaseBoundaries.swift; sourceTree = "<group>"; };
+		2C4C906423CB289B00955074 /* UpdateItemBUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateItemBUseCase.swift; sourceTree = "<group>"; };
+		2C4C906623CB28AA00955074 /* UpdateItemBUseCaseBoundaries.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateItemBUseCaseBoundaries.swift; sourceTree = "<group>"; };
+		2C4C906823CB28F900955074 /* CreateItemBUseCaseAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateItemBUseCaseAssembly.swift; sourceTree = "<group>"; };
+		2C4C906A23CB290700955074 /* GetItemBUseCaseAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetItemBUseCaseAssembly.swift; sourceTree = "<group>"; };
+		2C4C906C23CB291500955074 /* UpdateItemBUseCaseAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateItemBUseCaseAssembly.swift; sourceTree = "<group>"; };
 		2CB1D0EE23BA483B00755886 /* ISDKTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ISDKTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CB1D0F123BA483B00755886 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2CB1D0F923BA483B00755886 /* ISDKTest.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ISDKTest.xcdatamodel; sourceTree = "<group>"; };
@@ -462,9 +480,12 @@
 			isa = PBXGroup;
 			children = (
 				2C32C5C023C9C9970028CFFA /* CreateItemA */,
+				2C4C905923CB26B200955074 /* CreateItemB */,
 				2C32C4AD23C6131A0028CFFA /* GetABList */,
 				2C4C902823CA16A600955074 /* GetItemA */,
+				2C4C905A23CB26CE00955074 /* GetItemB */,
 				2C4C903123CA1BE500955074 /* UpdateItemA */,
+				2C4C905B23CB26D400955074 /* UpdateItemB */,
 			);
 			path = UseCases;
 			sourceTree = "<group>";
@@ -527,9 +548,12 @@
 			isa = PBXGroup;
 			children = (
 				2C4C901623C9EB0E00955074 /* CreateItemAUseCaseAssembly.swift */,
+				2C4C906823CB28F900955074 /* CreateItemBUseCaseAssembly.swift */,
 				2C32C4C823C630570028CFFA /* GetABListUseCaseAssembly.swift */,
 				2C4C902D23CA175C00955074 /* GetItemAUseCaseAssembly.swift */,
+				2C4C906A23CB290700955074 /* GetItemBUseCaseAssembly.swift */,
 				2C4C903623CA1CC600955074 /* UpdateItemAUseCaseAssembly.swift */,
+				2C4C906C23CB291500955074 /* UpdateItemBUseCaseAssembly.swift */,
 			);
 			path = UseCases;
 			sourceTree = "<group>";
@@ -899,7 +923,7 @@
 			isa = PBXGroup;
 			children = (
 				2C32C5C123C9C9B10028CFFA /* CreateItemAUseCase.swift */,
-				2C32C5C323C9C9BC0028CFFA /* CreateItemABoundaries.swift */,
+				2C32C5C323C9C9BC0028CFFA /* CreateItemAUseCaseBoundaries.swift */,
 			);
 			path = CreateItemA;
 			sourceTree = "<group>";
@@ -1063,6 +1087,33 @@
 				2C4C905723CB1A2E00955074 /* ItemBLocalStorage.swift */,
 			);
 			path = ItemB;
+			sourceTree = "<group>";
+		};
+		2C4C905923CB26B200955074 /* CreateItemB */ = {
+			isa = PBXGroup;
+			children = (
+				2C4C905C23CB270000955074 /* CreateItemBUseCase.swift */,
+				2C4C905E23CB271500955074 /* CreateItemBUseCaseBoundaries.swift */,
+			);
+			path = CreateItemB;
+			sourceTree = "<group>";
+		};
+		2C4C905A23CB26CE00955074 /* GetItemB */ = {
+			isa = PBXGroup;
+			children = (
+				2C4C906023CB284D00955074 /* GetItemBUseCase.swift */,
+				2C4C906223CB285C00955074 /* GetItemBUseCaseBoundaries.swift */,
+			);
+			path = GetItemB;
+			sourceTree = "<group>";
+		};
+		2C4C905B23CB26D400955074 /* UpdateItemB */ = {
+			isa = PBXGroup;
+			children = (
+				2C4C906423CB289B00955074 /* UpdateItemBUseCase.swift */,
+				2C4C906623CB28AA00955074 /* UpdateItemBUseCaseBoundaries.swift */,
+			);
+			path = UpdateItemB;
 			sourceTree = "<group>";
 		};
 		2CB1D0E523BA483B00755886 = {
@@ -1507,6 +1558,7 @@
 			files = (
 				2C32C5AB23C90C960028CFFA /* CreateItemBCoordinator.swift in Sources */,
 				2C32C49E23C5D1C00028CFFA /* ABListModuleItemBCell.swift in Sources */,
+				2C4C905D23CB270000955074 /* CreateItemBUseCase.swift in Sources */,
 				2C32C4C923C630570028CFFA /* GetABListUseCaseAssembly.swift in Sources */,
 				2C4C904D23CB191C00955074 /* ItemBCoreData+CoreDataClass.swift in Sources */,
 				2C32C49523C5CC950028CFFA /* ViewStyle.swift in Sources */,
@@ -1514,9 +1566,11 @@
 				2C32C5B023C992950028CFFA /* TextFieldStyle.swift in Sources */,
 				2C32C54623C90B860028CFFA /* CreateItemAModuleAssembly.swift in Sources */,
 				2C32C52C23C90B290028CFFA /* ItemBModuleAssembly.swift in Sources */,
+				2C4C906D23CB291500955074 /* UpdateItemBUseCaseAssembly.swift in Sources */,
 				2C32C4B423C61A4C0028CFFA /* ItemARepositoryProtocol.swift in Sources */,
 				2CC7062523BA66AB00921919 /* AppCoordinatorProtocol.swift in Sources */,
 				2C32C58F23C90C740028CFFA /* CreateItemAModulesFactoryProtocol.swift in Sources */,
+				2C4C906123CB284D00955074 /* GetItemBUseCase.swift in Sources */,
 				2C3DCB4E23C32AF900B52607 /* ABListModuleItemACellViewModel.swift in Sources */,
 				2C3DCB5023C3410800B52607 /* ABListModuleItemACellViewModelProtocol.swift in Sources */,
 				2C32C57723C90C490028CFFA /* ItemBModulesFactoryProtocol.swift in Sources */,
@@ -1551,10 +1605,12 @@
 				2C32C5B823C9A0040028CFFA /* UIImagePickerController+RxCreate.swift in Sources */,
 				2CC7062823BA670500921919 /* AppCoordinatorsFactoryProtocol.swift in Sources */,
 				2C32C55D23C90BDE0028CFFA /* CreateItemBModuleViewController.swift in Sources */,
+				2C4C906323CB285C00955074 /* GetItemBUseCaseBoundaries.swift in Sources */,
 				2CC7063923BA6B8000921919 /* ABListModulesFactory.swift in Sources */,
-				2C32C5C423C9C9BC0028CFFA /* CreateItemABoundaries.swift in Sources */,
+				2C32C5C423C9C9BC0028CFFA /* CreateItemAUseCaseBoundaries.swift in Sources */,
 				2C32C5B423C99F7D0028CFFA /* RxImagePickerDelegateProxy.swift in Sources */,
 				2C4C904C23CB191C00955074 /* LabelCoreData+CoreDataProperties.swift in Sources */,
+				2C4C905F23CB271500955074 /* CreateItemBUseCaseBoundaries.swift in Sources */,
 				2C32C4BC23C62CC40028CFFA /* ItemARepository.swift in Sources */,
 				2C32C5A823C90C960028CFFA /* CreateItemBCoordinatorsFactoryProtocol.swift in Sources */,
 				2C32C5BF23C9C2DF0028CFFA /* ButtonStyle.swift in Sources */,
@@ -1585,6 +1641,7 @@
 				2C32C52723C90B290028CFFA /* ItemBModule.swift in Sources */,
 				2C4C901F23CA01F000955074 /* Int+Extension.swift in Sources */,
 				2C3DCB3C23C2119E00B52607 /* ABListCoordinatorAssembly.swift in Sources */,
+				2C4C906523CB289B00955074 /* UpdateItemBUseCase.swift in Sources */,
 				2CC7064323BA6FAB00921919 /* ABListModuleViewController.swift in Sources */,
 				2C32C4A023C5D1D10028CFFA /* ABListModuleItemBView.swift in Sources */,
 				2C4C904E23CB191C00955074 /* ItemBCoreData+CoreDataProperties.swift in Sources */,
@@ -1600,6 +1657,7 @@
 				2CC7063423BA683B00921919 /* ABListCoordinator.swift in Sources */,
 				2C32C48C23C4D4C50028CFFA /* ViewController.swift in Sources */,
 				2C32C55A23C90BDD0028CFFA /* CreateItemBModuleAssembly.swift in Sources */,
+				2C4C906723CB28AA00955074 /* UpdateItemBUseCaseBoundaries.swift in Sources */,
 				2C3DCB4223C2180F00B52607 /* ABListModuleViewModelProtocol.swift in Sources */,
 				2CC7063723BA6ADE00921919 /* ABListModule.swift in Sources */,
 				2CC7061723BA507300921919 /* CoordinatorProtocol.swift in Sources */,
@@ -1617,6 +1675,7 @@
 				2C32C4AA23C612A70028CFFA /* ItemAEntity.swift in Sources */,
 				2CC7061323BA501A00921919 /* RouterProtocol.swift in Sources */,
 				2C32C5BD23C9BDD20028CFFA /* RxFilterNil.swift in Sources */,
+				2C4C906B23CB290700955074 /* GetItemBUseCaseAssembly.swift in Sources */,
 				2C32C4F423C9088F0028CFFA /* ItemAModuleBoundaries.swift in Sources */,
 				2C32C4F723C9088F0028CFFA /* ItemAModuleViewModelProtocol.swift in Sources */,
 				2C32C5D523C9D18F0028CFFA /* CoreDataProviderAssembly.swift in Sources */,
@@ -1633,6 +1692,7 @@
 				2C32C4B123C614020028CFFA /* GetABListUseCaseBoundaries.swift in Sources */,
 				2C32C48623C4C7C30028CFFA /* CellReusable.swift in Sources */,
 				2C32C48223C4C7AD0028CFFA /* CellSelectable.swift in Sources */,
+				2C4C906923CB28F900955074 /* CreateItemBUseCaseAssembly.swift in Sources */,
 				2C32C5A923C90C960028CFFA /* CreateItemBCoordinatorsFactory.swift in Sources */,
 				2C32C5AA23C90C960028CFFA /* CreateItemBCoordinatorAssembly.swift in Sources */,
 				2C32C4B623C61BBE0028CFFA /* ItemBRepositoryProtocol.swift in Sources */,
