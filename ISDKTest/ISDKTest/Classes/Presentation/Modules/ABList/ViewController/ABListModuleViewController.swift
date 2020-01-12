@@ -30,13 +30,6 @@ final class ABListModuleViewController: ViewController<ABListModuleView> {
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
-    // MARK: Override functions
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        configure()
-    }
 }
 
 // MARK: - Binding ViewModel
@@ -64,6 +57,11 @@ private extension ABListModuleViewController {
             .tap
             .map { ABListModuleViewModelAction.createB }
             .bind(to: viewModel.vmAction)
+            .disposed(by: disposeBag)
+        
+        view().tableView.rx
+            .itemSelected
+            .bind(to: tableViewItemSelectedBinder)
             .disposed(by: disposeBag)
 
         // States
@@ -111,17 +109,9 @@ private extension ABListModuleViewController {
     }
 }
 
-// MARK: Configure
+// MARK: - Helper Binders
 
 private extension ABListModuleViewController {
-
-    func configure() {
-        view().tableView.rx
-            .itemSelected
-            .bind(to: tableViewItemSelectedBinder)
-            .disposed(by: disposeBag)
-        
-    }
     
     var tableViewItemSelectedBinder: Binder<IndexPath> {
         return Binder<IndexPath>(self) { (target, indexPath) in

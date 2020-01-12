@@ -45,11 +45,11 @@ private extension ABListCoordinator {
         self.rootModule = module
         
         module.output.showAddItemA = { [weak self] in
-            self?.runCreateItemACoordinator()
+            self?.runItemACoordinator(id: nil)
         }
         
         module.output.showAddItemB = { [weak self] in
-            self?.runCreateItemBCoordinator()
+            self?.runItemBCoordinator(id: nil)
         }
         
         module.output.showItemA = { [weak self] (id) in
@@ -68,7 +68,7 @@ private extension ABListCoordinator {
 
 private extension ABListCoordinator {
     
-    func runItemACoordinator(id: String) {
+    func runItemACoordinator(id: String?) {
         let coordinator = coordinatorsFactory.createItemACoordinator(router: router)
         
         coordinator.finishFlow = { [weak self, weak coordinator] in
@@ -81,7 +81,7 @@ private extension ABListCoordinator {
         coordinator.start(id: id)
     }
     
-    func runItemBCoordinator(id: String) {
+    func runItemBCoordinator(id: String?) {
         let coordinator = coordinatorsFactory.createItemBCoordinator(router: router)
         
         coordinator.finishFlow = { [weak self, weak coordinator] in
@@ -92,31 +92,5 @@ private extension ABListCoordinator {
         addDependency(coordinator)
         
         coordinator.start(id: id)
-    }
-    
-    func runCreateItemACoordinator() {
-        let coordinator = coordinatorsFactory.createCreateItemACoordinator(router: router)
-        
-        coordinator.finishFlow = { [weak self, weak coordinator] in
-            self?.removeDependency(coordinator)
-            self?.rootModule?.input.refresh()
-        }
-        
-        addDependency(coordinator)
-        
-        coordinator.start()
-    }
-    
-    func runCreateItemBCoordinator() {
-        let coordinator = coordinatorsFactory.createCreateItemBCoordinator(router: router)
-        
-        coordinator.finishFlow = { [weak self, weak coordinator] in
-            self?.removeDependency(coordinator)
-            self?.rootModule?.input.refresh()
-        }
-        
-        addDependency(coordinator)
-        
-        coordinator.start()
     }
 }

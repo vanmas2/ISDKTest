@@ -16,9 +16,12 @@ struct ViewStyle {
     
     let backgroundColor: UIColor?
     
+    let cornerRadius: CGFloat?
+    
     // MARK: Constructors
     
-    init(backgroundColor: UIColor? = nil) {
+    init(backgroundColor: UIColor? = nil, cornerRadius: CGFloat? = nil) {
         self.backgroundColor = backgroundColor
+        self.cornerRadius = cornerRadius
     }
 }

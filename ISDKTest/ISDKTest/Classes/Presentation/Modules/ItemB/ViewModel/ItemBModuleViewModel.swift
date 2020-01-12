@@ -18,11 +18,13 @@ final class ItemBModuleViewModel {
     
     // MARK: Private properties
     
-    private let id: String
+    private let id: String?
     
     private let updateItemBUseCase: UpdateItemBUseCaseProtocol
     
     private let getItemBUseCase: GetItemBUseCaseProtocol
+    
+    private let createItemBUseCase: CreateItemBUseCaseProtocol
     
     private var output: Output
     
@@ -30,9 +32,10 @@ final class ItemBModuleViewModel {
     
     // MARK: Constructors
     
-    init(id: String, getItemBUseCase: GetItemBUseCaseProtocol, updateItemBUseCase: UpdateItemBUseCaseProtocol) {
+    init(id: String?, getItemBUseCase: GetItemBUseCaseProtocol, updateItemBUseCase: UpdateItemBUseCaseProtocol, createItemBUseCase: CreateItemBUseCaseProtocol) {
         self.getItemBUseCase = getItemBUseCase
         self.updateItemBUseCase = updateItemBUseCase
+        self.createItemBUseCase = createItemBUseCase
         self.id = id
         output = Output()
     }
@@ -71,22 +74,9 @@ extension ItemBModuleViewModel: Reactor {
         case .setLabels(let labels):
             return Observable.just(.setLabels(labels))
         case .update:
-            guard
-                currentState.title.count > 0,
-                currentState.desc.count > 0,
-                currentState.title.count <= 50,
-                currentState.desc.count <= 300
-                else { return Observable.empty() }
-            return updateItemBUseCase.execute(request: .init(id: id, title: currentState.title, desc: currentState.desc, value: currentState.value, image: currentState.imageData, labels: currentState.labels.components(separatedBy: " ")))
-                .map { .update }
+            return updateHandleAction()
         case .get:
-            return getItemBUseCase.execute(request: .init(id: id))
-                .filterNil()
-                .map {
-                    var labels = $0.labels.reduce("") { "\($0) \($1)" }
-                    labels.removeFirst()
-                    return .set(.init(title: $0.title, desc: $0.desc, value: $0.value, imageData: $0.image, labels: labels))
-                }
+            return getHandleAction()
         }
     }
     
@@ -122,6 +112,34 @@ extension ItemBModuleViewModel: Reactor {
 
 private extension  ItemBModuleViewModel {
     
+    func updateHandleAction() -> Observable<Mutation> {
+        guard
+            currentState.title.count > 0,
+            currentState.desc.count > 0
+            else { return Observable.empty() }
+        
+        if let id = id {
+            return updateItemBUseCase.execute(request: .init(id: id, title: currentState.title, desc: currentState.desc, value: currentState.value, image: currentState.imageData, labels: currentState.labels.components(separatedBy: " ")))
+                .map { .update }
+        } else {
+            return createItemBUseCase.execute(request: .init(title: currentState.title, desc: currentState.desc, value: currentState.value, image: currentState.imageData, labels: currentState.labels.components(separatedBy: " ")))
+                .map { _ in .update }
+        }
+    }
+    
+    func getHandleAction() -> Observable<Mutation> {
+        if let id = id {
+            return getItemBUseCase.execute(request: .init(id: id))
+                .filterNil()
+                .map {
+                    var labels = $0.labels.reduce("") { "\($0) \($1)" }
+                    labels.removeFirst()
+                    return .set(.init(title: $0.title, desc: $0.desc, value: $0.value, imageData: $0.image, labels: labels))
+            }
+        } else {
+            return Observable.just(.set(.init(title: String.random(length: 20), desc: String.random(length: 100), value: Int.random(in: 0...500), imageData: Data(imageName: "Icons/noImage"), labels: "")))
+        }
+    }
 }
 
 // MARK: -  ItemBModuleViewModelProtocol

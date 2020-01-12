@@ -5,7 +5,6 @@
 //  Created by Иван Масальских on 11/01/2020.
 //
 
-
 import UIKit
 import Stevia
 
@@ -83,6 +82,10 @@ private extension ItemAModuleView {
             photoButton,
             createButton
         )
+        
+        titleTextField.delegate = self
+        valueTextField.delegate = self
+        descTextView.delegate = self
     }
     
     func configureLayout() {
@@ -118,52 +121,76 @@ private extension ItemAModuleView {
     }
     
     func configureStyle() {
-        let viewStyle = ViewStyle(backgroundColor: View.backgroundColor)
-        let labelStyle = LabelStyle(font: UIFont.systemFont(ofSize: 18), numberOfLines: 1)
-        let buttonStyle = ButtonStyle(backgroundColor: .lightGray, cornerRadius: 5)
-        let photoButtonStyle = ButtonStyle(cornerRadius: 5)
-        
-        style(viewStyle: viewStyle)
+        style(viewStyle: DefaultTheme.view)
         
         titleLabel.text = "Title"
-        titleLabel.style(labelStyle: labelStyle)
+        titleLabel.style(labelStyle: DefaultTheme.label)
         
-        titleTextField.style(textFieldStyle: .init(borderStyle: .roundedRect))
-        titleTextField.font = UIFont.systemFont(ofSize: 16)
+        titleTextField.style(textFieldStyle: DefaultTheme.textField)
         
         descLabel.text = "Description"
-        descLabel.style(labelStyle: labelStyle)
+        descLabel.style(labelStyle: DefaultTheme.label)
         
+        descTextView.style(textViewStyle: DefaultTheme.textView)
         descTextView.isScrollEnabled = true
-        descTextView.layer.borderWidth = 0.5
-        descTextView.layer.borderColor = UIColor.lightGray.cgColor
-        descTextView.layer.cornerRadius = 5
-        descTextView.font = UIFont.systemFont(ofSize: 16)
         
         valueLabel.text = "Value"
-        valueLabel.style(labelStyle: labelStyle)
+        valueLabel.style(labelStyle: DefaultTheme.label)
         
-        valueTextField.style(textFieldStyle: .init(borderStyle: .roundedRect))
-        valueTextField.keyboardType = .numberPad
-        valueTextField.font = UIFont.systemFont(ofSize: 16)
+        valueTextField.style(textFieldStyle: DefaultTheme.valueTextField)
         
         photoLabel.text = "Photo"
-        photoLabel.style(labelStyle: labelStyle)
+        photoLabel.style(labelStyle: DefaultTheme.label)
         
-        photoButton.style(buttonStyle: photoButtonStyle)
+        photoButton.style(buttonStyle: DefaultTheme.photoButton)
         photoButton.clipsToBounds = true
         
-        createButton.setTitle("Update item A", for: .normal)
-        createButton.style(buttonStyle: buttonStyle)
+        createButton.setTitle("Confirm", for: .normal)
+        createButton.style(buttonStyle: DefaultTheme.button)
     }
 }
 
+// MARK: - UITextFieldDelegate
+
+extension ItemAModuleView: UITextFieldDelegate {
+    
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        
+        if(textField == titleTextField){
+            let newText = textField.text! + string
+            return newText.count <= Defaults.titleTextFieldMaxLength
+        }
+        
+        if(textField == valueTextField){
+            let newText = textField.text! + string
+            return newText.count <= Defaults.valueTextFieldMaxLength
+        }
+
+        return true;
+    }
+}
+
+// MARK: - UITextFieldDelegate
+
+extension ItemAModuleView: UITextViewDelegate {
+    
+    func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
+        if(textView == descTextView){
+            let newText = (textView.text as NSString).replacingCharacters(in: range, with: text)
+            return newText.count <= Defaults.descTextViewMaxLength
+        }
+        
+        return true
+    }
+}
 
 // MARK: - Constants
 
 private extension ItemAModuleView {
     
-    enum View {
-        static let backgroundColor = UIColor.white
+    enum Defaults {
+        static let titleTextFieldMaxLength = 50
+        static let descTextViewMaxLength = 300
+        static let valueTextFieldMaxLength = 100
     }
 }
