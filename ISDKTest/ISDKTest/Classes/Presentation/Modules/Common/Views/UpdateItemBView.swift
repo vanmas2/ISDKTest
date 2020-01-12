@@ -1,5 +1,5 @@
 //
-//  UpdateItemView.swift
+//  UpdateItemBView.swift
 //  ISDKTest
 //
 //  Created by Иван Масальских on 12/01/2020.
@@ -9,9 +9,9 @@ import UIKit
 import Stevia
 
 
-// MARK: - UpdateItemView
+// MARK: - UpdateItemBView
 
-final class UpdateItemView: UIView {
+final class UpdateItemBView: UIView {
     
     // MARK: Views
     
@@ -33,6 +33,10 @@ final class UpdateItemView: UIView {
     
     private(set) var photoButton: UIButton!
     
+    private(set) var labelsLabel: UILabel!
+    
+    private(set) var labelsTextField: UITextField!
+    
     private(set) var createButton: UIButton!
     
     // MARK: Constructors
@@ -51,7 +55,7 @@ final class UpdateItemView: UIView {
 
 // MARK: - Configure UI
 
-private extension UpdateItemView {
+private extension UpdateItemBView {
     
     func configureUI() {
         configureViews()
@@ -69,6 +73,8 @@ private extension UpdateItemView {
         valueTextField = UITextField()
         photoLabel = UILabel()
         photoButton = UIButton()
+        labelsLabel = UILabel()
+        labelsTextField = UITextField()
         createButton = UIButton()
         sv(scrollContentView)
         scrollContentView.contentView.sv(
@@ -80,6 +86,8 @@ private extension UpdateItemView {
             valueTextField,
             photoLabel,
             photoButton,
+            labelsLabel,
+            labelsTextField,
             createButton
         )
     }
@@ -104,6 +112,10 @@ private extension UpdateItemView {
             |-20-photoLabel-20-|,
             2,
             |-20-photoButton,
+            20,
+            |-20-labelsLabel-20-|,
+            2,
+            |-20-labelsTextField-20-|,
             20,
             |-20-createButton-20-|,
             (>=20)
@@ -152,6 +164,12 @@ private extension UpdateItemView {
         photoButton.style(buttonStyle: photoButtonStyle)
         photoButton.clipsToBounds = true
         
+        labelsLabel.text = "Labels"
+        labelsLabel.style(labelStyle: labelStyle)
+        
+        labelsTextField.style(textFieldStyle: .init(borderStyle: .roundedRect))
+        labelsTextField.font = UIFont.systemFont(ofSize: 16)
+        
         createButton.setTitle("Confirm", for: .normal)
         createButton.style(buttonStyle: buttonStyle)
     }
@@ -160,7 +178,7 @@ private extension UpdateItemView {
 
 // MARK: - Constants
 
-private extension UpdateItemView {
+private extension UpdateItemBView {
     
     enum View {
         static let backgroundColor = UIColor.white

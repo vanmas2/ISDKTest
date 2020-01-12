@@ -141,7 +141,8 @@
 		2C4C906B23CB290700955074 /* GetItemBUseCaseAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4C906A23CB290700955074 /* GetItemBUseCaseAssembly.swift */; };
 		2C4C906D23CB291500955074 /* UpdateItemBUseCaseAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4C906C23CB291500955074 /* UpdateItemBUseCaseAssembly.swift */; };
 		2C4C906F23CB2C6200955074 /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4C906E23CB2C6200955074 /* UIImage+Extension.swift */; };
-		2C4C907323CB432A00955074 /* UpdateItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4C907223CB432A00955074 /* UpdateItemView.swift */; };
+		2C4C907323CB432A00955074 /* UpdateItemAView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4C907223CB432A00955074 /* UpdateItemAView.swift */; };
+		2C4C907523CB46C700955074 /* UpdateItemBView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4C907423CB46C700955074 /* UpdateItemBView.swift */; };
 		2CB1D0F223BA483B00755886 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB1D0F123BA483B00755886 /* AppDelegate.swift */; };
 		2CB1D0FA23BA483B00755886 /* ISDKTest.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2CB1D0F823BA483B00755886 /* ISDKTest.xcdatamodeld */; };
 		2CB1D0FC23BA483D00755886 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2CB1D0FB23BA483D00755886 /* Assets.xcassets */; };
@@ -318,7 +319,8 @@
 		2C4C906A23CB290700955074 /* GetItemBUseCaseAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetItemBUseCaseAssembly.swift; sourceTree = "<group>"; };
 		2C4C906C23CB291500955074 /* UpdateItemBUseCaseAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateItemBUseCaseAssembly.swift; sourceTree = "<group>"; };
 		2C4C906E23CB2C6200955074 /* UIImage+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
-		2C4C907223CB432A00955074 /* UpdateItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateItemView.swift; sourceTree = "<group>"; };
+		2C4C907223CB432A00955074 /* UpdateItemAView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateItemAView.swift; sourceTree = "<group>"; };
+		2C4C907423CB46C700955074 /* UpdateItemBView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateItemBView.swift; sourceTree = "<group>"; };
 		2CB1D0EE23BA483B00755886 /* ISDKTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ISDKTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CB1D0F123BA483B00755886 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2CB1D0F923BA483B00755886 /* ISDKTest.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ISDKTest.xcdatamodel; sourceTree = "<group>"; };
@@ -1132,7 +1134,8 @@
 		2C4C907123CB42F900955074 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				2C4C907223CB432A00955074 /* UpdateItemView.swift */,
+				2C4C907223CB432A00955074 /* UpdateItemAView.swift */,
+				2C4C907423CB46C700955074 /* UpdateItemBView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -1582,7 +1585,7 @@
 				2C32C49E23C5D1C00028CFFA /* ABListModuleItemBCell.swift in Sources */,
 				2C4C905D23CB270000955074 /* CreateItemBUseCase.swift in Sources */,
 				2C32C4C923C630570028CFFA /* GetABListUseCaseAssembly.swift in Sources */,
-				2C4C907323CB432A00955074 /* UpdateItemView.swift in Sources */,
+				2C4C907323CB432A00955074 /* UpdateItemAView.swift in Sources */,
 				2C4C904D23CB191C00955074 /* ItemBCoreData+CoreDataClass.swift in Sources */,
 				2C32C49523C5CC950028CFFA /* ViewStyle.swift in Sources */,
 				2C32C4C423C62FA30028CFFA /* ItemBRepositoryAssembly.swift in Sources */,
@@ -1737,6 +1740,7 @@
 				2C32C52B23C90B290028CFFA /* ItemBModuleViewModelProtocol.swift in Sources */,
 				2C4C901D23CA01BB00955074 /* String+Extension.swift in Sources */,
 				2CC7063023BA67C500921919 /* ABListModulesFactoryProtocol.swift in Sources */,
+				2C4C907523CB46C700955074 /* UpdateItemBView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
