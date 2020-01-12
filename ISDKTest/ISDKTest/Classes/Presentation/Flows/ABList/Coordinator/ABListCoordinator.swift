@@ -111,6 +111,7 @@ private extension ABListCoordinator {
         
         coordinator.finishFlow = { [weak self, weak coordinator] in
             self?.removeDependency(coordinator)
+            self?.rootModule?.input.refresh()
         }
         
         addDependency(coordinator)

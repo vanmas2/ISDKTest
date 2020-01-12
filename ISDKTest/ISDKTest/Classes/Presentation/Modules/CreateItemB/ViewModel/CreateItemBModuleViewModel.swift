@@ -18,13 +18,16 @@ final class CreateItemBModuleViewModel {
     
     // MARK: Private properties
     
+    private let createItemBUseCase: CreateItemBUseCaseProtocol
+    
     private var output: Output
     
     private var disposeBag = DisposeBag()
     
     // MARK: Constructors
     
-    init() {
+    init(createItemBUseCase: CreateItemBUseCaseProtocol) {
+        self.createItemBUseCase = createItemBUseCase
         output = Output()
     }
 }
@@ -37,22 +40,39 @@ extension CreateItemBModuleViewModel: Reactor {
     
     typealias Action = CreateItemBModuleViewModelAction
     
-    typealias Mutation = CreateItemBModuleViewModelMutation
+    typealias Mutation = Action
     
     typealias State = CreateItemBModuleViewModelState
     
     // MARK: Properties
     
     var initialState: CreateItemBModuleViewModelState {
-        return CreateItemBModuleViewModelState()
+        return CreateItemBModuleViewModelState(title: String.random(length: 20), desc: String.random(length: 100), value: Int.random(in: 0...500), imageData: Data(imageName: "Icons/noImage"), labels: "")
     }
     
     // MARK: Functions
     
     func mutate(action: Action) -> Observable<Mutation> {
         switch action {
-        default:
-            return Observable.empty()
+        case .setTitle(let title):
+            return Observable.just(.setTitle(title))
+        case .setDesc(let desc):
+            return Observable.just(.setDesc(desc))
+        case .setValue(let value):
+            return Observable.just(.setValue(value))
+        case .setImageData(let imageData):
+            return Observable.just(.setImageData(imageData))
+        case .setLabels(let labels):
+            return Observable.just(.setLabels(labels))
+        case .create:
+            guard
+                currentState.title.count > 0,
+                currentState.desc.count > 0,
+                currentState.title.count <= 50,
+                currentState.desc.count <= 300
+                else { return Observable.empty() }
+            return createItemBUseCase.execute(request: .init(title: currentState.title, desc: currentState.desc, value: currentState.value, image: currentState.imageData, labels: currentState.labels.components(separatedBy: " ")))
+                .map { _ in .create }
         }
     }
     
@@ -60,8 +80,18 @@ extension CreateItemBModuleViewModel: Reactor {
         var newState = state
         
         switch mutation {
-        default:
-            ()
+        case .setTitle(let title):
+            newState.title = title
+        case .setDesc(let desc):
+            newState.desc = desc
+        case .setValue(let value):
+            newState.value = value
+        case .setImageData(let imageData):
+            newState.imageData = imageData
+        case .setLabels(let labels):
+            newState.labels = labels
+        case .create:
+            output.didFinish?()
         }
         
         return newState
