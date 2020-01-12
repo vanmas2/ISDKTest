@@ -90,6 +90,9 @@ private extension ItemBModuleView {
             labelsTextField,
             createButton
         )
+        
+        titleTextField.delegate = self
+        valueTextField.delegate = self
     }
     
     func configureLayout() {
@@ -160,5 +163,36 @@ private extension ItemBModuleView {
         
         createButton.setTitle("Confirm", for: .normal)
         createButton.style(buttonStyle: DefaultTheme.button)
+    }
+}
+
+// MARK: - UITextFieldDelegate
+
+extension ItemBModuleView: UITextFieldDelegate {
+    
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        
+        if(textField == titleTextField){
+            let currentText = textField.text! + string
+            return currentText.count <= Defaults.titleTextFieldMaxLength
+        }
+        
+        if(textField == valueTextField){
+            let currentText = textField.text! + string
+            return currentText.count <= Defaults.valueTextFieldMaxLength
+        }
+        
+        return true;
+    }
+}
+
+// MARK: - Constants
+
+private extension ItemBModuleView {
+    
+    enum Defaults {
+        static let titleTextFieldMaxLength = 50
+        static let descTextViewMaxLength = 300
+        static let valueTextFieldMaxLength = 100
     }
 }

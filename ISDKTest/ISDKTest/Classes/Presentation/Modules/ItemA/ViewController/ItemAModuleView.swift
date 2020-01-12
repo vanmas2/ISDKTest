@@ -82,6 +82,10 @@ private extension ItemAModuleView {
             photoButton,
             createButton
         )
+        
+        titleTextField.delegate = self
+        valueTextField.delegate = self
+        descTextView.delegate = self
     }
     
     func configureLayout() {
@@ -143,5 +147,50 @@ private extension ItemAModuleView {
         
         createButton.setTitle("Confirm", for: .normal)
         createButton.style(buttonStyle: DefaultTheme.button)
+    }
+}
+
+// MARK: - UITextFieldDelegate
+
+extension ItemAModuleView: UITextFieldDelegate {
+    
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        
+        if(textField == titleTextField){
+            let newText = textField.text! + string
+            return newText.count <= Defaults.titleTextFieldMaxLength
+        }
+        
+        if(textField == valueTextField){
+            let newText = textField.text! + string
+            return newText.count <= Defaults.valueTextFieldMaxLength
+        }
+
+        return true;
+    }
+}
+
+// MARK: - UITextFieldDelegate
+
+extension ItemAModuleView: UITextViewDelegate {
+    
+    func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
+        if(textView == descTextView){
+            let newText = (textView.text as NSString).replacingCharacters(in: range, with: text)
+            return newText.count <= Defaults.descTextViewMaxLength
+        }
+        
+        return true
+    }
+}
+
+// MARK: - Constants
+
+private extension ItemAModuleView {
+    
+    enum Defaults {
+        static let titleTextFieldMaxLength = 50
+        static let descTextViewMaxLength = 300
+        static let valueTextFieldMaxLength = 100
     }
 }
