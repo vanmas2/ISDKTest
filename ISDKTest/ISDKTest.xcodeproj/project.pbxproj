@@ -112,7 +112,13 @@
 		2C4C906B23CB290700955074 /* GetItemBUseCaseAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4C906A23CB290700955074 /* GetItemBUseCaseAssembly.swift */; };
 		2C4C906D23CB291500955074 /* UpdateItemBUseCaseAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4C906C23CB291500955074 /* UpdateItemBUseCaseAssembly.swift */; };
 		2C4C906F23CB2C6200955074 /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4C906E23CB2C6200955074 /* UIImage+Extension.swift */; };
-		2C4C907523CB46C700955074 /* UpdateItemBView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4C907423CB46C700955074 /* UpdateItemBView.swift */; };
+		2C4C907723CB5FF100955074 /* TextViewStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4C907623CB5FF100955074 /* TextViewStyle.swift */; };
+		2C4C907B23CB6A7300955074 /* DefaultTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4C907A23CB6A7300955074 /* DefaultTheme.swift */; };
+		2C4C907F23CB6C9A00955074 /* Styler+LabelStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4C907E23CB6C9A00955074 /* Styler+LabelStyle.swift */; };
+		2C4C908123CB6CB900955074 /* Styler+ViewStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4C908023CB6CB900955074 /* Styler+ViewStyle.swift */; };
+		2C4C908323CB6CE100955074 /* Styler+TextFieldStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4C908223CB6CE100955074 /* Styler+TextFieldStyle.swift */; };
+		2C4C908523CB6D1100955074 /* Styler+ButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4C908423CB6D1100955074 /* Styler+ButtonStyle.swift */; };
+		2C4C908723CB6D3800955074 /* Styler+TextViewStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4C908623CB6D3800955074 /* Styler+TextViewStyle.swift */; };
 		2CB1D0F223BA483B00755886 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB1D0F123BA483B00755886 /* AppDelegate.swift */; };
 		2CB1D0FA23BA483B00755886 /* ISDKTest.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2CB1D0F823BA483B00755886 /* ISDKTest.xcdatamodeld */; };
 		2CB1D0FC23BA483D00755886 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2CB1D0FB23BA483D00755886 /* Assets.xcassets */; };
@@ -260,7 +266,13 @@
 		2C4C906A23CB290700955074 /* GetItemBUseCaseAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetItemBUseCaseAssembly.swift; sourceTree = "<group>"; };
 		2C4C906C23CB291500955074 /* UpdateItemBUseCaseAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateItemBUseCaseAssembly.swift; sourceTree = "<group>"; };
 		2C4C906E23CB2C6200955074 /* UIImage+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
-		2C4C907423CB46C700955074 /* UpdateItemBView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateItemBView.swift; sourceTree = "<group>"; };
+		2C4C907623CB5FF100955074 /* TextViewStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextViewStyle.swift; sourceTree = "<group>"; };
+		2C4C907A23CB6A7300955074 /* DefaultTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultTheme.swift; sourceTree = "<group>"; };
+		2C4C907E23CB6C9A00955074 /* Styler+LabelStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Styler+LabelStyle.swift"; sourceTree = "<group>"; };
+		2C4C908023CB6CB900955074 /* Styler+ViewStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Styler+ViewStyle.swift"; sourceTree = "<group>"; };
+		2C4C908223CB6CE100955074 /* Styler+TextFieldStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Styler+TextFieldStyle.swift"; sourceTree = "<group>"; };
+		2C4C908423CB6D1100955074 /* Styler+ButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Styler+ButtonStyle.swift"; sourceTree = "<group>"; };
+		2C4C908623CB6D3800955074 /* Styler+TextViewStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Styler+TextViewStyle.swift"; sourceTree = "<group>"; };
 		2CB1D0EE23BA483B00755886 /* ISDKTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ISDKTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CB1D0F123BA483B00755886 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2CB1D0F923BA483B00755886 /* ISDKTest.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ISDKTest.xcdatamodel; sourceTree = "<group>"; };
@@ -358,11 +370,8 @@
 		2C32C48F23C5C8C70028CFFA /* Styler */ = {
 			isa = PBXGroup;
 			children = (
-				2C32C49023C5C8D70028CFFA /* Styler.swift */,
-				2C32C5BE23C9C2DF0028CFFA /* ButtonStyle.swift */,
-				2C32C49223C5C8F50028CFFA /* LabelStyle.swift */,
-				2C32C5AF23C992950028CFFA /* TextFieldStyle.swift */,
-				2C32C49423C5CC950028CFFA /* ViewStyle.swift */,
+				2C4C907923CB69D400955074 /* Common */,
+				2C4C907823CB69CA00955074 /* Theme */,
 			);
 			path = Styler;
 			sourceTree = "<group>";
@@ -914,20 +923,46 @@
 			path = UpdateItemB;
 			sourceTree = "<group>";
 		};
-		2C4C907023CB42EB00955074 /* Common */ = {
+		2C4C907823CB69CA00955074 /* Theme */ = {
 			isa = PBXGroup;
 			children = (
-				2C4C907123CB42F900955074 /* Views */,
+				2C4C907A23CB6A7300955074 /* DefaultTheme.swift */,
+			);
+			path = Theme;
+			sourceTree = "<group>";
+		};
+		2C4C907923CB69D400955074 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				2C4C907D23CB6C7A00955074 /* Styler */,
+				2C4C907C23CB6C7400955074 /* Style */,
 			);
 			path = Common;
 			sourceTree = "<group>";
 		};
-		2C4C907123CB42F900955074 /* Views */ = {
+		2C4C907C23CB6C7400955074 /* Style */ = {
 			isa = PBXGroup;
 			children = (
-				2C4C907423CB46C700955074 /* UpdateItemBView.swift */,
+				2C32C5BE23C9C2DF0028CFFA /* ButtonStyle.swift */,
+				2C32C49223C5C8F50028CFFA /* LabelStyle.swift */,
+				2C32C5AF23C992950028CFFA /* TextFieldStyle.swift */,
+				2C4C907623CB5FF100955074 /* TextViewStyle.swift */,
+				2C32C49423C5CC950028CFFA /* ViewStyle.swift */,
 			);
-			path = Views;
+			path = Style;
+			sourceTree = "<group>";
+		};
+		2C4C907D23CB6C7A00955074 /* Styler */ = {
+			isa = PBXGroup;
+			children = (
+				2C32C49023C5C8D70028CFFA /* Styler.swift */,
+				2C4C907E23CB6C9A00955074 /* Styler+LabelStyle.swift */,
+				2C4C908023CB6CB900955074 /* Styler+ViewStyle.swift */,
+				2C4C908223CB6CE100955074 /* Styler+TextFieldStyle.swift */,
+				2C4C908423CB6D1100955074 /* Styler+ButtonStyle.swift */,
+				2C4C908623CB6D3800955074 /* Styler+TextViewStyle.swift */,
+			);
+			path = Styler;
 			sourceTree = "<group>";
 		};
 		2CB1D0E523BA483B00755886 = {
@@ -1033,7 +1068,6 @@
 		2CC7060D23BA4DCB00921919 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				2C4C907023CB42EB00955074 /* Common */,
 				2CC7063523BA6AD000921919 /* ABList */,
 				2C32C4CA23C904990028CFFA /* ItemA */,
 				2C32C51323C90AF60028CFFA /* ItemB */,
@@ -1412,7 +1446,9 @@
 				2C32C5BF23C9C2DF0028CFFA /* ButtonStyle.swift in Sources */,
 				2C3DCB4A23C32A9900B52607 /* ABListModuleItemAView.swift in Sources */,
 				2C32C49323C5C8F50028CFFA /* LabelStyle.swift in Sources */,
+				2C4C908123CB6CB900955074 /* Styler+ViewStyle.swift in Sources */,
 				2CB1D0FA23BA483B00755886 /* ISDKTest.xcdatamodeld in Sources */,
+				2C4C907B23CB6A7300955074 /* DefaultTheme.swift in Sources */,
 				2C32C52923C90B290028CFFA /* ItemBModuleView.swift in Sources */,
 				2C32C4F323C9088F0028CFFA /* ItemAModuleViewController.swift in Sources */,
 				2C32C57923C90C490028CFFA /* ItemBCoordinator.swift in Sources */,
@@ -1447,10 +1483,12 @@
 				2CC7061723BA507300921919 /* CoordinatorProtocol.swift in Sources */,
 				2C32C50D23C908CE0028CFFA /* ItemACoordinator.swift in Sources */,
 				2C32C5C823C9CF130028CFFA /* CoreDataProvider.swift in Sources */,
+				2C4C908323CB6CE100955074 /* Styler+TextFieldStyle.swift in Sources */,
 				2C32C57A23C90C490028CFFA /* ItemBCoordinatorProtocol.swift in Sources */,
 				2C4C905323CB197A00955074 /* ItemACoreData+CoreDataClass.swift in Sources */,
 				2C32C5D923C9D25D0028CFFA /* ItemALocalStorage.swift in Sources */,
 				2C32C51123C908CE0028CFFA /* ItemAModulesFactory.swift in Sources */,
+				2C4C907F23CB6C9A00955074 /* Styler+LabelStyle.swift in Sources */,
 				2CC7063B23BA6CC500921919 /* ABListModuleBoundaries.swift in Sources */,
 				2CC7061523BA504A00921919 /* Coordinator.swift in Sources */,
 				2C32C5DB23C9D2810028CFFA /* ItemALocalStorageProtocol.swift in Sources */,
@@ -1478,13 +1516,16 @@
 				2C4C906923CB28F900955074 /* CreateItemBUseCaseAssembly.swift in Sources */,
 				2C32C4B623C61BBE0028CFFA /* ItemBRepositoryProtocol.swift in Sources */,
 				2C32C4F623C9088F0028CFFA /* ItemAModuleAssembly.swift in Sources */,
+				2C4C907723CB5FF100955074 /* TextViewStyle.swift in Sources */,
 				2C32C57C23C90C490028CFFA /* ItemBCoordinatorsFactory.swift in Sources */,
 				2CC7064123BA6E0900921919 /* AppCoordinatorAssembly.swift in Sources */,
 				2C32C51223C908CE0028CFFA /* ItemACoordinatorAssembly.swift in Sources */,
 				2CC7061923BA509F00921919 /* Presentable.swift in Sources */,
+				2C4C908723CB6D3800955074 /* Styler+TextViewStyle.swift in Sources */,
 				2C32C4F223C9088F0028CFFA /* ItemAModuleView.swift in Sources */,
 				2CC7063D23BA6DC400921919 /* AppAssembly.swift in Sources */,
 				2C4C902C23CA16CA00955074 /* GetItemAUseCaseBoundaries.swift in Sources */,
+				2C4C908523CB6D1100955074 /* Styler+ButtonStyle.swift in Sources */,
 				2CC7063223BA682E00921919 /* ABListCoordinatorProtocol.swift in Sources */,
 				2C32C48423C4C7B80028CFFA /* CellConfigurable.swift in Sources */,
 				2C32C57823C90C490028CFFA /* ItemBCoordinatorAssembly.swift in Sources */,
@@ -1492,7 +1533,6 @@
 				2C32C52B23C90B290028CFFA /* ItemBModuleViewModelProtocol.swift in Sources */,
 				2C4C901D23CA01BB00955074 /* String+Extension.swift in Sources */,
 				2CC7063023BA67C500921919 /* ABListModulesFactoryProtocol.swift in Sources */,
-				2C4C907523CB46C700955074 /* UpdateItemBView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

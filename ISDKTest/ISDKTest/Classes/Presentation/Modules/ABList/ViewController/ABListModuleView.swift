@@ -112,38 +112,35 @@ private extension ABListModuleView {
             addItemBButton.Bottom == layoutMarginsGuide.Bottom - 10
         }
         
-        sortTextField.width(100)
-    }
-    
-    func configureStyle() {
-        backgroundColor = View.backgroundColor
-        
-        tableView.backgroundColor = View.backgroundColor
-        tableView.separatorStyle = .none
-        
         if #available(iOS 11.0, *) {
             tableView.contentInset = .init(top: 0, left: 0, bottom: safeAreaInsets.bottom + 54, right: 0)
         } else {
             tableView.contentInset = .init(top: 0, left: 0, bottom: layoutMargins.bottom + 54, right: 0)
         }
         
-        sortView.backgroundColor = .lightGray
-        sortView.layer.cornerRadius = 5
+        addItemAButton.contentEdgeInsets = .init(top: 6, left: 10, bottom: 6, right: 10)
+        addItemBButton.contentEdgeInsets = .init(top: 6, left: 10, bottom: 6, right: 10)
+        
+        sortTextField.width(100)
+    }
+    
+    func configureStyle() {
+        style(viewStyle: DefaultTheme.view)
+        
+        tableView.style(viewStyle: DefaultTheme.view)
+        tableView.separatorStyle = .none
+        
+        sortView.style(viewStyle: DefaultTheme.sortView)
         
         sortLabel.text = "Sort by:"
         
-        sortTextField.borderStyle = .roundedRect
-        sortTextField.backgroundColor = .lightGray
+        sortTextField.style(textFieldStyle: DefaultTheme.sortTextField)
         
         addItemAButton.setTitle("Add Item A", for: .normal)
-        addItemAButton.backgroundColor = .lightGray
-        addItemAButton.layer.cornerRadius = 5
-        addItemAButton.contentEdgeInsets = .init(top: 6, left: 10, bottom: 6, right: 10)
+        addItemAButton.style(buttonStyle: DefaultTheme.addItemButton)
         
         addItemBButton.setTitle("Add Item B", for: .normal)
-        addItemBButton.backgroundColor = .lightGray
-        addItemBButton.layer.cornerRadius = 5
-        addItemBButton.contentEdgeInsets = .init(top: 6, left: 10, bottom: 6, right: 10)
+        addItemBButton.style(buttonStyle: DefaultTheme.addItemButton)
     }
     
     func configurePickerView() {
@@ -162,15 +159,5 @@ private extension ABListModuleView {
     @objc
     func doneButtonTap() {
         endEditing(true)
-    }
-}
-
-
-// MARK: - Constants
-
-private extension ABListModuleView {
-    
-    enum View {
-        static let backgroundColor = UIColor.white
     }
 }
