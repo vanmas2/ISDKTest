@@ -16,13 +16,29 @@ protocol ItemBModuleViewModelProtocol {
 }
 
 enum ItemBModuleViewModelAction {
- 
+    case setTitle(String)
+    case setDesc(String)
+    case setValue(Int)
+    case setImageData(Data)
+    case setLabels(String)
+    case update
+    case get
 }
 
 enum ItemBModuleViewModelMutation {
-
+    case setTitle(String)
+    case setDesc(String)
+    case setValue(Int)
+    case setImageData(Data)
+    case setLabels(String)
+    case update
+    case set(ItemBModuleViewModelState)
 }
 
 struct ItemBModuleViewModelState {
-
+    var title: String
+    var desc: String
+    var value: Int
+    var imageData: Data
+    var labels: String
 }

@@ -10,4 +10,6 @@ import Foundation
 
 // MARK: - ItemBCoordinatorProtocol
 
-protocol ItemBCoordinatorProtocol: CoordinatorProtocol {}
+protocol ItemBCoordinatorProtocol: CoordinatorProtocol {
+    func start(id: String)
+}

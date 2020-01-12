@@ -26,10 +26,10 @@ final class ItemBCoordinator: Coordinator, ItemBCoordinatorProtocol {
         super.init(router: router)
     }
     
-    // MARK: Override functions
+    // MARK: Functions
     
-    override func start() {
-        showItemBModule()
+    func start(id: String) {
+        showItemBModule(id: id)
     }
 }
 
@@ -37,14 +37,17 @@ final class ItemBCoordinator: Coordinator, ItemBCoordinatorProtocol {
 
 private extension ItemBCoordinator {
     
-    func showItemBModule() {
-        var module = modulesFactory.createItemBModule()
+    func showItemBModule(id: String) {
+        var module = modulesFactory.createItemBModule(id: id)
         
         module.output.didFinish = { [weak self] in
-            
+            self?.router.popModule()
+            self?.finishFlow?()
         }
         
-        router.push(module)
+        router.push(module, animated: true) { [weak self] in
+            self?.finishFlow?()
+        }
     }
 }
 

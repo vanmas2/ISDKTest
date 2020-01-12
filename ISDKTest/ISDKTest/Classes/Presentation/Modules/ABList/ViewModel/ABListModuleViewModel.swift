@@ -102,7 +102,9 @@ private extension ABListModuleViewModel {
                         let viewModel = ABListModuleItemACellViewModel(id: item.id, title: item.title, desc: item.desc, value: item.value.description, image: item.image, viewModel: self)
                         return viewModel
                     case .itemB(let item):
-                        return ABListModuleItemBCellViewModel(id: item.id, title: item.title, desc: item.desc, value: item.value.description, image: item.image, labels: item.labels.reduce("") { "\($0)\($1) " }, viewModel: self)
+                        var labels = item.labels.reduce("") { "\($0) \($1)" }
+                        labels.removeFirst()
+                        return ABListModuleItemBCellViewModel(id: item.id, title: item.title, desc: item.desc, value: item.value.description, image: item.image, labels: labels, viewModel: self)
                     }
                 }
             }
