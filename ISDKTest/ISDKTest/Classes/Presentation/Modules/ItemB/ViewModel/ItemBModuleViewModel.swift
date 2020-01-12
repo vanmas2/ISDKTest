@@ -18,13 +18,22 @@ final class ItemBModuleViewModel {
     
     // MARK: Private properties
     
+    private let id: String
+    
+    private let updateItemBUseCase: UpdateItemBUseCaseProtocol
+    
+    private let getItemBUseCase: GetItemBUseCaseProtocol
+    
     private var output: Output
     
     private var disposeBag = DisposeBag()
     
     // MARK: Constructors
     
-    init() {
+    init(id: String, getItemBUseCase: GetItemBUseCaseProtocol, updateItemBUseCase: UpdateItemBUseCaseProtocol) {
+        self.getItemBUseCase = getItemBUseCase
+        self.updateItemBUseCase = updateItemBUseCase
+        self.id = id
         output = Output()
     }
 }
@@ -44,15 +53,40 @@ extension ItemBModuleViewModel: Reactor {
     // MARK: Properties
     
     var initialState: ItemBModuleViewModelState {
-        return ItemBModuleViewModelState()
+        return ItemBModuleViewModelState(title: "", desc: "", value: 0, imageData: Data(), labels: "")
     }
     
     // MARK: Functions
     
     func mutate(action: Action) -> Observable<Mutation> {
         switch action {
-        default:
-            return Observable.empty()
+        case .setTitle(let title):
+            return Observable.just(.setTitle(title))
+        case .setDesc(let desc):
+            return Observable.just(.setDesc(desc))
+        case .setValue(let value):
+            return Observable.just(.setValue(value))
+        case .setImageData(let imageData):
+            return Observable.just(.setImageData(imageData))
+        case .setLabels(let labels):
+            return Observable.just(.setLabels(labels))
+        case .update:
+            guard
+                currentState.title.count > 0,
+                currentState.desc.count > 0,
+                currentState.title.count <= 50,
+                currentState.desc.count <= 300
+                else { return Observable.empty() }
+            return updateItemBUseCase.execute(request: .init(id: id, title: currentState.title, desc: currentState.desc, value: currentState.value, image: currentState.imageData, labels: currentState.labels.components(separatedBy: " ")))
+                .map { .update }
+        case .get:
+            return getItemBUseCase.execute(request: .init(id: id))
+                .filterNil()
+                .map {
+                    var labels = $0.labels.reduce("") { "\($0) \($1)" }
+                    labels.removeFirst()
+                    return .set(.init(title: $0.title, desc: $0.desc, value: $0.value, imageData: $0.image, labels: labels))
+                }
         }
     }
     
@@ -60,8 +94,24 @@ extension ItemBModuleViewModel: Reactor {
         var newState = state
         
         switch mutation {
-        default:
-            ()
+        case .setTitle(let title):
+            newState.title = title
+        case .setDesc(let desc):
+            newState.desc = desc
+        case .setValue(let value):
+            newState.value = value
+        case .setImageData(let imageData):
+            newState.imageData = imageData
+        case .setLabels(let labels):
+            newState.labels = labels
+        case .update:
+            output.didFinish?()
+        case .set(let data):
+            newState.title = data.title
+            newState.desc = data.desc
+            newState.value = data.value
+            newState.imageData = data.imageData
+            newState.labels = data.labels
         }
         
         return newState

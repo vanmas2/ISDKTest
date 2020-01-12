@@ -60,7 +60,10 @@ extension AppAssembly {
         GetABListUseCaseAssembly(),
         CreateItemAUseCaseAssembly(),
         GetItemAUseCaseAssembly(),
-        UpdateItemAUseCaseAssembly()
+        UpdateItemAUseCaseAssembly(),
+        CreateItemBUseCaseAssembly(),
+        GetItemBUseCaseAssembly(),
+        UpdateItemBUseCaseAssembly()
     ]
 }
 

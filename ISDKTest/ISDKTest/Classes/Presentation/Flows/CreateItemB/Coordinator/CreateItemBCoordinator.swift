@@ -41,10 +41,13 @@ private extension CreateItemBCoordinator {
         var module = modulesFactory.createCreateItemBModule()
         
         module.output.didFinish = { [weak self] in
-            
+            self?.router.popModule()
+            self?.finishFlow?()
         }
         
-        router.push(module)
+        router.push(module, animated: true) { [weak self] in
+            self?.finishFlow?()
+        }
     }
 }
 

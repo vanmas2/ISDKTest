@@ -1,18 +1,17 @@
 //
-//  ItemBModuleView.swift
+//  UpdateItemView.swift
 //  ISDKTest
 //
-//  Created by Иван Масальских on 11/01/2020.
+//  Created by Иван Масальских on 12/01/2020.
 //
-
 
 import UIKit
 import Stevia
 
 
-// MARK: - ItemBModuleView
+// MARK: - UpdateItemView
 
-final class ItemBModuleView: UIView {
+final class UpdateItemView: UIView {
     
     // MARK: Views
     
@@ -34,10 +33,6 @@ final class ItemBModuleView: UIView {
     
     private(set) var photoButton: UIButton!
     
-    private(set) var labelsLabel: UILabel!
-    
-    private(set) var labelsTextField: UITextField!
-    
     private(set) var createButton: UIButton!
     
     // MARK: Constructors
@@ -56,7 +51,7 @@ final class ItemBModuleView: UIView {
 
 // MARK: - Configure UI
 
-private extension ItemBModuleView {
+private extension UpdateItemView {
     
     func configureUI() {
         configureViews()
@@ -74,8 +69,6 @@ private extension ItemBModuleView {
         valueTextField = UITextField()
         photoLabel = UILabel()
         photoButton = UIButton()
-        labelsLabel = UILabel()
-        labelsTextField = UITextField()
         createButton = UIButton()
         sv(scrollContentView)
         scrollContentView.contentView.sv(
@@ -87,8 +80,6 @@ private extension ItemBModuleView {
             valueTextField,
             photoLabel,
             photoButton,
-            labelsLabel,
-            labelsTextField,
             createButton
         )
     }
@@ -113,10 +104,6 @@ private extension ItemBModuleView {
             |-20-photoLabel-20-|,
             2,
             |-20-photoButton,
-            20,
-            |-20-labelsLabel-20-|,
-            2,
-            |-20-labelsTextField-20-|,
             20,
             |-20-createButton-20-|,
             (>=20)
@@ -165,13 +152,7 @@ private extension ItemBModuleView {
         photoButton.style(buttonStyle: photoButtonStyle)
         photoButton.clipsToBounds = true
         
-        labelsLabel.text = "Labels"
-        labelsLabel.style(labelStyle: labelStyle)
-        
-        labelsTextField.style(textFieldStyle: .init(borderStyle: .roundedRect))
-        labelsTextField.font = UIFont.systemFont(ofSize: 16)
-        
-        createButton.setTitle("Update item B", for: .normal)
+        createButton.setTitle("Confirm", for: .normal)
         createButton.style(buttonStyle: buttonStyle)
     }
 }
@@ -179,7 +160,7 @@ private extension ItemBModuleView {
 
 // MARK: - Constants
 
-private extension ItemBModuleView {
+private extension UpdateItemView {
     
     enum View {
         static let backgroundColor = UIColor.white
