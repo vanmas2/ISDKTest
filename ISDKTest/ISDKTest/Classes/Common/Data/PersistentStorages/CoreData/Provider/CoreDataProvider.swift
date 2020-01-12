@@ -107,10 +107,7 @@ public final class CoreDataProvider {
     // MARK: - Lazy properties
     
     lazy private var applicationDocumentsDirectory: URL = {
-        guard
-            let containerURL = FileManager.default.containerURL(forSecurityApplicationGroupIdentifier: "ru.vanmas2.ISDKTest")
-            else { return URL(fileURLWithPath: "") }
-        return containerURL
+        return URL(fileURLWithPath: NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0])
     }()
     
     lazy private var managedObjectModel: NSManagedObjectModel = {
@@ -127,10 +124,8 @@ public final class CoreDataProvider {
     }()
     
     lazy private var persistentStoreCoordinator: NSPersistentStoreCoordinator = {
-        
         let coordinator = NSPersistentStoreCoordinator(managedObjectModel: managedObjectModel)
-        let documentsPath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0]
-        let url = URL(fileURLWithPath: documentsPath.appending("/\(persistentStoreName).sqlite"))//applicationDocumentsDirectory.appendingPathComponent("\(persistentStoreName).sqlite")
+        let url = applicationDocumentsDirectory.appendingPathComponent("/\(persistentStoreName).sqlite")
         
         let options = [
             NSMigratePersistentStoresAutomaticallyOption: true,

@@ -83,7 +83,6 @@
 		2C3DCB5023C3410800B52607 /* ABListModuleItemACellViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3DCB4F23C3410800B52607 /* ABListModuleItemACellViewModelProtocol.swift */; };
 		2C4C901723C9EB0E00955074 /* CreateItemAUseCaseAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4C901623C9EB0E00955074 /* CreateItemAUseCaseAssembly.swift */; };
 		2C4C901D23CA01BB00955074 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4C901C23CA01BB00955074 /* String+Extension.swift */; };
-		2C4C901F23CA01F000955074 /* Int+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4C901E23CA01F000955074 /* Int+Extension.swift */; };
 		2C4C902123CA0AD300955074 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4C902023CA0AD300955074 /* UIView+Extension.swift */; };
 		2C4C902323CA0B5C00955074 /* KeyboardLayoutConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4C902223CA0B5C00955074 /* KeyboardLayoutConstraint.swift */; };
 		2C4C902723CA0C9000955074 /* ScrollContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4C902623CA0C9000955074 /* ScrollContentView.swift */; };
@@ -232,7 +231,6 @@
 		2C3DCB4F23C3410800B52607 /* ABListModuleItemACellViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ABListModuleItemACellViewModelProtocol.swift; sourceTree = "<group>"; };
 		2C4C901623C9EB0E00955074 /* CreateItemAUseCaseAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateItemAUseCaseAssembly.swift; sourceTree = "<group>"; };
 		2C4C901C23CA01BB00955074 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
-		2C4C901E23CA01F000955074 /* Int+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+Extension.swift"; sourceTree = "<group>"; };
 		2C4C902023CA0AD300955074 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		2C4C902223CA0B5C00955074 /* KeyboardLayoutConstraint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardLayoutConstraint.swift; sourceTree = "<group>"; };
 		2C4C902623CA0C9000955074 /* ScrollContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollContentView.swift; sourceTree = "<group>"; };
@@ -693,7 +691,6 @@
 			isa = PBXGroup;
 			children = (
 				2C32C5BA23C9B8840028CFFA /* Data+Extension.swift */,
-				2C4C901E23CA01F000955074 /* Int+Extension.swift */,
 				2C4C901C23CA01BB00955074 /* String+Extension.swift */,
 				2C4C906E23CB2C6200955074 /* UIImage+Extension.swift */,
 				2C4C902023CA0AD300955074 /* UIView+Extension.swift */,
@@ -1432,7 +1429,6 @@
 				2C32C5B623C99FA50028CFFA /* UIImagePickerController+Rx.swift in Sources */,
 				2C32C51023C908CE0028CFFA /* ItemAModulesFactoryProtocol.swift in Sources */,
 				2C32C52723C90B290028CFFA /* ItemBModule.swift in Sources */,
-				2C4C901F23CA01F000955074 /* Int+Extension.swift in Sources */,
 				2C3DCB3C23C2119E00B52607 /* ABListCoordinatorAssembly.swift in Sources */,
 				2C4C906523CB289B00955074 /* UpdateItemBUseCase.swift in Sources */,
 				2CC7064323BA6FAB00921919 /* ABListModuleViewController.swift in Sources */,
