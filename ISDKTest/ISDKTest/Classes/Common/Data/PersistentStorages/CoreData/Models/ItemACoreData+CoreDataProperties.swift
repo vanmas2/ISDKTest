@@ -2,7 +2,7 @@
 //  ItemACoreData+CoreDataProperties.swift
 //  ISDKTest
 //
-//  Created by Иван Масальских on 11/01/2020.
+//  Created by Иван Масальских on 12/01/2020.
 //
 //
 
@@ -16,10 +16,5 @@ extension ItemACoreData {
         return NSFetchRequest<ItemACoreData>(entityName: "ItemA")
     }
 
-    @NSManaged public var id: String?
-    @NSManaged public var title: String?
-    @NSManaged public var desc: String?
-    @NSManaged public var value: NSNumber?
-    @NSManaged public var image: NSData?
 
 }
