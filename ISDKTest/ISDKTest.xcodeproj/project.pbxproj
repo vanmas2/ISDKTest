@@ -265,7 +265,7 @@
 		2C32C5C923C9CF260028CFFA /* CoreDataProviderProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataProviderProtocol.swift; sourceTree = "<group>"; };
 		2C32C5D423C9D18F0028CFFA /* CoreDataProviderAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataProviderAssembly.swift; sourceTree = "<group>"; };
 		2C32C5D823C9D25D0028CFFA /* ItemALocalStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemALocalStorage.swift; sourceTree = "<group>"; };
-		2C32C5DA23C9D2810028CFFA /* ItemALocalStorageProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemALocalStorageProtocol.swift; sourceTree = "<group>"; };
+		2C32C5DA23C9D2810028CFFA /* ItemALocalStorageProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ItemALocalStorageProtocol.swift; path = ../../LocalStorages/ItemA/ItemALocalStorageProtocol.swift; sourceTree = "<group>"; };
 		2C32C5DC23C9E7F10028CFFA /* ISDKTest.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ISDKTest.entitlements; sourceTree = "<group>"; };
 		2C3DCB3B23C2119E00B52607 /* ABListCoordinatorAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ABListCoordinatorAssembly.swift; sourceTree = "<group>"; };
 		2C3DCB3D23C2131600B52607 /* ABListCoordinatorsFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ABListCoordinatorsFactory.swift; sourceTree = "<group>"; };
@@ -295,7 +295,7 @@
 		2C4C904823CB191C00955074 /* ItemCoreData+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ItemCoreData+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		2C4C905123CB197A00955074 /* ItemACoreData+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ItemACoreData+CoreDataClass.swift"; sourceTree = "<group>"; };
 		2C4C905223CB197A00955074 /* ItemACoreData+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ItemACoreData+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		2C4C905523CB1A2600955074 /* ItemBLocalStorageProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemBLocalStorageProtocol.swift; sourceTree = "<group>"; };
+		2C4C905523CB1A2600955074 /* ItemBLocalStorageProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ItemBLocalStorageProtocol.swift; path = ../../LocalStorages/ItemB/ItemBLocalStorageProtocol.swift; sourceTree = "<group>"; };
 		2C4C905723CB1A2E00955074 /* ItemBLocalStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemBLocalStorage.swift; sourceTree = "<group>"; };
 		2CB1D0EE23BA483B00755886 /* ISDKTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ISDKTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CB1D0F123BA483B00755886 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -508,6 +508,7 @@
 		2C32C4B923C62CAB0028CFFA /* ItemA */ = {
 			isa = PBXGroup;
 			children = (
+				2C32C5DA23C9D2810028CFFA /* ItemALocalStorageProtocol.swift */,
 				2C32C4BB23C62CC40028CFFA /* ItemARepository.swift */,
 			);
 			path = ItemA;
@@ -516,6 +517,7 @@
 		2C32C4BA23C62CB20028CFFA /* ItemB */ = {
 			isa = PBXGroup;
 			children = (
+				2C4C905523CB1A2600955074 /* ItemBLocalStorageProtocol.swift */,
 				2C32C4BD23C62CEE0028CFFA /* ItemBRepository.swift */,
 			);
 			path = ItemB;
@@ -972,7 +974,6 @@
 			isa = PBXGroup;
 			children = (
 				2C32C5D823C9D25D0028CFFA /* ItemALocalStorage.swift */,
-				2C32C5DA23C9D2810028CFFA /* ItemALocalStorageProtocol.swift */,
 			);
 			path = ItemA;
 			sourceTree = "<group>";
@@ -1060,7 +1061,6 @@
 			isa = PBXGroup;
 			children = (
 				2C4C905723CB1A2E00955074 /* ItemBLocalStorage.swift */,
-				2C4C905523CB1A2600955074 /* ItemBLocalStorageProtocol.swift */,
 			);
 			path = ItemB;
 			sourceTree = "<group>";
