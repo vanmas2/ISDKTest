@@ -129,6 +129,8 @@
 		2C4C905023CB191C00955074 /* ItemCoreData+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4C904823CB191C00955074 /* ItemCoreData+CoreDataProperties.swift */; };
 		2C4C905323CB197A00955074 /* ItemACoreData+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4C905123CB197A00955074 /* ItemACoreData+CoreDataClass.swift */; };
 		2C4C905423CB197A00955074 /* ItemACoreData+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4C905223CB197A00955074 /* ItemACoreData+CoreDataProperties.swift */; };
+		2C4C905623CB1A2600955074 /* ItemBLocalStorageProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4C905523CB1A2600955074 /* ItemBLocalStorageProtocol.swift */; };
+		2C4C905823CB1A2E00955074 /* ItemBLocalStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4C905723CB1A2E00955074 /* ItemBLocalStorage.swift */; };
 		2CB1D0F223BA483B00755886 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB1D0F123BA483B00755886 /* AppDelegate.swift */; };
 		2CB1D0FA23BA483B00755886 /* ISDKTest.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2CB1D0F823BA483B00755886 /* ISDKTest.xcdatamodeld */; };
 		2CB1D0FC23BA483D00755886 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2CB1D0FB23BA483D00755886 /* Assets.xcassets */; };
@@ -293,6 +295,8 @@
 		2C4C904823CB191C00955074 /* ItemCoreData+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ItemCoreData+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		2C4C905123CB197A00955074 /* ItemACoreData+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ItemACoreData+CoreDataClass.swift"; sourceTree = "<group>"; };
 		2C4C905223CB197A00955074 /* ItemACoreData+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ItemACoreData+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		2C4C905523CB1A2600955074 /* ItemBLocalStorageProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemBLocalStorageProtocol.swift; sourceTree = "<group>"; };
+		2C4C905723CB1A2E00955074 /* ItemBLocalStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemBLocalStorage.swift; sourceTree = "<group>"; };
 		2CB1D0EE23BA483B00755886 /* ISDKTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ISDKTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CB1D0F123BA483B00755886 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2CB1D0F923BA483B00755886 /* ISDKTest.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ISDKTest.xcdatamodel; sourceTree = "<group>"; };
@@ -1055,6 +1059,8 @@
 		2C4C903823CB161400955074 /* ItemB */ = {
 			isa = PBXGroup;
 			children = (
+				2C4C905723CB1A2E00955074 /* ItemBLocalStorage.swift */,
+				2C4C905523CB1A2600955074 /* ItemBLocalStorageProtocol.swift */,
 			);
 			path = ItemB;
 			sourceTree = "<group>";
@@ -1515,6 +1521,7 @@
 				2C3DCB5023C3410800B52607 /* ABListModuleItemACellViewModelProtocol.swift in Sources */,
 				2C32C57723C90C490028CFFA /* ItemBModulesFactoryProtocol.swift in Sources */,
 				2C4C905423CB197A00955074 /* ItemACoreData+CoreDataProperties.swift in Sources */,
+				2C4C905623CB1A2600955074 /* ItemBLocalStorageProtocol.swift in Sources */,
 				2C32C49C23C5D1AE0028CFFA /* ABListModuleItemBCellViewModel.swift in Sources */,
 				2C32C5CA23C9CF260028CFFA /* CoreDataProviderProtocol.swift in Sources */,
 				2C32C54123C90B860028CFFA /* CreateItemAModule.swift in Sources */,
@@ -1569,6 +1576,7 @@
 				2C32C4C223C62F930028CFFA /* ItemARepositoryAssembly.swift in Sources */,
 				2C32C5AD23C90C960028CFFA /* CreateItemBModulesFactoryProtocol.swift in Sources */,
 				2CC7064823BA702500921919 /* ABListModuleView.swift in Sources */,
+				2C4C905823CB1A2E00955074 /* ItemBLocalStorage.swift in Sources */,
 				2C32C4F823C9088F0028CFFA /* ItemAModuleViewModel.swift in Sources */,
 				2C32C50C23C908CE0028CFFA /* ItemACoordinatorProtocol.swift in Sources */,
 				2C4C905023CB191C00955074 /* ItemCoreData+CoreDataProperties.swift in Sources */,
