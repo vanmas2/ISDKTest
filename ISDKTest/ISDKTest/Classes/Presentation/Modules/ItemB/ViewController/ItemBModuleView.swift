@@ -109,8 +109,14 @@ private extension ItemBModuleView {
 
         if #available(iOS 11.0, *) {
             scrollContentView.Top == safeAreaLayoutGuide.Top
+            scrollContentView.Bottom == safeAreaLayoutGuide.Bottom
+            scrollContentView.Left == safeAreaLayoutGuide.Left
+            scrollContentView.Right == safeAreaLayoutGuide.Right
         } else {
             scrollContentView.Top == layoutMarginsGuide.Top
+            scrollContentView.Bottom == layoutMarginsGuide.Bottom
+            scrollContentView.Left == layoutMarginsGuide.Left
+            scrollContentView.Right == layoutMarginsGuide.Right
         }
         
         scrollContentView.contentView.layout(
