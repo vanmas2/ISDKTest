@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		179E7ADD23CC1C30003A6E79 /* UIResponder+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 179E7ADC23CC1C30003A6E79 /* UIResponder+Extension.swift */; };
 		2C32C48223C4C7AD0028CFFA /* CellSelectable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C32C48123C4C7AD0028CFFA /* CellSelectable.swift */; };
 		2C32C48423C4C7B80028CFFA /* CellConfigurable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C32C48323C4C7B80028CFFA /* CellConfigurable.swift */; };
 		2C32C48623C4C7C30028CFFA /* CellReusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C32C48523C4C7C30028CFFA /* CellReusable.swift */; };
@@ -160,6 +161,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		179E7ADC23CC1C30003A6E79 /* UIResponder+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIResponder+Extension.swift"; sourceTree = "<group>"; };
 		2C32C48123C4C7AD0028CFFA /* CellSelectable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellSelectable.swift; sourceTree = "<group>"; };
 		2C32C48323C4C7B80028CFFA /* CellConfigurable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellConfigurable.swift; sourceTree = "<group>"; };
 		2C32C48523C4C7C30028CFFA /* CellReusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellReusable.swift; sourceTree = "<group>"; };
@@ -702,6 +704,7 @@
 				2C32C5BA23C9B8840028CFFA /* Data+Extension.swift */,
 				2C4C901C23CA01BB00955074 /* String+Extension.swift */,
 				2C4C906E23CB2C6200955074 /* UIImage+Extension.swift */,
+				179E7ADC23CC1C30003A6E79 /* UIResponder+Extension.swift */,
 				2C4C902023CA0AD300955074 /* UIView+Extension.swift */,
 				2C32C5B223C99F650028CFFA /* Rx */,
 			);
@@ -1522,6 +1525,7 @@
 				2C32C51223C908CE0028CFFA /* ItemACoordinatorAssembly.swift in Sources */,
 				2CC7061923BA509F00921919 /* Presentable.swift in Sources */,
 				2C4C908723CB6D3800955074 /* Styler+TextViewStyle.swift in Sources */,
+				179E7ADD23CC1C30003A6E79 /* UIResponder+Extension.swift in Sources */,
 				2C32C4F223C9088F0028CFFA /* ItemAModuleView.swift in Sources */,
 				2CC7063D23BA6DC400921919 /* AppAssembly.swift in Sources */,
 				2C4C902C23CA16CA00955074 /* GetItemAUseCaseBoundaries.swift in Sources */,

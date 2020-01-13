@@ -41,6 +41,15 @@ final class ABListModuleView: UIView {
         super.init(coder: aDecoder)
         configureUI()
     }
+
+    // MARK: Override functions
+
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        if #available(iOS 11.0, *) {} else {
+            setDefaultTopLayoutGuide()
+        }
+    }
 }
 
 
@@ -129,6 +138,7 @@ private extension ABListModuleView {
         
         tableView.style(viewStyle: DefaultTheme.view)
         tableView.separatorStyle = .none
+        tableView.estimatedRowHeight = 100
         
         sortView.style(viewStyle: DefaultTheme.sortView)
         

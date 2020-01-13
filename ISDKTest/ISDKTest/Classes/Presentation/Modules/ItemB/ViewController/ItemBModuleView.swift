@@ -50,6 +50,15 @@ final class ItemBModuleView: UIView {
         super.init(coder: aDecoder)
         configureUI()
     }
+
+    // MARK: Override functions
+
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        if #available(iOS 11.0, *) {} else {
+            setDefaultTopLayoutGuide()
+        }
+    }
 }
 
 
@@ -97,6 +106,12 @@ private extension ItemBModuleView {
     
     func configureLayout() {
         scrollContentView.fillContainer()
+
+        if #available(iOS 11.0, *) {
+            scrollContentView.Top == safeAreaLayoutGuide.Top
+        } else {
+            scrollContentView.Top == layoutMarginsGuide.Top
+        }
         
         scrollContentView.contentView.layout(
             20,

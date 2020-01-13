@@ -28,4 +28,10 @@ extension UIView {
         tapper.cancelsTouchesInView = false
         addGestureRecognizer(tapper)
     }
+
+    @available(iOS, introduced: 7.0, deprecated: 11.0, message: "")
+    func setDefaultTopLayoutGuide() {
+        let rootTopLayoutGuide = parentViewController?.topLayoutGuide.length ?? 0
+        layoutMargins.top = rootTopLayoutGuide
+    }
 }
